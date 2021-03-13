@@ -1,0 +1,8823 @@
+###########################################################################
+file: "2011-02-11 user14.emo20q.r1@ark.usc.edu - user19@ark.usc.edu.log"
+###########################################################################
+
+match:1, answerer:user19, questioner:user14.emo20q.r1, start:"2011-02-11 15:08:52"
+
+Is it a positive emotion?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+Is it directed at another person?
+gloss:{directed(e,otherPerson)}
+-
+yep
+gloss:{yes}
+
+is it angry?
+gloss:{e==anger}
+-
+no
+gloss:{no}
+
+is it something one feels for long periods of time?
+gloss:{e.duration==long}
+-
+it's possible, but generally i guess i'd say no
+gloss:{possible:yes,general:no}
+
+is it similar to anger?
+gloss:{similar(e,anger)}
+-
+hmmm
+that's a hard one...
+iguess not really
+gloss:{judgement:difficult,qualification:uncertain,hedge:no}
+
+Is the emotion usually caused by certain situations (as opposed to just popping up in your mind)?
+gloss:{cause(something,e)}
+-
+yes
+gloss:{yes}
+
+is it regret?
+gloss:{e==regret}
+-
+nope
+gloss:{no}
+
+guilt?
+gloss:{e==guilt}
+-
+nope
+gloss:{no}
+
+fustration
+gloss:{e==frustration}
+-
+hehe nope
+gloss:{no,humor}
+
+Jealousy?
+gloss:{e==jealousy}
+-
+yep!
+that was it
+gloss:{yes,cheer,done}
+
+end:"2011-02-11 15:26:33", emotion:jealousy, questions:10, outcome:success
+
+
+match:2, answerer:user14.emo20q.r1, questioner:user19, start:"2011-02-11 15:29:01"
+
+is it a positive emotion?
+gloss:{e.valence==positive}
+-
+negative
+gloss:{no}
+
+does the emotion last for a long time, generally speaking?
+gloss:{e.duration==long}
+-
+I'm going to say yes, at least it feels like it does.
+gloss:{yes,qualification:subjective}
+
+would you say the emotion results in higher stress levels?
+dunno if that makes sense
+gloss:{cause(e,stress)}
+-
+for me it results in lower stress levels
+gloss:{yes,qualification:subjective}
+
+does it result in inactivity?
+gloss:{cause(e,inactivity)}
+-
+eh... yes, you could say so.
+gloss:{yes,hedge:yes}
+
+is it depression?
+gloss:{e==depression}
+-
+no
+gloss:{no}
+
+is it sadness?
+gloss:{e==sadness}
+-
+nope
+gloss:{no}
+
+is it something that is directed towards someone?
+gloss:{directed(e,otherPerson)}
+-
+it can be, but not necessarily.
+gloss:{possible:yes,necessary:no}
+
+if you had to give the emotion a colour, would you say it's closer to blue than red?
+gloss:{non-yes-no}
+-
+nice... definitely closer to blue.
+gloss:{cheer,non-yes-no}
+
+is it grief?
+gloss:{e==grief}
+-
+no
+not that blue
+gloss:{no,clarification:t-1}
+
+loneliness?
+gloss:{e==loneliness}
+-
+no
+gloss:{no}
+
+are you less likely to experience the emotion when around good firiends?
+gloss:{not(experienceWith(e,friends))}
+-
+yes, definitely.
+gloss:{yes,qualification:certain}
+
+is it boredome?
+gloss:{e==boredom}
+-
+you got it!
+good job!
+gloss:{yes,done,cheer}
+
+end:"2011-02-11 15:48:44", emotion:boredom, questions:12, outcome:success
+ 
+
+match:3, answerer:user19, questioner:user14.emo20q.r1, start:"2011-02-11 15:51:57"
+
+is it a strong emotion?
+gloss:{e.activation==high}
+-
+yes
+gloss:{yes}
+
+is it a positive emotion?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it necessarily directed at another person?
+gloss:{necessary(directed(e,otherPerson))}
+-
+no
+gloss:{no}
+
+is it similar to happy?
+gloss:{similar(e,happy)}
+-
+no
+gloss:{no}
+
+can you feel the emotion without any external events that cause it?
+gloss:{cause(emptySet,e)}
+-
+no
+gloss:{no}
+
+is it curious?
+gloss:{e==curiosity}
+-
+no
+gloss:{no}
+
+pride?
+gloss:{e==pride}
+-
+no
+gloss:{no}
+
+Excited?
+gloss:{e==excitement}
+-
+but i had a different word in mind
+gloss:{no,clarification:t-1}
+
+so it's similar to excited?
+gloss:{similar(e,excitement)}
+-
+no
+gloss:{no}
+
+similar to pride?
+gloss:{similar(e,pride)}
+-
+yes
+gloss:{yes}
+
+proud? ;)
+gloss:{e==proud}
+-
+yeah
+hehe
+i had to look it up after you said pride
+gloss:{yes,done,humor,clarification}
+
+end:"2011-02-11 16:01:43", emotion:proud, questions:11, outcome:success
+
+
+match:4, answerer:user14.emo20q.r1, questioner:user19, start:"2011-02-11 16:05:20", rules:strict,
+
+is it a positive emotion?
+gloss:{e.valence==positive}
+-
+other
+gloss:{undefined}
+
+is the emotion directed towards another person?
+gloss:{directed(e,otherPerson)}
+-
+other (it can be, but not necessarily)
+gloss:{possible:yes,necessary:no}
+
+is communication with another person likely to occur as a result of the emotion?
+gloss:{cause(e,communication)}
+-
+yes
+gloss:{yes}
+
+is the emotion more likely to occur when you are tired?
+gloss:{self.situation(e,tired)}
+-
+no
+gloss:{no}
+
+is it an emotion that you feel at least once every one or two days?
+gloss:{e.frequency==regularly}
+-
+yes (you=me in particular)
+gloss:{yes,qualification:subjective}
+
+is it interest? / interested?
+gloss:{e==interest}
+-
+no
+gloss:{no}
+
+is it a powerful emotion?
+gloss:{e.activation==high}
+-
+yes
+gloss:{yes}
+
+is it surprise?
+gloss:{e==surprise}
+-
+yep!
+good one
+gloss:{yes,done,cheer}
+
+end:"2011-02-11 16:22:49", emotion:surprise, questions: 8, outcome:success
+
+###########################################################################
+file:"2011-02-11 user14.emo20q.r1@ark.usc.edu - user8@ark.usc.edu.log"
+###########################################################################
+
+
+
+match:1, answerer:user8, questioner:user14.emo20q.r1, start:"2011-02-11 17:48:29"
+
+so, is it an emotion that makes you feel good?
+gloss:{cause(e,self.feelGood)}
+-
+I think that when it occurs, it can overtake any "regular"
+or "everyday" emotions
+gloss:{ambiguous}
+
+is it caused by some event, or can it just occur spontaneously?
+gloss:{cause(event,e)}
+-
+both.
+gloss:{ambiguous}
+
+is it unexpected?
+gloss:{not(expected(e))}
+-
+It is often unexpected. There are times when it's solicited by others & I like to solicit it in others.
+but you know, sometimes i think it's too often in stuff we see like movies and tv and stuff
+but i'm not certain b/c i haven't seen a movie inor tv in a long long time
+but i walk past the ads for htem on the subway platform or subway
+and it's THERE
+you know?
+gloss:{frequently:yes}
+
+is it surprise?
+gloss:{e==surprise}
+-
+the emotion?
+no
+gloss:{no}
+
+hmm.. is it  happy/happiness?
+gloss:{e==happiness}
+-
+no- something in between the firs & escond guess
+gloss:{no,clarification}
+
+interest?
+gloss:{e==interest}
+-
+no, it's an emotion my dog & i frequently share
+gloss:{no,hint}
+
+love :)
+gloss:{e==love}
+-
+aww, well, yes we share it but it's not my word
+gloss:{clarification,no}
+
+playful?
+gloss:{e==playfulness}
+-
+yes, i think so
+perhaps playful comes from it
+gloss:{hedge:yes,clarification}
+
+let's see... curiosity
+gloss:{e==curiosity}
+-
+no
+gloss:{no}
+
+excitement?
+gloss:{e==excitement}
+-
+it's a lesser form
+so noo
+gloss:{clarification,no}
+
+amusement?
+gloss:{e==amusement}
+-
+maybe it solicits amuseument in others?
+gloss:{clarification,no}
+
+humor?
+gloss:{e==humor}
+-
+it requires humor?
+or maybe you need humor to not be embarassed afterward
+after going through said emotion
+gloss:{clarification,no}
+
+is it goofy?
+gloss:{e==humor}
+-
+this word would be right next to it in a thesaurus!
+not alphabeticaly
+gloss:{no,hint,close}
+
+silly!
+gloss:{e==silly}
+-
+yes!
+my dog feels silly
+:D
+& I
+gloss:{yes,done,clarification}
+
+end:"2011-02-11 18:11:08", emotion:silly, questions:15, outcome:success
+
+
+match:2, answerer:user14.emo20q.r1, questioner:user8, start:"2011-02-11 18:17:15"
+
+is it your current emotional state?
+gloss:{e==self.currentState}
+-
+no, although I try to stay somewhat close to it.
+gloss:{no,clarification}
+
+is it a long sustaining emotion?
+gloss:{e.duration==long}
+-
+yes
+gloss:{yes}
+
+or an aspirational emotion?
+gloss:{aspiration(e)}
+-
+that too.
+gloss:{yes}
+
+Do you need someone to pull this emotion out of you
+or evoke it?
+if so, who is it?
+gloss:{necessary(cause(otherPerson,e))}
+-
+it can help.... you don't need someone, but it can help.  I think it could be slightly contagious.
+gloss:{possible:yes,necessary:no,clarification}
+
+is the emotion a type of or related to content
+or zen
+contentment (is that a word?_)
+gloss:{subset(e,zenContentment)||similar(e,zenContentment)}
+-
+kind of  related to contentment
+gloss:{hedge:yes,similarity}
+
+is it a word that an eighth grader would know?
+gloss:{adolescent.know(e)}
+-
+good question!  yes, they should know the word (but it's not applied to them)
+gloss:{cheer,yes,clarification}
+
+serene?
+gloss:{e==serenity}
+-
+close.
+gloss:{no,close}
+
+stoned? :D
+gloss:{e==stoned}
+-
+depends on the eight grader :)
+j/k no...
+gloss:{no,humor}
+
+does the word function or can be conjugated as anything eles?
+i.e. can it be a verb too?
+gloss:{possible(verb(e))}
+-
+Interesting question.  It can be a verb as well as an adjective
+gloss:{cheer,yes,clarification}
+
+relaxed
+gloss:{e==relaxed}
+-
+pretty close...
+gloss:{no,close}
+
+relieved?
+relief
+gloss:{e==relief}
+-
+nope, colder
+gloss:{no,hint}
+
+did we already say calm?
+gloss:{e==calm}
+-
+you got it!
+Good job :)
+gloss:{yes,done,cheer}
+
+end:"2011-02-11 18:30:02", emotion:calm, questions:12, outcome:success
+
+###########################################################################
+file:"2011-02-13 user14@ark.usc.edu - user28@ark.usc.edu.log"
+###########################################################################
+
+
+
+
+match:1, answerer:user28, questioner:user14, start:"2011-02-13 19:59:01"
+
+lets see... is it a positive emotion?
+gloss:{e.valence==positive}
+-
+yes, can you put number on your question please?
+gloss:{yes,statusRequest}
+
+okay, #2: is it a strong emotion?
+gloss:{e.activation==high}
+-
+maybe
+gloss:{indeterminate}
+
+3: is it an emotion that is directed at another person?
+gloss:{directed(e,otherPerson)}
+-
+no
+gloss:{no}
+
+is it an emotion that just pops up spontaneously (vs being triggered by something)?
+gloss:{cause(emptySet,e)}
+-
+no and $4
+gloss:{no}
+
+#5, is it triggered by something unexpected?
+gloss:{unexpected(e)}
+-
+no
+gloss:{no}
+
+is it happy?
+gloss:{e==happiness}
+-
+yes
+gloss:{yes}
+
+is that the right one?
+gloss:{clarification}
+-
+no (7)
+gloss:{no}
+
+is it stronger than happy?
+gloss:{e.valence>happiness.valence}
+- 
+no
+gloss:{no}
+
+is it calm?
+gloss:{e==calm}
+-
+yes
+gloss:{yes}
+
+tranquil/tranquility?
+gloss:{e==tranquility}
+-
+close (10)
+gloss:{no,close}
+
+serene/serenity?
+gloss:{e==serenity}
+-
+yes! ding ding ding!
+gloss:{yes,done}
+
+end:"2011-02-13 20:10:15", emotion:serenity, questions:11, outcome:success
+
+
+match:2, answerer:user14, questioner:user28, start:"2011-02-13 20:12:12"
+
+is it happy?
+gloss:{e==happy}
+-
+it is happy, but that's not it.
+gloss:{yes}
+
+is it an emotion that is directed at another person
+gloss:{directed(e,otherPerson)}
+-
+yes
+gloss:{yes}
+
+does some other person gain anything from it?
+gloss:{cause(e,benefit(otherPerson))}
+-
+usually, yes.
+gloss:{usually:yes}
+
+does it has anything to do with love?
+gloss:{similar(e,love)}
+-
+yes, that's 4.
+gloss:{yes,status}
+
+is it love?
+gloss:{e==love}
+-
+yes!  Happy valentines day  <3
+gloss:{yes,cheer,done}
+
+end:"2011-02-13 20:18:59", emotion:love, questions:5, outcome:success
+
+###########################################################################
+file: "2011-02-13 user14.emo20q.r1@ark.usc.edu - user28@ark.usc.edu.log"
+###########################################################################
+
+match:1, answerer:user28, questioner:user14.emo20q.r1, start:"2011-02-13 22:34:22"
+
+is it an emotion that can be directed at another person?
+gloss:{directed(e,otherPerson)}
+-
+yes
+gloss:{yes}
+
+is it necessarily directed at someone?
+gloss:{necessary(directed(e,otherPerson))}
+-
+yes
+gloss:{yes}
+
+is it a positive emotion?
+gloss:{e.valence==positive}
+-
+yes (3)
+gloss:{yes,status}
+
+is it an emotion that lasts a long time, generally? 4
+gloss:{e.duration==long}
+-
+no
+gloss:{no}
+
+is it caused by another person?
+gloss:{cause(otherPerson,e)}
+-
+no
+gloss:{no}
+
+6: is it a strong emotion?
+gloss:{e.activation==high}
+-
+yes
+gloss:{yes}
+
+is it usually caused by something in particular (as opposed to being spontaneously popping up)?
+gloss:{cause(something,e)}
+-
+no
+gloss:{no}
+
+8: is it ... hmm lets see
+having a crush on someone?
+gloss:{e==crush}
+-
+close
+gloss:{no,close}
+
+infatuated?
+gloss:{e==infatuation}
+-
+close
+gloss:{no,close}
+
+is it flirtatious?
+gloss:{e==flirtatiousness}
+-
+no
+gloss:{no}
+
+11, is it amourous
+gloss:{e==amourous}
+-
+no
+gloss:{no}
+
+12, horny?
+gloss:{e==horniness}
+-
+no
+gloss:{no}
+
+doh, my battery is running out... I give up  =-O
+gloss:{giveup}
+-
+adore
+gloss:{answer,done}
+
+end:"2011-02-13 22:54:49", emotion:adoration, questions:12, outcome:failure/giveup
+
+########################################################################
+file:"2011-02-14 user14.emo20q.r1@ark.usc.edu - user22@ark.usc.edu.log"
+########################################################################
+
+
+match:1, answerer:user22, questioner:user14.emo20q.r1, start:"2011-02-14 16:04:52"
+
+okay: is it a positive emotion?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it an emotion that's directed at another person?
+gloss:{directed(e,otherPerson)}
+-
+yes. in general.
+gloss:{general:yes}
+
+third question, is it a strong emotion?
+gloss:{e.activation==high}
+-
+yes
+gloss:{yes}
+
+is the emotion "angry/anger"? 
+gloss:{e==anger}
+-
+yes, that's right.
+gloss:{yes,done}
+
+end:"2011-02-14 16:08:32", emotion:anger, questions:4, outcome:success
+
+
+match:2, answerer:user14.emo20q.r1, questioner:user22, start:"2011-02-14 16:04:52"
+
+is it humorous one?
+gloss:{subset(e,humorous)}
+-
+no, serious.
+gloss:{no}
+
+kind of a nightmare?
+gloss:{subset(e,nightmare)}
+-
+no, not at all
+gloss:{no}
+
+is it associated with sadness
+gloss:{associated(e,sadness)}
+-
+no
+gloss:{no}
+
+would you feel this in a helpless situation?
+gloss:{situation(e,helpless)}
+-
+no... that's number 4.
+gloss:{no,status}
+
+outward or inward?
+gloss:{non-yes-no}
+-
+outward
+gloss:{non-yes-no}
+
+to person or things
+gloss:{non-yes-no}
+-
+almost always to persons.
+gloss:{non-yes-no}
+
+desperate
+gloss:{e==despair}
+-
+no
+gloss:{no}
+
+devotion kind?
+gloss:{subset(e,devotion)}
+-
+no.  It can be, but not necessarily
+gloss:{possible:yes,necessary:no}
+
+I have to get out. what is it?
+gloss:{giveup}
+-
+okay... it's "thankful"
+gloss:{answer,done}
+
+end:"2011-02-14 16:32:10", emotion:thankfulness, questions:9, outcome:failure/giveup
+
+
+###################################################################
+file:"2011-02-17 user14.emo20q.r1@ark.usc.edu - user5@ark.usc.edu.log"
+###################################################################
+
+
+match:1, answerer:user5, questioner:user14.emo20q.r1, start:"2011-02-17 13:11:28"
+
+great, question one: is it a positive emotion?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+can it be a mental state? 
+gloss:{mentalState(e)}
+-
+yes
+gloss:{yes}
+
+can this emotion be caused by another person?
+gloss:{cause(anotherPerson,e)}
+-
+yes but not necessarily
+gloss:{possible:yes,necessary:no}
+
+can the emotion be directed at another person?
+gloss:{directed(e,otherPerson)}
+-
+no
+gloss:{no}
+
+is the emotion "depressed" or "depression"
+gloss:{e==depression}
+-
+no
+gloss:{no}
+
+would you say that the emotion is a strong emotion?
+gloss:{e.activation==high}
+-
+i think it could be strong but the word implies rather mild
+gloss:{possible:yes,necessary:no,hint}
+
+is the emotion "bored" or "boredom"?
+gloss:{e==boredom}
+-
+no
+gloss:{no}
+
+is the emotion "sad"?
+gloss:{e==sadness}
+-
+no
+gloss:{no}
+
+Is the emotion directed at one's self?
+gloss:{directed(e,self)}
+-
+yes, more specifically in has to do with how one perceives a situation
+gloss:{yes,hint}
+
+confused?
+gloss:{e==confusion}
+-
+yes
+gloss:{yes,done}
+
+end:"2011-02-17 13:25:33", emotion:confusion, questions:10, outcome:success
+
+match:2, answerer:user14.emo20q.r1, questioner:user5, start:"2011-02-17 13:28:20"
+
+is it positive?
+gloss:{e.valence==positive}
+-
+yes.
+gloss:{yes}
+
+is it directed at some other person?
+gloss:{directed(e,otherPerson)}
+-
+not usually.
+gloss:{possible:yes,usually:no}
+
+is it highly activated?
+gloss:{e.activation==high}
+-
+hmm, I'd say yes in general
+gloss:{general:yes}
+
+is it caused by sth unexpected?
+gloss:{cause(unexpectedEvent,e)}
+-
+in general, no.
+gloss:{general:no}
+
+it is a synonum to happiness, joy etc?
+gloss:{similar(e,happiness)}
+-
+no, it's different.  Actually relating to the first question, even though it would be considered a positive emotion, it might not make the experiencer feel happyness, joy, etc.
+gloss:{no,hint,clarification}
+
+is it related to the understanding of a situation, realizing or learning sth?
+gloss:{related(e,understanding||learning)}
+-
+yes, in general, especially about the situation.
+gloss:{yes,hint}
+
+is it sth like informed or vigilant?
+gloss:{similar(e,informed)||similar(e,vigilant)}
+-
+yes, getting closer
+gloss:{no,close,hint}
+
+aware?
+gloss:{e==aware}
+-
+no
+gloss:{no}
+
+receptive?
+gloss:{e==receptive}
+-
+no, you're getting farther now.
+gloss:{no,hint}
+
+alert?
+gloss:{e==alert}
+-
+no
+gloss:{no}
+
+sensible?
+gloss:{e==sensible}
+-
+no... sensible isn't highly activated  :-P
+gloss:{no,hint,jeer}
+
+enlightened?
+gloss:{e==enlighted}
+-
+no... think stronger and more dealing a specific situation
+gloss:{no,hint}
+
+focused?
+gloss:{e==focused}
+-
+no, even stronger.
+gloss:{no,hint}
+
+absorbed?
+gloss:{e==absorbed}
+-
+nope, a lot stronger.
+gloss:{no,hint}
+
+oh is it determined?
+gloss:{e==determined}
+-
+that's getting closer, but still stronger.
+gloss:{no,close,hint}
+
+keen?
+gloss:{e==keen}
+-
+no.
+gloss:{no}
+
+perseverance?
+gloss:{e==perseverance}
+-
+ooh, you're very close!
+gloss:{no,close}
+
+persistence? resolute?
+gloss:{e==persistence}
+-
+no, stronger than perseverence/persistence... even tougher situation
+gloss:{no,hint}
+ 
+resolute?
+gloss:{e==resolute}
+-
+no, stronger and less patience!
+gloss:{no,hint}
+
+bravery?
+gloss:{e==bravery}
+-
+yes!
+gloss:{yes,done}
+
+end:"2011-02-17 13:59:24", emotion:bravery, questions:20, outcome:success
+
+
+
+
+
+###################################################################
+file:"2011-02-18 user14.emo20q.r1@ark.usc.edu - user26@ark.usc.edu.log"
+###################################################################
+
+match:1, answerer:user14.emo20q.r1, questioner:user26, start:"2011-02-18 12:44:15"
+
+would i feel this if my dog died?
+gloss:{situation(e,dogDied)}
+-
+no
+gloss:{no}
+
+would i feel this if it were my birthday?
+gloss:{situation(e,birthday)}
+-
+nope
+gloss:{no}
+
+would i feel this if some one cut me off on the highway?
+gloss:{situation(e,cutoffOnHighway)}
+-
+perhaps
+gloss:{possible:yes,necessary:no}
+
+would i feel this if i saw a ghost
+gloss:{situation(e,seeGhost)}
+-
+no, not generally
+gloss:{general:no}
+
+would i feel this if i got in a fight with someone?
+gloss:{situation(e,fightWithSomeone)}
+-
+maybe you could feel it
+gloss:{possible:yes,necessary:no}
+
+would i feel it if some one received something i wanted?
+gloss:{situation(e,recieveSomethingDesired)}
+-
+nope
+gloss:{no}
+
+anger?
+gloss:{e==anger}
+-
+no
+gloss:{no}
+
+is it similar to anger?
+gloss:{similar(e,anger)}
+-
+kind of similar
+gloss:{hedge:yes}
+
+would i feel this if someone punched me in the face?
+gloss:{situation(e,punchedInFace)}
+-
+not so much for getting punched in the face
+gloss:{hedge:no}
+
+would i feel this if i had a grudge against someone?
+gloss:{situation(e,haveGrudge)}
+-
+no, I wouldn't say that it's normally for grudges
+gloss:{no,clarification}
+
+would i possibly shout at someone?
+gloss:{behavior(e,shouting)}
+-
+yes, possibly, especially if you had this emotion long enough.
+gloss:{possible:yes,necessary:no,clarification}
+
+is it resentful?
+gloss:{e==resentment}
+-
+no
+gloss:{no}
+
+is it passive aggresive
+gloss:{e==passiveAggressive}
+-
+no.
+gloss:{no}
+
+is it aggressive aggressive?
+gloss:{e==aggressive}
+-
+no, it's less necessarily directed at another person than your recent guesses
+gloss:{no,hint}
+
+would i feel this if i hated myself?
+gloss:{situation(e,hateSelf)}
+-
+probably you would feel it, but it's not that strong
+gloss:{probably:yes}
+
+would i feel it if i were disapointed in myself?
+gloss:{situation(e,disappointedInSelf)}
+-
+yes 
+at least possibly
+gloss:{possible:yes,necessary:no}
+
+is it regret?
+gloss:{e==regret}
+-
+no, it's not about blaming yourself but rather blaming someone else or some situation
+gloss:{no,hint}
+
+oh, is it frustrated?
+gloss:{e==frustration}
+-
+aha!
+yep
+gloss:{yes,done}	
+
+end:"2011-02-18 13:08:01", emotion:frustration, questions:18, outcome:success
+
+
+
+################################################################
+file:"2011-03-03 user26@ark.usc.edu - user17@ark.usc.edu.log"
+################################################################
+
+match:1, answerer:user17, questioner:user26, start:"2011-03-03 15:19:33"
+
+would you feel this if your best friend died?
+gloss:{situation(e,friendDied)}
+-
+yes
+gloss:{yes}
+
+sadness?
+gloss:{e==sadness}
+-
+no
+gloss:{no}
+
+grief?
+gloss:{e==grief}
+-
+no
+it is not so high intensity
+gloss:{no,hint}
+
+would you cry if you felt this?
+gloss:{behavior(e,crying)}
+-
+I don't think so
+gloss:{no,uncertain}
+
+sorrow?
+gloss:{e==sorrow}
+-
+no
+a little less intense I think
+gloss:{no,hint}
+
+would you feel this if you lost your keys?
+gloss:{situation(e,loseKeys)}
+-
+mmm yes
+gloss:{yes}
+
+would you feel it if you had an exam the next day?
+gloss:{situation(e,futureTest)}
+-
+no, but I would feel it maybe after an exam
+gloss:{no,hint}
+
+worry?
+gloss:{e==worry}
+-
+more intense
+gloss:{no,hint}
+
+shame?
+gloss:{e==shame}
+-
+not quite
+gloss:{no,close}
+
+regret?
+gloss:{e==regret}
+-
+no
+all that you say are more internal I think
+gloss:{no,hint}
+
+you can express it in an obvious way
+by sighing?
+gloss:{behavior(e,sighing)}
+-
+yes :)
+gloss:{yes,cheer}
+
+frustration?
+gloss:{e==frustration}
+-
+yessss!!!!!
+gloss:{yes,done}
+
+end:"2011-03-03 15:26:53", emotion:frustration, questions:12, outcome:success
+
+
+match:2, answerer:user26, questioner:user17, start:"2011-03-03 15:26:59"
+
+would you feel it if you passed the screenings?
+gloss:{situation(e,passedScreening)}
+-
+yes sort of
+well possible is a better answer
+i mean possibly
+gloss:{yes,hedge,possibly:yes,necessarily:no}
+
+would you feel it in a less joyful situation?
+gloss:{e.valence<passedScreening.valence}
+-
+possibly but its doubtful
+gloss:{no,doubtful,possibly:yes,necessarily:no}
+
+content?
+gloss:{e==contentment}
+-
+no but you may feel content at the same time
+gloss:{no,hint}
+
+would you feel it if you do a nice act?
+gloss:{situation(e,doingNiceAct)}
+-
+no unless you were looking for an opportunity to do a nice act and you were afforded the opportunity
+gloss:{no,hint}
+
+satisfaction?
+gloss:{e==satisfaction}
+-
+it's like satisfaction but directed towards someone else
+and their actions
+gloss:{no,hint}
+
+wait! I think I get it!
+gratefulness?
+gloss:{e==gratefulness}
+-
+yep  :-)
+way to go
+gloss:{yes,done,cheer}
+
+end:"2011-03-03 15:34:35", emotion:gratefulness, questions:6, outcome:success
+
+
+###################################################################
+file:"2011-03-03 user5@ark.usc.edu - user3@ark.usc.edu.log"
+###################################################################
+
+match:1, answerer:user3, questioner:user5, start:"2011-03-03 15:16:49"
+
+is it positive?
+gloss:{e.valence==positive}
+-
+negative
+no
+i think u should ask yes or no question
+gloss:{no,rules}
+
+2)is it highly activated?
+gloss:{e.activation==high}
+-
+no
+gloss:{no}
+
+3) is it directed towards another person?
+gloss:{directed(e,otherPerson)}
+-
+yes
+(it is related to another person. but it's more like what I feel from the other person when I see)
+(wasn't sure about directed, so. )
+gloss:{yes,unsure,clarification}
+
+it is related to disliking somebody?
+gloss:{situation(e,dislikingOtherPerson)}
+-
+yes
+gloss:{yes}
+
+is it annoyance?
+gloss:{e==annoyance}
+-
+no
+(that was 5)
+gloss:{no,status}
+
+6)is it sth that you would feel if you want to take revenge at sb?
+gloss:{situation(e,revenge)}
+-
+no
+gloss:{no}
+
+7)is it sth you feel when you are bored with someone?
+gloss:{situation(e,boredWithOtherPerson)}
+-
+no
+gloss:{no}
+
+8)is it related to disgust about sth that that person does (e.g he is dirty etc)
+gloss:{situation(e,disgustAboutOtherPerson)}
+-
+yes
+gloss:{yes}
+
+9)is it disgusted?
+gloss:{e==disgusted}
+-
+yes
+yey~
+u r genius
+gloss:{yes,done,cheer}
+
+end:"2011-03-03 15:31:39", emotion:disgust, questions:9, outcome:success
+
+
+match:2, answerer:user5, questioner:user3, start:"2011-03-03 15:32:49"
+
+is it positive emotino?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+directed to someone or something?
+gloss:{directed(e,otherPerson||directed(e,something)}
+-
+yes
+gloss:{yes}
+
+is it something imagining the future?
+gloss:{directed(e,futureEnvisionment)}
+-
+no
+gloss:{no}
+
+is it sth (something) about the other has, not you?
+gloss:{situation(e,has(something,otherPerson)&&~has(something(self)))}
+-
+yes
+it is very related to that
+gloss:{yes,close}
+
+is it close to jeoulous than curious?
+gloss:{similar(e,jealous)>similar(e,curious)}
+-
+no it is positive
+gloss:{no,hint}
+
+is it close to desire than curious?
+gloss:{similar(e,desire)>similar(e,curious)}
+-
+yes, close to desire but not exactly that
+gloss:{yes,hint}
+
+can it be related loving the other?
+gloss:{similar(e,love)}
+-
+you might feel that if you love someone, but not necessarily
+and you might feel that for someone you don;t love
+gloss:{possibly:yes,necessarily:no}
+
+is it affection?
+gloss:{e==affection}
+-
+no
+gloss:{no}
+
+is it close to hostility?
+gloss:{similar(e,hostility)}
+-
+no
+it is positive
+gloss:{no,hint}
+
+oh sorry. hospitaility, i meant
+gloss:{e==hospitality}
+-
+no
+(i count that as one question, so you have asked 9 already)
+gloss:{no,status,stickler}
+
+is it close to joyful?
+gloss:{similar(e,joy)}
+-
+no not really
+gloss:{no,hedge}
+
+is it close to admiring?
+gloss:{similar(e,admiration)}
+-
+yes!!
+gloss:{yes,cheer}
+
+is it admire?
+hehe
+gloss:{e==admiration}
+-
+yes!!!
+:-)
+you got it, you are a genius too
+gloss:{yes,done,cheer}
+
+end:"2011-03-03 15:45:48", emotion:admiration, questions:13, outcome:success
+
+
+
+##################################################################
+file: "2011-03-03 user5@ark.usc.edu - user26@ark.usc.edu.log"
+##################################################################
+
+match:1, answerer:user5, questioner:user26, start:"2011-03-03 15:46:01"
+
+would you feel this if it was your birthday?
+gloss:{situation(e,birthday)}
+-
+no
+gloss:{no}
+
+would you feel it if your friend died?
+gloss:{situation(e,friendDied)}
+-
+no
+gloss:{no}
+
+is it something you feel towards someone else?
+gloss:{directed(e,otherPerson)}
+-
+yes
+gloss:{yes}
+
+is it something you would feel towards a friend?
+gloss:{directed(e,friend)}
+-
+no
+gloss:{no}
+
+is it considered a negative thing to feel?
+gloss:{e.valence==negative}
+-
+yes
+gloss:{yes}
+
+hatred?
+gloss:{e==hatred}
+-
+no
+gloss:{no}
+
+would you feel it if someone else had something you wanted?
+gloss:{situation(e,has(otherPerson,sthYouWant))}
+-
+no
+gloss:{no}
+
+would you feel this towards an enemy?
+gloss:{directed(e,enemy)}
+-
+you could, but you could have an enemy and still not feel that towards him
+gloss:{possibly:yes,necessarily:no}
+
+would you most likely feel this towards someone you don't know?
+gloss:{directed(e,stranger)}
+-
+no, rather the opposite you feel it for someone you know
+gloss:{no,hint}
+
+pity?
+gloss:{e==pity}
+-
+no, pity could also have a positive aspect
+but they are related
+gloss:{no,hint,close}
+
+contempt?
+gloss:{e==contempt}
+-
+yes
+:)
+wow
+gloss:{yes,done,cheer}
+
+end:"2011-03-03 15:52:44", emotion:contempt, questions:11, outcome:success
+
+
+match:2, answerer:user26, questioner:user5, start:"2011-03-03 15:52:49"
+
+it is a positive emotion?
+gloss:{e.valence==positive}
+-
+not necessarily but it could be
+gloss:{possibly:yes,necessarily:no}
+
+is it towards some other person
+gloss:{directed(e,otherPerson)}
+-
+yes
+gloss:{yes}
+
+3) does it have to do with trying to obtain something that the othe person has?
+gloss:{situation(e,tryToObtainSthFromOtherPerson)}
+-
+it could
+gloss:{possibly:yes,necessarily:no}
+
+4)does it have to do with trying to be similar to some other person
+gloss:{situation(e,tryToBeSimilarToOtherPerson)}
+-
+not necessarily
+it could thought
+i mean though
+gloss:{possibly:yes,necessarily:no}
+
+is it similar to ambitious?
+gloss:{similar(e,ambition)}
+-
+you wouldn't feel ambition towards someone else
+gloss:{no,hint}
+
+is it similar to admiration?
+gloss:{similar(e,admiration)}
+-
+it can be but it is not necessarily positive
+gloss:{possibly:yes,necessarily:no,hint}
+
+7)is it similar to having faith/trust in someone?
+gloss:{similar(e,faith)||similar(e,trust)}
+-
+no
+gloss:{no}
+
+8)is it similar to desire?
+gloss:{similar(e,desire)}
+-
+it could be but it could be the opposite
+gloss:{possibly:yes,necessarily:no,hint}
+
+is it similar to obsession?
+gloss:{similar(e,obsession)}
+-
+no
+gloss:{no}
+
+10)whether it is positive or negative does it depend on the degree that you feel it?
+gloss:{depend(e.valence,e.degreeFelt)}
+-
+no i would say the degree is about the same whether positive or negative
+gloss:{no,hint}
+
+11)then whether it is positive or negative does it depend on the situation in which you feel it?
+gloss:{depend(e.valence,e.situation)}
+-
+yes
+gloss:{yes}
+
+is it similar to curiosity towards some person?
+gloss:{similar(e,curiosity)}
+-
+no not necessarily
+gloss:{no,necessarily:no,possibly:yes}
+
+13)would you feel that towards someone who is superior to you?
+gloss:{directed(e,superiorPerson)}
+-
+you definitely could if they merit it
+gloss:{yes,possibly:yes,necessarily:no,hint}
+
+14)would you feel that towards some close friend, with whom you feel comfortable?
+gloss:{directed(e,closeFriend)}
+-
+you could but you could also feel it towards someone you don't know
+personally
+gloss:{possibly:yes,necessarily:no,hint}
+
+15)it is similar to being influenced, inspired by someone?
+gloss:{similar(e,influencedByOther)||similar(e,inspiredByOther)}
+-
+those feelings could co-occur with feeling this emotion in a positive way
+actually i guess the could co-coccur in a negative sense but then the influence would be in the opposite sense
+gloss:{yes,clarification,hint}
+
+16) is it something related with following someone's behavior/example?
+gloss:{situation(e,followingOtherPersonsBehavior)}
+-
+it could be
+it doesn't necessarily lead you to taking action
+it's experienced during observation
+gloss:{possibly:yes,necessarily:no}
+
+17)is it similar to surprised?
+gloss:{similar(e,surprise)}
+-
+yes
+gloss:{yes}
+
+18)is it surprised?
+gloss:{e==surprise}
+-
+no (i think that should count as one question though because i would have told you after 17 if it was)
+gloss:{no,moderation}
+
+18)is it astonished?
+gloss:{e==astonishment}
+-
+that is ridiculously close
+but it doesn't have to be sudden
+gloss:{no,close,hint}
+
+19)amazed?
+gloss:{e==amazement}
+-
+it's a synonym
+so i'll give it to you but you can guess the right word if you want
+gloss:{no,synonym}
+
+20)astounded?
+gloss:{e==astounded}
+-
+you were closer with amazed
+here is a very abstract hint
+there are two words that mean the opposite thing
+and they both start with this word
+gloss:{no,hint}
+
+so what was it??
+i don;t know :-(
+gloss:{giveup}
+-
+... awe
+gloss:{answer,done}
+
+end:"2011-03-03 16:42:16", emotion:awe, questions:22, outcome:failure/giveup/over20
+
+####################################################################
+file:"2011-03-03 user3@ark.usc.edu - user17@ark.usc.edu.log"
+####################################################################
+
+match:1, answerer:user3, questioner:user17, start:"2011-03-03 15:48:05"
+
+would you feel it in a bad situation?
+gloss:{situation(e,bad)}
+-
+yes
+gloss:{yes}
+
+would you feel it if someonw got sick?
+gloss:{situation(e,sick(otherPerson))}
+-
+no
+gloss:{no}
+
+is it less intense than that?
+gloss:{e.activation<situation(e,sick(otherPerson))}
+-
+no
+gloss:{no}
+
+would you feel it if someone was unfair to you?
+gloss:{situation(e,beUnfairTo(otherPerson,self))}
+-
+no
+gloss:{no}
+
+would you feel it if someone died?
+gloss:{situation(e,otherPersonDied)}
+-
+no
+gloss:{no}
+
+can you express it in an obvious way?
+gloss:{hasExternalExpression(e)}
+-
+no
+gloss:{no}
+
+can you feel it internally?
+gloss:{hasInternalExpression(e)}
+-
+yes
+gloss:{yes}
+
+do you feel it if you have done something bad to someone?
+gloss:{situation(e,self.doneSomethingBadTo(otherPerson))}
+-
+no
+gloss:{no}
+
+is it highly intense?
+gloss:{e.activation==high}
+-
+no
+gloss:{no}
+
+is it moderate?
+gloss:{e.activation==moderate}
+-
+yes
+(to me, but not sure if yes to others. so it's more like subjective)
+gloss:{yes,subjective,hint}
+
+would you feel it if you had a user13 the next day?
+gloss:{situation(e,futureTest)}
+-
+no
+(but can do after the user13.)
+gloss:{no,hint}
+
+dissapointed?
+gloss:{e==disappointment}
+-
+close,but no
+gloss:{no,close}
+
+is it more intense than that?
+gloss:{e.activation>disappointment.activation}
+-
+no
+gloss:{no}
+
+embarrassment?
+gloss:{e==embarrassment}
+-
+oh very close, but no
+gloss:{no,close}
+
+shame?
+gloss:{e==shame}
+-
+yess!!!!
+u r geius
+good good
+*genius, I mean
+gloss:{yes,done,cheer}
+
+end:"2011-03-03 16:02:54", emotion:shame, questions:15, outcome:success
+
+
+match:2, answerer:user17, questioner:user3, start:"2011-03-03 16:03:02"
+
+positive?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it feeling toward yourself?
+gloss:{directed(e,self)}
+-
+not necessarily
+gloss:{necessarily:no,possibly:yes}
+
+highly activated?
+gloss:{e.activation==high}
+-
+yes
+gloss:{yes}
+
+close to excited?
+gloss:{similar(e,excited)}
+-
+yes
+gloss:{yes}
+
+excited?
+gloss:{e==excited}
+- 
+no
+gloss:{no}
+
+happy?
+gloss:{e==happiness}
+-
+no, excited was more close
+gloss:{no,hint}
+
+close to surprised?
+gloss:{similar(e,surprise)}
+-
+no
+you could be surprised first and then feel that
+(but it is not necessary)
+actually excited was very close
+gloss:{no,hint}
+
+joyful?
+gloss:{e==joy}
+-
+it's more intense than joyful
+you could feel joyful in the same time
+gloss:{no,hint}
+
+flatterred?
+gloss:{e==flattered}
+-
+no
+gloss:{no}
+
+oh amazement?
+gloss:{e==amazement}
+-
+not amazement
+you feel it when you expect something to happen
+gloss:{no,hint}
+
+umm
+optimism?
+gloss:{e==optimism}
+-
+mmmm no
+gloss:{no}
+
+hope?
+gloss:{e==hope}
+-
+well, it's more sure that something will happen
+so you are not hoping
+you look forwrd to it
+*forward
+gloss:{no,hint}
+
+enthralled?
+gloss:{e==enthralled}
+-
+maybe a little bit less intense than enthralled
+gloss:{no,hint}
+
+thrilled?
+gloss:{e==thrill}
+-
+very close
+gloss:{no,close}
+
+delighted?
+gloss:{e==delight}
+-
+you are very close
+it is basically like a synonym
+delighted is something that is not really expressed
+what I am thinking may be expressed by nods or body movements
+gloss:{no,close,synonym,hint}
+
+i think u can tell me. hehe
+gloss:{giveup}
+-
+(well the thing is that it has a greek root I think)
+(but it is very well-known english word)
+gloss:{hint}
+
+overjoyed?
+gloss:{e==overjoyed}
+-
+mmmm very close
+gloss:{no,close}
+
+satisfaction?
+gloss:{e==satisfaction}
+-
+I am sorry, because I thought it was an easy one, but it turns out not that easy
+no
+gloss:{no,cheer}
+
+euphoria?
+gloss:{e==euphoria}
+-
+no
+it's more close to thrilled and delighted
+but you can feel ephoria at the same time
+gloss:{no,hint}
+
+ecstasy?
+gloss:{e==ecstacy}
+-
+no
+less intense than that
+you would feel it if you went tomorrow for vacations
+gloss:{no,hint}
+
+pleased?
+gloss:{e==pleased}
+-
+no, more intense
+gloss:{no,hint}
+
+i already over 20
+we can stop here
+what was the answer?
+i may have to take GRE again. hahahaha
+gloss:{giveup}
+-
+enthousiasm
+gloss:{answer,done}
+
+end:"2011-03-03 16:46:51", emotion:enthusiasm, questions:22, outcome:failure/giveup/over20
+
+
+
+######################################################################
+file:"2011-03-03 user14.emo20q.r1@ark.usc.edu - user10@ark.usc.edu.log"
+######################################################################
+
+match:1, answerer:user14, questioner:user10, start:"2011-03-03 16:08:51"
+
+is it positive?
+gloss:{e.activation==positive}
+-
+yes
+gloss:{yes}
+
+is it active?
+gloss:{e.activation==high}
+-
+I think it could be, but not extremely
+lets say medium
+gloss:{yes,hedge,possibly:yes,necessarily:no,hint}
+
+is it content?
+gloss:{e==contentment}
+-
+no
+gloss:{no}
+
+is it pleased?
+gloss:{e==pleased}
+-
+no
+gloss:{no}
+
+is it amused?
+gloss:{e==amusement}
+-
+no
+gloss:{no}
+
+is it pride?
+gloss:{e==pride}
+-
+no, that's 6
+gloss:{no,status}
+
+I have no idea... I am terrible at these games...
+does it have anything to do with the attainment of goals?
+gloss:{situation(e,goalAttainment)}
+-
+aha, yes, good one.
+youre not terrible, just your strategy  :-P
+gloss:{yes,cheer,jeer}
+
+is it satisfied?
+gloss:{e==satisfaction}
+-
+no, less about after attainment, and more about before attainment
+gloss:{no,hint}
+
+is it hope?
+gloss:{e==hope}
+-
+no
+gloss:{no}
+
+optimism?
+gloss:{e==optimism}
+-
+no, but right direction
+gloss:{no,hint,close}
+
+eagerness?
+gloss:{e==eagerness}
+-
+no
+gloss:{no}
+
+Enthusiasm
+gloss:{e==enthusiasm}
+-
+no, a little less active
+gloss:{no,hint}
+
+excitement?
+gloss:{e==excitement}
+-
+no, it's got more of the attainment of goals, but not necessarily a specific goal
+gloss:{no,hint}
+
+accomplished?
+gloss:{e==accomplished}
+-
+no, but closely related with accomplished.
+the more accomplished you are, the more you will feel this emotion...
+gloss:{no,close,hint}
+
+fulfilled?
+gloss:{e==fulfillment}
+-
+no
+the more you feel this emotion, the more likely you will undertake and accomplish stuff
+gloss:{no,hint}
+
+confident?
+gloss:{e==confidence}
+-
+aha!
+yes
+gloss:{yes,done,cheer}
+
+end:"2011-03-03 16:31:49", emotion:confidence, questions:17, outcome:success
+
+
+match:2, answerer:user10, questioner:user14, start:"2011-03-03 16:33:02"
+
+
+do you feel this spontaneously?
+as opposed to being caused by something external..
+gloss:{cause(emptySet,e)}
+-
+then no, it is not spontaneous
+gloss:{no}
+
+can it be caused by another person?
+gloss:{cause(otherPerson,e)}
+-
+yes
+gloss:{yes}
+
+is it necessarily caused by another person?
+gloss:{necessarily(cause(otherPerson,e))}
+-
+not necessarily
+gloss:{no}
+
+is it positive?
+gloss:{e.valence==positive}
+-
+generally
+gloss:{generally:yes}
+
+can it be directed at another person?
+gloss:{directed(e,otherPerson)}
+-
+not really
+gloss:{no,hedge}
+
+is the emotion short in duration?
+gloss:{e.duration==short}
+-
+it depend
+gloss:{indeterminant}
+
+pleased?
+gloss:{e==pleased}
+-
+nope
+gloss:{no}
+
+amused?
+gloss:{e==amusement}
+-
+nope
+gloss:{no}
+
+is it close to amused?
+gloss:{similar(e,amused)}
+-
+nope
+gloss:{no}
+
+is it a strong emotion?
+gloss:{e.activation==high}
+-
+yes
+gloss:{yes}
+
+surprised?
+gloss:{e==surprise}
+-
+nope
+gloss:{no}
+
+impressed?
+gloss:{e==impressed}
+-
+nope
+gloss:{no}
+
+doh, I'm not confident any more ...
+is it related to goals?
+gloss:{situation(e,goals)}
+-
+it can be... it is a reaction to events
+(where goals and people are a subset of events)
+gloss:{possibly:yes,necessarily:no,hint}
+
+hmmm
+relieved?
+gloss:{e==relief}
+-
+yes!
+haha... good job
+gloss:{yes,done,cheer}
+
+end:"2011-03-03 16:52:47", emotion:relief, questions:14, outcome:success
+
+###########################################################
+file:"2011-03-06 user15@ark.usc.edu - user7@ark.usc.edu.log"
+###########################################################
+
+
+match:1, answerer:user7, questioner:user15, start:"2011-03-06 16:54:33"
+
+1) does the emotion have positive connotations?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+2) so is it a negative emotion?
+gloss:{e.valence==negative}
+-
+sort of, but it can be righteous
+gloss:{yes,hedge,hint}
+
+3) is it an everyday occurring emotion?
+gloss:{e.frequency==regularly}
+-
+sometimes
+gloss:{possibly:yes,necessarily:no}
+
+4) is it associated with being sad?
+gloss:{situation(e,sadness)}
+-
+no
+gloss:{no}
+
+5) is it a personality attribute, as in you could describe someone with this word?
+gloss:{personalityTrait(e)}
+-
+no
+gloss:{no}
+
+6) would i feel this emotion if i stubbed my toe?
+gloss:{situation(e,stubbedToe)}
+-
+YES!!!
+gloss:{yes,cheer}
+
+7) is it associated with having a bad day?
+gloss:{situation(e,badDay)}
+-
+yes
+gloss:{yes}
+
+actually I feel fairly confident I know what it is.... is it anger?
+gloss:{e==anger}
+-
+it is a synonym for anger
+the word i was thinking was mad, so we'll count that. then we can start with yoy chosing a word
+gloss:{yes,close,synonym,done}
+
+end:"2011-03-06 17:18:50", emotion:mad/anger, questions:8, outcome:success/synonym
+
+
+match:2, answerer:user15, questioner:user7, start:"2011-03-06 17:18:50"
+
+is it a positive or negative emtion?
+gloss:{e.valence==positive}
+-
+negative
+gloss:{no}
+
+Is it often felt in the course of a day?
+gloss:{e.frequency>daily}
+-
+perhaps
+gloss:{indeterminate}
+
+is it ever agood emotion?
+gloss:{possible(good(e))}
+-
+no
+but it's not considered the worst kind of emotion either
+gloss:{no,hint}
+
+can it be harmful to the person feeling it?
+gloss:{cause(e,harmToSelf)}
+-
+yes it could cause them to make poor decisions
+gloss:{yes,hint}
+
+yes.  mynext question is can it harm anyone besides the feeler?
+gloss:{cause(e,harmToOther)}
+-
+no...not as a direct effect at least
+gloss:{no,clarification}
+
+i dont' know if this is a valid question, but does it start with the letter D?
+gloss:{spelling=~/^d/}
+-
+no
+gloss:{no}
+
+damn.  does the person have any control over this emotion?
+gloss:{control(self,e)}
+-
+I don't think so
+gloss:{no,hedge}
+
+do children feel this emotion?
+gloss:{experience(e,children)}
+-
+yes, probably more frequently than adults
+gloss:{yes,hint}
+
+do adults usually try to discourage children from feeling this?
+gloss:{try(adults,cause(adults,not(experience(e,children))))}
+-
+yes, perhaps through explanation
+gloss:{yes,explanation}
+
+is it common in most children?
+gloss:{common(e,most(children))}
+-
+yes...but it's not something you associate with bad or naughty kids
+gloss:{yes,explanation}
+
+I think I know, but I'll ask one more question...does it ever cause children to wake up and cry?
+gloss:{cause(e,wakeUp(chidren)&&cry(children))}
+-
+no
+gloss:{no}
+
+Are they scared when they feel it?
+gloss:{situation(e,scared(children))}
+-
+in most scenarios probably not
+gloss:{probably:no}
+
+is it a socially acceptable emotion, say, at a birthday party?
+gloss:{situation(e,birthday)}
+-
+I don't think it's relevant in that context. Adults experience this emotion too
+any guesses? i guess it's a tough one
+gloss:{notRelevant,hint}
+
+I guess hatred
+gloss:{e==hatred}
+-
+nope. do i reveal it now?
+gloss:{no}
+
+is it a shameful feeling?
+gloss:{subset(e,shame)}
+-
+no
+gloss:{no}
+
+I didn't see that answer.  is it rage?
+gloss:{e==rage}
+-
+no
+give up?
+gloss:{no,jeer}
+
+is it frustration?
+gloss:{e==frustration}
+-
+not exactly, but I would say that frustration is very related to this feeling
+gloss:{no,hedge,close}
+
+uncle.  you win.
+gloss:{giveup}
+-
+okay..the word is confused or confusion
+gloss:{answer,done}
+
+end:"2011-03-06 18:03:45", emotion:confusion, questions:18, outcome:failure/giveup
+
+###########################################################
+file:"2011-04-26 user14.emo20q.r1@ark.usc.edu - user20@ark.usc.edu.log"
+###########################################################
+
+match:1, answerer:user14.emo20q.r1, questioner:user20, start:"2011-04-26 19:26:23"
+
+ok. Q1. Is it a hot emotion?
+gloss:{e.temperature==hot}
+-
+not really
+gloss:{no,hedge}
+
+Q2. Is it neutral
+gloss:{e==neutral}
+-
+no
+gloss:{no}
+
+Q3. Is it a happy emotion?
+gloss:{subset(e,happy)}
+-
+no
+gloss:{no}
+
+Q4. Is it a sad emotion?
+gloss:{subset(e,sadness)}
+-
+yes
+gloss:{yes}
+
+Q5. Does this emotion involve a verbal outburst or utterance?
+gloss:{behavior(e,verbal)}
+-
+not necessarily
+gloss:{necessarily:no,possibly:yes}
+
+Q6. Is this emotion remorseful?
+gloss:{e==remorse}
+-
+no
+gloss:{no}
+
+7. Is this emotion sadness?
+gloss:{e==sadness}
+-
+ding ding ding!  Yes  :-) 
+gloss:{yes,cheer,done}
+
+end:"2011-04-26 19:36:38", emotion:sadness, questions:7, outcome:success
+
+
+match:2, answerer:user20, questioner:user14.emo20q.r1, start:"2011-04-26 19:50:16"
+
+lets see... is it similar to happiness?
+gloss:{similar(e,happiness)}
+-
+yes
+gloss:{yes}
+
+is it happiness?
+gloss:{e==happiness}
+-
+no
+gloss:{no}
+
+okay... 3) is it a strong emotion?
+gloss:{e.activation==high}
+-
+yes
+gloss:{yes}
+
+is it long lasting?
+gloss:{e.duration==long}
+-
+mostly not
+gloss:{no,hedge}
+
+is it humor?
+gloss:{e==humor}
+-
+no
+gloss:{no}
+
+6) is it joy?
+gloss:{e==joy}
+-
+no
+gloss:{no}
+
+7) is it directed at another person?
+gloss:{directed(e,otherPerson)}
+-
+not necessarily
+gloss:{necessarily:no,possibly:yes}
+
+is it something that you feel often?
+8
+gloss:{e.frequency==regularly}
+-
+no in general
+gloss:{generally:no}
+
+extatic?
+gloss:{e==extatic}
+-
+no
+gloss:{no}
+
+9) excited
+gloss:{e==excited}
+-
+no
+gloss:{no}
+
+is it something unexpected?
+gloss:{unexpected(e)}
+-
+mostly
+gloss:{yes,hedge}
+
+11) is it going to be difficult to guess?
+gloss:{difficult(e)}
+-
+:) not sure, maybe - you were very close. It is a synonym of something you mentioned earlier
+gloss:{unsure,hint}
+
+glad?
+gloss:{e==gladness}
+-
+no
+gloss:{no}
+
+13) overjoyed?
+gloss:{e==overjoyed}
+-
+no....similar though
+gloss:{no,close,hint}
+
+14) jubilant?
+gloss:{e==jubilant}
+-
+no
+very close
+gloss:{no,close,hint}
+
+15) Euphoric?
+gloss:{e==euphoria}
+-
+no
+gloss:{no}
+
+16 thrilled?
+gloss:{e==thrill}
+-
+sorry
+no
+yeah i can quickly see the problem with this
+there are many synonyms for some emotions so it can get pretty difficult
+gloss:{no,pity}
+
+what was the closest so far?
+gloss:{non-yes-no}
+-
+Ecstatic, euphoric
+gloss:{non-yes-no}
+
+delight?
+gloss:{e==delight}
+-
+no
+think TV
+gloss:{no,hint}
+
+lets see... silly?
+gloss:{e==silly}
+-
+no
+gloss:{no}
+
+hyper?
+gloss:{e==hyper}
+-
+no
+gloss:{no}
+
+surprise?
+gloss:{e==surprise}
+-
+no
+gloss:{no}
+
+sexy?
+gloss:{e==sexy}
+-
+no
+want me to spill it? i guess it was tough.
+gloss:{no,pity}
+
+enthusiastic?
+gloss:{e==enthusiasm}
+-
+sorry
+no
+gloss:{no,pity}
+
+yep, I think I went over  :'-(
+gloss:{non-yes-no}
+-
+it was glee/gleeful
+gloss:{done}
+
+end:"2011-04-26 19:36:38", emotion:glee, questions:26, outcome:failure/giveup/over20
+
+
+
+###########################################################
+file:"2011-04-26 user15@ark.usc.edu - user17@ark.usc.edu.log"
+###########################################################
+
+match:1, answerer:user17, questioner:user15, start:"2011-04-26 19:09:29"
+
+1) does the emotion have negative connotations?
+gloss:{e.valence==negative}
+-
+no!
+gloss:{no}
+
+2) is it a common, everyday emotion to experience?
+gloss:{e.frequency==regularly}
+-
+yes, it's common, but maybe not everyday
+gloss:{yes,hedge}
+
+3) is it a positive emotion?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+3) is one more likely to experience it on a sunny day?
+woops, that's question 4
+gloss:{situation(e,sunnyDay)}
+-
+if you like sun very very much
+then yes it is possible
+gloss:{yes,hedge}
+
+5) are people experiencing this emotion pleasant to be around?
+gloss:{pleasant(experiencer(e))}
+-
+yes
+gloss:{yes}
+
+6) is it associated with optimism?
+gloss:{associated(e,optimism)}
+-
+not that much
+it is more associated with a situation that has happenned
+** correction for question6: you may feel this emotion also when you are waiting for something, not only if something has happenned
+gloss:{no,hedge,hint}
+
+7) is it synonymous with joy?
+gloss:{synonym(e,joy)}
+-
+you are joyful when you feel it
+gloss:{no,hint}
+
+8) are some people more predisposed to feel it? for example, is it more of a personality trait?
+gloss:{personalityTrait(e)}
+-
+no, it is more spontaneous
+gloss:{no,hint}
+
+okay, then I'll take a crack at it: is it happiness?
+gloss:{e==happiness}
+-
+you are close
+you can be happy for a long period of time
+but you can feel this emotion more temporarily
+gloss:{no,close,hint}
+
+10) does one feel this after accomplishing something successfully?
+gloss:{after(e,accomplishingSomethingSuccessfully)}
+-
+yes
+but this is not the only case
+you can feel that also when you are waiting for something nice to happen
+gloss:{yes,hedge,hint}
+
+11) is it directed toward another person?
+gloss:{directed(e,otherPerson)}
+-
+no
+not necessarily at least
+gloss:{no,hedge}
+
+12) is it a euphoric feeling?
+gloss:{euphoric(e)}
+-
+yes it is!
+you are very close!
+gloss:{yes,close}
+
+is it "excitement"?
+gloss:{e==excitement}
+-
+YESSSSS!!!!!!
+:):)
+congrats!!!!
+gloss:{yes,cheer,done}
+
+end:"2011-04-26 19:32:08", emotion:excitement, questions:13, outcome:success
+
+
+match:2, answerer:user15, questioner:user17, start:"2011-04-26 19:32:15"
+
+1)positive or negative?
+gloss:{non-yes-no}
+-
+negative
+gloss:{non-yes-no}
+
+2)do you feel it if you have done poorly at an exam?
+gloss:{situation(e,doPoorlyOnExam)}
+-
+perhaps, but it wouldn't be your primary emotion
+gloss:{possibly:yes,primarily:no,hedge}
+
+3) is it a strong emotion?
+gloss:{e.activation==high}
+-
+yes it's usually very strong
+gloss:{yes,certainty}
+
+4) would you feel it if someone close to you had died?
+gloss:{situation(e,someoneCloseDied)}
+-
+no
+probably not at least, although i could envision a scenario in which you would
+gloss:{no,probably,hedge}
+
+5) would you feel it if your car was stolen?
+gloss:{situation(e,carStolen)}
+-
+it would depend on the context
+if the thief were present, then maybe
+gloss:{depends,hint}
+
+6)angry?
+gloss:{e==anger}
+-
+no
+gloss:{no}
+
+7) would you feel it if you were in a bad neighborhood during the night?
+gloss:{situation(e,badNeighborhoodAtNight)}
+-
+yes
+gloss:{yes}
+
+8)scared?
+gloss:{e==scared}
+-
+yes! well, the word i had in mind was "fear" but being scared is a product of that
+gloss:{yes,synonym,done}
+
+end:"2011-04-26 19:41:19", emotion:fear/scared, questions:8, outcome:success/synonym
+
+
+###########################################################
+file:"2011-04-27 user23@ark.usc.edu - user19@ark.usc.edu.log"
+###########################################################
+
+match:1, answerer:user19, questioner:user23, start:"2011-04-27 15:08:35"
+
+is it a positive emotion?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it a subtle positive or more activated?
+gloss:{non-yes-no}
+-
+more activated
+gloss:{non-yes-no}
+
+is it more like excited or more like happy?
+gloss:{non-yes-no}
+-
+more like excited
+gloss:{non-yes-no}
+
+is it a word that you would use to describe to others when you experience such an emotion..for example "i am really XXXX"..or is it more like a word you talk to yourself 'hmm..i am feeling xxxx"
+gloss:{non-yes-no}
+-
+to answer the first question, no
+and for the second, yes
+although, i have to say, it's not so easy to decide...
+gloss:{non-yes-no}
+
+does your heat beating fast when experiencing such an emotion?
+gloss:{behavior(e,heartBeatingFast)}
+-
+yesss
+gloss:{yes}
+
+is it a common emotion that people would feel on a fairly regular basis?
+gloss:{e.frequency==regularly}
+-
+well
+i'd say yes
+well wait sorry
+probably not
+no
+gloss:{unsure}
+
+is it expressed more verbally (like laughing) or more nonverbally (like smiling)?
+gloss:{non-yes-no,behavior(e,verbal)}
+-
+to the first, no. to the second yes. (so more nonverbally)
+(though that one is tough to say as well)
+gloss:{no,non-yes-no}
+
+is it ecstatic?
+gloss:{e==ecstasy}
+-
+no
+gloss:{no}
+
+is it closer to amazed than excited?
+gloss:{similarity(e,amazed)>similarity(e,excited)}
+-
+no
+gloss:{no}
+
+is it something like "this is wonderful"
+gloss:{similar(e,thisIsWonderful)}
+-
+yes
+gloss:{yes}
+
+is it awesome?
+haha..
+gloss:{e==awesome,joke}
+-
+hehe
+no... but close
+gloss:{no,close,joke}
+
+it is phenomenal?
+is it*
+gloss:{e==phenomenal}
+-
+no
+gloss:{no}
+
+is it closer to "awesome" than to "excited"?
+gloss:{similarity(e,awesome)>similarity(e,excited)}
+-
+no
+gloss:{no}
+
+is it something like eager?
+gloss:{similar(e,eager)}
+-
+no
+gloss:{no}
+
+do you experience it more because of some other things happen not relating to you directly (meaning compared to when you do something for yourself and then you feel that way)
+gloss:{cause(externalThings,e)}
+-
+no
+gloss:{no}
+
+is it like energetic?
+gloss:{similar(e,energetic)}
+-
+ah...hmmmm....
+i guess i have to say no...
+gloss:{no,uncertain}
+
+the reason that you say "no" is it because "energetic" is not "positive" enough(compared to not "activated")
+gloss:{meta-question-head-explodes}
+-
+no
+gloss:{no}
+
+is it usually more activated than "excited"?
+gloss:{usually(e.activation>excited.activation)}
+-
+that's a hard one
+i'd say yes
+gloss:{yes,difficult}
+
+ok i'll just do random guess
+remarkable?
+gloss:{e==remarkable}
+-
+you're pretty close man
+don't give up
+no
+gloss:{no,cheer,pity}
+
+spectacular
+gloss:{e==spectacular}
+-
+no
+gloss:{no}
+
+terrific
+gloss:{e==terrific}
+-
+no
+gloss:{no}
+
+:-(
+gloss:{non-yes-no}
+-
+well, i think it's 20
+the emotion was....
+thrilled 
+gloss:{e==thrill,non-yes-no,done}
+
+end:"2011-04-27 16:09:05", emotion:thrill, questions:22, outcome:failure/over20
+
+
+match:2, answerer:user23, questioner:user19, start:"2011-04-27 16:09:51"
+
+is it a positive emotion?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+if you had to say the emotion was a colour, would you say it is more like red than blue?
+gloss:{similarity(e,red)>similarity(e,blue)}
+-
+blue
+gloss:{no,non-yes-no}
+
+is a person who experiences this emotion less likely to spring into action to do something about this emotion?
+(weird question0
+gloss:{behavior(e,action)}
+-
+do something about this emotion?..what do you mean by that?
+i dont get the question ...ha..so answer would be..i dont know..probably more no
+gloss:{no,uncertain}
+
+yeah i was trying to reformulate it...
+something like
+is a person experiencing this emotion less likely to get off there but and take measures to improve their condition
+there -> their
+but -> butt
+gloss:{behavior(e,actionToImproveCondition)}
+-
+it really depends..but i would say more often yes
+gloss:{yes,depends}
+
+is a long lasting emotion?
+is it a ...
+gloss:{e.duration==long}
+-
+yes it can be
+gloss:{yes,possibly}
+
+if you had to choose, would you say it is more of a calm emotion than a violent emotion?
+gloss:{e.activation==low}
+-
+this is hard to choose...if i really had to choose without trying to clarify it...i would say calm
+gloss:{yes,difficult,non-yes-no}
+
+is it depressed?
+gloss:{e==depression}
+-
+no
+but close
+gloss:{no,close}
+
+is it bored?
+gloss:{e==boredom}
+-
+no
+gloss:{no}
+
+is it missing a person?
+gloss:{e==missingSomeone}
+-
+missing a person?..ok..i'll have to interpret that myself..yeah..it can be..
+ok i'll say yes for that one then
+gloss:{yes,uncertain}
+
+i can rephrase, i think: longing
+is it longing?
+gloss:{e==longing}
+-
+nope
+gloss:{no}
+
+is the emotion felt in relation to another person?
+gloss:{assocated(e,otherPerson)}
+-
+yes it can be...
+you were really close earlier~
+gloss:{yes,possibly,hint}
+
+i feel like i need to narrow it down just a little bit more...
+is it an emotion that is usually hidden from others? (vs. usually expressed to others)
+gloss:{usually(hiddenFromOthers(e))}
+-
+expressed to others
+gloss:{no,non-yes-no}
+
+is it sadness?
+gloss:{e==sadness}
+-
+no
+gloss:{no}
+
+is it worry i.e. being worried?
+gloss:{e==worry}
+-
+no
+gloss:{no}
+
+is it being homesick?
+gloss:{e==homesick}
+-
+nono
+gloss:{no}
+
+is it an emotion people experience every day?
+gloss:{e.frequency==regularly}
+-
+no
+gloss:{no}
+
+is it melancholic?
+gloss:{e==melancholy}
+-
+i guess that's close enough:)
+gloss:{yes,close}
+
+yeah?
+what is it?
+gloss:{non-yes-no,giveup}
+-
+devastated
+gloss:{non-yes-no,done}
+
+end:"2011-04-27 16:40:47", emotion:devastation, questions:18, outcome:failure/giveup, note:{debated}
+
+
+###########################################################
+file:"2011-04-27 user26@ark.usc.edu - user12@ark.usc.edu.log"
+###########################################################
+
+match:1, answerer:user26, questioner:user12, start:"2011-04-27 10:15:37"
+
+is it negative?
+gloss:{e.valence==negative}
+-
+yes
+in general
+gloss:{yes,generally}
+
+does it include active body movement?
+gloss:{behavior(e,bodyMovement)}
+-
+it could but not necessarily
+gloss:{possibly:yes,necessarily:no}
+
+is it initiated from other people?
+can someone else cause that emotion?
+gloss:{can(cause(otherPerson,e))}
+-
+yes
+gloss:{yes}
+
+can that emotion arise without any initiation (or happenings)?
+gloss:{can(cause(emptySet,e))}
+-
+yes
+but typically i would think it is cause by external events
+gloss:{yes,hint}
+
+is it a feeling that if someone intentionally hit you?
+gloss:{situation(e,somebodyHitYou)}
+-
+no
+gloss:{no}
+
+is it a feeling that you ate something bad?
+gloss:{situation(e,ateSomethingBad)}
+-
+no
+eating something bad isn't really an emotion
+gloss:{no,hint}
+
+Would I feel the emotion when I got F in the exam?
+gloss:{situation(e,getFOnExam)}
+-
+yes
+you could
+gloss:{yes,possibly}
+
+is it sad?
+gloss:{e==sadness}
+-
+no
+gloss:{no}
+
+is it frustrated?
+gloss:{e==frustration}
+-
+no
+gloss:{no}
+
+is it angry?
+gloss:{e==anger}
+-
+no
+gloss:{no}
+
+is it something related to unsatisfaction?
+gloss:{associated(e,unsatisfaction)}
+-
+no
+it doesn't really have to do with how you feel about the current situation
+gloss:{no,hint}
+
+is it toward people?
+gloss:{directed(e,otherPeople)}
+-
+no
+it is more inward
+but it could be felt about people
+gloss:{no,explanation,hint}
+
+is it anxiety?
+gloss:{e==anxiety}
+-
+no
+not exactly
+but very close
+gloss:{no,close}
+
+is it worry?
+gloss:{e==worry}
+-
+yes
+you got it
+gloss:{yes,done}
+
+end:"2011-04-27 10:46:40", emotion:worry, questions:14, outcome:success
+
+
+match:2, answerer:user12, questioner:user26, start:"2011-04-27 10:47:00"
+
+would i feel this if my best friend died?
+gloss:{situation(e,bestFriendDied)}
+-
+yes
+gloss:{yes}
+
+is it sadness?
+gloss:{e==sadness}
+-
+not precisely
+little lighter than that (i guess)
+gloss:{no,hint}
+
+remorse?
+gloss:{e==remorse}
+-
+(I don't even know the word)
+gloss:{uncertain}
+
+would i feel this if i failed an exam?
+gloss:{situation(e,failExam)}
+-
+no....
+it's more outward
+gloss:{no,hint}
+
+would someone cry if they felt this?
+gloss:{behavior(e,crying)}
+-
+yes
+gloss:{yes}
+
+grief?
+gloss:{e==grief}
+-
+close.... but I think it's even more outward
+feeling toward someone who are experiencing a situation....
+gloss:{no,close,hint}
+
+sympathy
+?
+gloss:{e==sympathy}
+-
+i don't see any difference in terms of natural language description....
+so... yes...
+mine was pity
+gloss:{yes,done}
+
+end:"2011-04-27 10:58:58", emotion:pity/sympathy, questions:7, outcome:success/synonym
+
+
+###########################################################
+file:"2011-04-28 user5@ark.usc.edu - user21@ark.usc.edu.log"
+###########################################################
+
+match:1, answerer:user21, questioner:user5, start:"2011-04-28 15:25:22"
+
+1)is it positive or negative
+gloss:{non-yes-no}
+-
+negative
+gloss:{non-yes-no}
+
+is it low or high activated/
+gloss:{non-yes-no}
+-
+well, that's hard to say ...
+I would say low ...
+low is my answer
+gloss:{non-yes-no,difficult}
+
+3)is it directed towards another person?
+gloss:{directed(e,otherPerson)}
+-
+no
+gloss:{no}
+
+4)is it more about how one feels about himself?
+gloss:{directed(e,self)}
+-
+no
+not necessarily
+but could be ...
+gloss:{no,possibly:yes,necessarily:no}
+
+5)id it related to sth disappointing?
+*is
+gloss:{associated(e,disappointment)}
+-
+no
+not necessarily
+but could b
+be
+gloss:{no,possibly:yes,necessarily:no}
+
+is it related to being in physical pain?
+gloss:{associated(e,physicalPain)}
+-
+no
+gloss:{no}
+
+7)mentally tired or confused? (i have no idea about your verb...:-()
+gloss:{associated(e,mentallyTiredConfused)}
+-
+yes
+it can be
+more I would say, related to mentally tired
+gloss:{yes,possibly,hint}
+
+8)is it similar to frustration?
+gloss:{similar(e,frustration)}
+-
+by similar you mean ?
+synonym?
+no
+gloss:{no,clarification}
+
+in the sense that you would feel that of you were frustrated i guess...
+if you would feel that i mean...
+gloss:{non-yes-no,clarification}
+-
+well there can be a misunderstanding here ...
+it's not necessarily part of the frustration state
+it could be considered more to be a consequence 
+gloss:{non-yes-no,clarification}
+
+9)is it similar to distracted?
+gloss:{similar(e,distracted)}
+-
+no
+gloss:{no}
+
+10)similar to disappointed?
+gloss:{similar(e,disappointment)}
+-
+no
+gloss:{no}
+
+11)similar to bored?
+gloss:{similar(e,boredom)}
+-
+no
+gloss:{no}
+
+12)so would you feel like that after a long and difficult day at work
+gloss:{situation(e,after(longDifficultDayAtWork))}
+-
+no
+gloss:{no}
+
+13)then how about depressed?
+gloss:{e==depression}
+-
+it's not depressed ...
+I would say it is more like a symptom ...
+gloss:{no,hint}
+
+14) is it less severe that depressed, sth like melancholic (i hope that word exists in english)
+gloss:{e==melancholy}
+-
+( :P )
+It is melancholic ...
+gloss:{yes,done}
+
+end:"2011-04-28 15:52:28", emotion:melancholy, questions:14, outcome:success
+
+
+match:2, answerer:user5, questioner:user21, start:"2011-04-28 15:53:13"
+
+1) Is it a positive emotion?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+2) Is it a strong emotion?
+gloss:{e.activation==high}
+-
+yes
+gloss:{yes}
+
+3) Do you feel it when your team scores a goal?
+gloss:{situation(e,yourTeamScores)}
+-
+you could yes
+gloss:{yes,possibly}
+
+4) Do you feel it when you get your phd?
+gloss:{situation(e,getPhd)}
+-
+hmm not exactly... (but again one could)
+gloss:{no,possibly}
+
+5) Do you feel it when you get married (or at least you are supposed to feel it :P ) ?
+(when one gets married ... )
+( :P )
+gloss:{situation(e,getMarried)}
+-
+yes you do i suppose but the example with the team that you gave was the one that described it best
+(how can i know since i am not married???)
+gloss:{yes,hint}
+
+6) Is it enthusiastic?
+gloss:{e==enthusiastic}
+-
+no
+gloss:{no}
+
+7) Is it cheerful?
+gloss:{e==cheerfulness}
+-
+no it is stronger than that
+gloss:{no,hint}
+
+8) So, would you feel it if you are on drugs, e.g., LSD ?
+(if you were)
+gloss:{situation(e,onDrugs)}
+-
+hahaha how can i know??
+but yes i suppose if the drug was supposed to make you high/activated
+gloss:{yes,possibly}
+
+9) Is it euphoria?
+gloss:{e==euphoria}
+-
+hahahah no ithough to put that...but it was too greek ;-)
+gloss:{no,joke}
+
+10) Do you feel that when you get the drug "Exstasis" ?
+"Ecstasis"
+I meant ...
+gloss:{situation(e,ecstasyDrug)}
+-
+yes i would assume so
+yes
+gloss:{yes,hedge}
+
+11) Is it ecstatic?
+( :P )
+gloss:{e==ecstasy}
+-
+no
+but you are close maybe i should give it to you
+gloss:{no}
+
+Is it "exhilarated" ?
+12) Is is exhilarated?
+"it
+gloss:{e==exhilaration}
+-
+it has to do with sth sudden
+not exhilarated
+gloss:{no,hint}
+
+13) So is it closer to surprise?
+gloss:{similar(e,surprise)}
+-
+yes but a very good surprise
+(it could also affect physically like the drug)
+it is not necassarily a surprise though, its more that its sth sudden
+gloss:{yes,possibly,clarification,hint}
+
+14) Is it delirious?
+gloss:{e==delirium}
+-
+no but delirious is negative
+is more like mentally unstable
+gloss:{no,clarification}
+
+15) Is it entranced?
+(I cannot think of sth related to this sudden thing you mentioned ... )
+gloss:{e==entrancement}
+-
+no but let mw look it up to see if it is a synonym
+(my vocabul;ary is not that great, keep that in mind ;-))
+ok its really close
+you got it i think
+it was thrilled
+gloss:{no,uncertainty,yes,done}
+
+end:"2011-04-28 16:19:54", emotion:thrill/entrancement, questions:15, outcome:success/synonym
+
+
+###########################################################
+file:"2011-04-28 user3@ark.usc.edu - user24@ark.usc.edu.log"
+###########################################################
+
+match:1, answerer:user3, questioner:user24, start:"2011-04-28 15:23:20"
+
+is it positive emotion
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it associated with high energy and excitement
+gloss:{associated(e,highEnergy&&excitement)}
+-
+no
+opposite
+u did 2 questions
+gloss:{no,hint}
+
+do people feel that when they are helpless
+gloss:{situation(e,helpless)}
+-
+ummm.. I think so
+kind of
+gloss:{yes,uncertain,hedge}
+
+is it generally associated with a drooped down face and looking down :D
+gloss:{behavior(e,droopedFaceAndLookingDown)}
+-
+oh yeah
+gloss:{yes}
+
+is it being sad
+?
+gloss:{e==sadness}
+-
+no, but very similar
+sad for long time, you can think it as
+gloss:{no,close,hint}
+
+do people preparing for screening feel that at times
+?
+gloss:{situation(e,prepareForScreening)}
+-
+yes. but I think they may feel that when they feel after failing the screeening
+gloss:{yes,clarification}
+
+depression
+??
+gloss:{e==depression}
+-
+yes!!
+u r right!
+u r genius
+haha
+gloss:{yes,done,cheer}
+
+end:"2011-04-28 15:30:42", emotion:depression, questions:7, outcome:success
+
+
+match:2, answerer:user24, questioner:user3, start:"2011-04-28 15:30:47"
+
+1. is it positive emotion?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+2. would u feel this emotion when you broke up in relationship? 
+gloss:{situation(e,brokeUpRelationship)}
+-
+not that much i guess
+gloss:{no,hedge}
+
+3. oh. then it is not salient emotion, is it?
+gloss:{not(salent(e))}
+-
+it is not
+gloss:{yes}
+
+4. is it rather stationary emotional state than fluctuating?
+gloss:{stationary(e)}
+-
+well .. if u feel it for a while .. not over days
+gloss:{depends}
+
+umm. is it close to sadness?
+5
+gloss:{similar(e,sadness)}
+-
+well .. no that much
+but to an extent can lead to sadness
+gloss:{no,depends}
+
+6. would u in this emotional state when you have concern?
+gloss:{associated(e,haveConcern)}
+-
+yes
+gloss:{yes}
+
+anxiety?
+gloss:{e==anxiety}
+-
+yes!
+bulls eye
+gloss:{yes,done}
+
+end:"2011-04-28 15:38:10", emotion:anxiety, questions:7, outcome:success
+
+
+match:3, answerer:user3, questioner:user24, start:"2011-04-28 15:44:40"
+
+is it positive
+?
+gloss:{e.valence==positive}
+-
+umm
+i would say yes
+gloss:{yes,uncertain,hedge}
+
+can it lead to negative emotion
+gloss:{cause(e,negativeEmotion)}
+-
+yes
+i think so
+i think it depends on situation
+gloss:{yes,uncertain,depends}
+
+is it realted to outcome of some result
+gloss:{associated(e,outcomeOfResult)}
+-
+yes. very likely
+gloss:{yes}
+
+is it high energy
+gloss:{e.activation==high}
+-
+could be both yes and no
+gloss:{depends}
+
+is it very obviouson the face when someone has it
+obvious on
+gloss:{e.readabilty==obvious}
+-
+umm
+not as much as happiness, sadness, etc.
+but you can still read it in context
+gloss:{no,depends}
+
+did u feel that just before the screeing results were out
+gloss:{e&&pEvent(beforeScreeningResults)}
+-
+no
+it may be influenced by the results of others, so
+gloss:{no,hint}
+
+u felt it after the results
+?
+or can one feel it after such results
+?
+gloss:{(e&&pEvent(afterScreeningResults))||situation(e,afterScreeningResults)}
+-
+no. not this time, but yes for last time
+gloss:{yes,clarification}
+
+8 is it related to being determined
+or taking some sort of promise
+gloss:{associated(e,beingDeterminedOrTakingPromise)}
+-
+umm
+yes. it can be realted to both actually
+when result came out, mine is bad and yours is good. what emotion would I get?
+gloss:{yes,hint}
+
+9 is it close to being disappointed
+gloss:{similar(e,disappointment)}
+-
+close
+but, no
+gloss:{no,close}
+
+is it more close to being scared
+gloss:{similar(e,scared)}
+-
+no
+u r going far
+gloss:{no,hint}
+
+is ti close to being concerned
+gloss:{similar(e,concerned)}
+-
+no
+gloss:{no}
+
+12 is it close to being embarrassed
+gloss:{similar(e,embarrassment)}
+-
+no
+u may feel embarrased because ur result is not good
+but target emotion may follow that you saw the other person's result is good
+gloss:{no,hint}
+
+13 is it connected to jealously
+jealousy 
+gloss:{associated(e,jealously)}
+-
+no. but very close
+just different word with a bit less negative feeling
+gloss:{no,close}
+
+dislike for the other person
+?
+gloss:{e==dislikeForOtherPerson}
+-
+no.
+jeolous is almost right
+but
+a bit less negative meaning in it
+or you can think as almost synonym
+gloss:{no,hint}
+
+envy?
+gloss:{e==envy}
+-
+yes!
+u r genius
+gloss:{yes,done}
+
+end:"2011-04-28 16:03:53", emotion:envy, questions:15, outcome:success
+
+
+###########################################################
+file:"2011-04-28 user18@ark.usc.edu - user6@ark.usc.edu.log"
+###########################################################
+
+match:1, answerer:user6, questioner:user18, start:"2011-04-28 15:21:52"
+
+do you feel this way when you're frustrated?
+gloss:{cooccur(e,frustration)}
+-
+not necessarily
+You may feel like that or may not...it's not that related to frustration
+gloss:{no,depends}
+
+2. do you feel this way when you you do things you enjoy?
+gloss:{situation(e,doThingsYouEnjoy)}
+-
+Not necessarily, again!
+But most of the time
+gloss:{no,depends,usually}
+
+3. do you associate this emotion with femininity?
+gloss:{associated(e,femininity)}
+-
+no
+gloss:{no}
+
+4. do you feel this way when you're sad?
+gloss:{cooccur(e,sadness)}
+-
+generally yes, but not necessarily
+gloss:{yes,generally,notNecessarily}
+
+5. is this an emotion which is perceived positively in American society?
+gloss:{positivePerceptionInAmericanSociety(e)}
+-
+I think so, specially when compared to its opposite
+gloss:{yes}
+
+6. is this an emotion which some people seem to be incapapble of feeling?
+gloss:{forSome(p)(p.incapableOfFeeling(e))}
+-
+no
+gloss:{no}
+
+7. is this emotion associated with self esteem?
+gloss:{associated(e,selfEsteem)}
+-
+no
+gloss:{no}
+
+8. is this emotion associated with the ability to concentrate?
+gloss:{associated(e,abilityToConcentrate)}
+-
+yes
+gloss:{yes}
+
+9. is this emotion associated with distraction?
+gloss:{associated(e,distraction)}
+-
+yes to some extent
+gloss:{yes,hedge}
+
+10. is this emotion associated with level of interest in an activity?
+gloss:{associated(e,levelOfInterestInAnActivity)}
+-
+yes to some extent
+gloss:{yes,hedge}
+
+11. is this emotion associated with thoughtfulness?
+gloss:{associated(e,thoughtfulness)}
+-
+yes to some extent
+gloss:{yes,hedge}
+
+12. is this emotion associated with anticipation?
+gloss:{associated(e,anticipation)}
+-
+Not that much
+gloss:{no,hedge}
+
+13. focused?
+gloss:{e==focused}
+-
+not exactly, but you are close to it
+gloss:{no,hedge,close}
+
+reflective?
+gloss:{e==reflective}
+-
+not exactly, but it is related...focused was closer
+gloss:{no,close,hint}
+
+obsessive?
+gloss:{e==obsessive}
+-
+no, u got further
+gloss:{no,far,hint}
+
+15. begins with a consonant?
+gloss:{beginsWith(e.spelling,consonant)}
+-
+yes
+gloss:{yes}
+
+ends with ful?
+gloss:{endsWith(e.spelling,ful)}
+-
+no
+Do you want a hint?
+gloss:{no,offerHint}
+
+17. ends with ive?
+gloss:{endsWith(e.spelling,ive)}
+-
+no
+gloss:{no}
+
+18. ends with ness?
+gloss:{endsWith(e.spelling,ness)}
+-
+yes, the name with "ness", but the state is the associated adjective definitely
+It is associated with using a chemical substance
+gloss:{yes,clarification,hint}
+
+deliberateness?
+gloss:{e==deliberateness}
+-
+No, it is associated with alcohol
+gloss:{no,hint}
+
+drunkeness?
+gloss:{e==drunkeness}
+-
+NO! do you pay attention to my answers to questions you already asked?
+it's associated with NOT using a substance
+gloss:{no,hint}
+
+sobriety doesnt end with 'ness'
+gloss:{non-yes-no}
+-
+soberness
+gloss:{non-yes-no}
+
+end:"2011-04-28 16:37:04", emotion:soberness, questions:22, outcome:success
+
+
+###########################################################
+file:"2011-06-01 user14.emo20q.r1@ark.usc.edu - user11@ark.usc.edu.log"
+###########################################################
+
+match:1, answerer:user14.emo20q.r1, questioner:user11, start:"2011-06-01 18:25:26"
+
+Do you feel like this when you are at Disneyland?
+gloss:{situation(e,disney)}
+-
+no
+gloss:{no}
+
+Do you feel like this when you run over a dog with your car?
+gloss:{situation(e,runOverADog)}
+-
+possibly, yes
+gloss:{yes,possibly}
+
+Do you feel like this when someone cuts you in line?
+gloss:{situation(e,someoneCutsInLine)}
+-
+in general, no
+gloss:{no,generally}
+
+is it remorse?
+gloss:{e==remorse}
+-
+no
+gloss:{no}
+
+Do you feel like this when someone close to you dies?
+gloss:{situation(e,someoneCloseDied)}
+-
+not necessarily
+but you could I suppose
+gloss:{no,possibly}
+
+When you steal something from a friend (like when a kid steals a friends toy) do you feel like this?
+gloss:{situation(e,stealSomethingFromAFriend)}
+-
+I think so... I don't normally steal stuff from friends though ;-) 
+gloss:{yes,unsure,clarification}
+
+How about when a friend gets a brand new car that is much better than yours?
+gloss:{situation(e,friendGetsANewCarThatIsBetterThanYours)}
+-
+no
+gloss:{no}
+
+When you do an enjoyable activity do you feel like this at any point before, during or after?
+gloss:{situation(e,enjoyableActivity)}
+-
+no, it's not too typical of most enjoyable activities, though I can think of a few counter examples.
+gloss:{no,withExceptions}
+
+Do you feel like this when someone gives you a gift you were not expecting?
+gloss:{situation(e,receiveUnexpectedGift)}
+-
+no
+gloss:{no}
+
+There is a sound that does not let you sleep at night at your apartment do you feel like this in reaction to this noise?
+gloss:{situation(e,soundAtNight)}
+-
+yes
+gloss:{yes}
+
+is the feeling annoyed?
+gloss:{e==annoyance}
+-
+no
+gloss:{no}
+
+does waiting in line make you feel like this?
+gloss:{situation(e,waitingInLine)}
+-
+no not necessarily
+gloss:{no,notNecessarily}
+
+Something happens (a plate breaks) and there is nothing you can do about it do you feel like this in reaction to the situation?
+gloss:{situation(e,plateBreaks)}
+-
+in general, no.  But if the plate were very expensive and you were concerned about someone finding out (like the kid stealing), then maybe...
+gloss:{no,generally,explanation,withException}
+
+You are walking through South Central very late with your very expensive laptop and you see a stranger quickly moving towards you, do you feel like this when that happens/
+?
+if*
+gloss:{situation(e,inSouthCentralAtNightCarryingLaptopEncounterStranger)}
+-
+yes, that's getting close
+gloss:{yes,close}
+
+fear?
+gloss:{e==fear}
+-
+no, but close
+gloss:{no,close}
+
+you are about to find out if you got into USC you have the envelope in your hand do you feel like this right before you open the envelope?
+gloss:{situation(e,openingCollegeApplicationResultLetter)}
+-
+yes
+gloss:{yes}
+
+nervousness
+?
+gloss:{e==nervousness}
+-
+I think that's number 16
+no, that's a near synonym, but I think it's slightly different
+gloss:{no,close,hint}
+
+Do you feel like this when there is a big event coming up and you "cant wait" for it to happen
+gloss:{situation(e,bigEventComingUpYouCantWait)}
+-
+no, actually more the opposite... you don't want it to happen.
+gloss:{no,hint}
+
+how about anxious?
+is it the feeling?
+gloss:{e==anxiety}
+-
+yes, it's anxious... I think i'll count it, but that wasn't the exact word.  Do you know it?
+gloss:{yes,synonym,done}
+
+no what is it?
+gloss:{non-yes-no}
+-
+I was thinking of worried, but I think that this might be an example of two words that you can't really think of a difference.
+gloss:{non-yes-no}
+
+end:"2011-06-01 19:00:31", emotion:worry/anxiety, questions:18, outcome:success/synonym
+
+
+match:2, answerer:user11, questioner:user14.emo20q.r1, start:"2011-06-01 19:00:40"
+
+is it an emotion that makes you feel good?
+gloss:{cause(e,feelGood)}
+-
+no
+gloss:{no}
+
+would you feel this emotion if you did something stupid?
+gloss:{situation(e,doSomethingStupid)}
+-
+Yes
+gloss:{yes}
+
+is it regret?
+gloss:{e==regret}
+-
+yes, but that was too easy hahah
+lets go again
+gloss:{yes,done}
+
+end:"2011-06-01 19:05:44", emotion:regret, questions:3, outcome:success
+
+
+match:3, answerer:user11, questioner:user14.emo20q.r1, start:"2011-06-01 19:05:52"
+
+Okay, would you feel this emotion if you did something stupid?
+gloss:{situation(e,doSomethingStupid)}
+-
+no
+gloss:{no}
+
+is this an emotion associated with good karma?
+gloss:{associated(e,goodKarma)}
+-
+no
+gloss:{no}
+
+is it associated with bad karma?
+gloss:{associated(e,badKarma)}
+-
+no it doesnt really relate to karma 
+gloss:{no,hint}
+
+if you had to give the emotion a color from red to blue, would it be closer to red?
+gloss:{similarity(e,red)>similarity(e,blue)}
+-
+red
+yes
+gloss:{yes}
+
+hmmm.... would you feel this at disneyland?
+gloss:{situation(e,disney)}
+-
+no
+gloss:{no}
+
+How about standing in line at the grocery store?
+gloss:{situation(e,waitingInLine)}
+-
+no
+gloss:{no}
+
+Then when something goes well?
+gloss:{situation(e,somethingGoesWell)}
+-
+yes
+gloss:{yes}
+
+is it like satisfaction?
+(Am i allowed to ask that?)
+gloss:{similar(e,satisfaction)}
+-
+yes (and yes... it's a yes/no question)
+gloss:{yes}
+
+ok, do you feel it when you've made a great accomplishment?
+gloss:{situation(e,greatAccomplishment)}
+-
+yes
+gloss:{yes}
+
+how about when something good happens, just by chance
+gloss:{situation(e,somethingGoodHappensByChance)}
+-
+yes, that too
+gloss:{yes}
+
+is it happiness?
+gloss:{e==happiness}
+-
+aha... yes, you got it!
+gloss:{yes,done,cheer}
+
+end:"2011-06-06 18:31:45", emotion:happiness, questions:6, outcome:success
+
+
+match:2, answerer:user16, questioner:user14.emo20q.r1, start:"2011-06-06 18:32:04"
+
+is it an emotion that makes you feel good?
+gloss:{cause(e,feelGood)}
+-
+no
+gloss:{no}
+
+Do you feel it when something goes wrong?
+gloss:{situation(e,somethingGoesWrong)}
+-
+yes
+gloss:{yes}
+
+Is the something that goes wrong related to another person?
+gloss:{e&&assocated(somethingGoesWrong,otherPerson)}
+-
+yes, it can be (can I say more than "yes"?)
+gloss:{yes,possibly}
+
+So, when you feel bad due to this emotion, do you direct the bad feelings at yourself?
+gloss:{directed(e,self)}
+-
+yes
+gloss:{yes}
+
+is it embarrassment?
+gloss:{e==embarrassment}
+-
+no
+gloss:{no}
+
+how about guilt?
+gloss:{e==guilt}
+-
+no
+but in regards to your earlier question "do you feel it when something goes wrong," the answer is yes, but it's not necessarily when something has gone wrong
+gloss:{no,clarification}
+
+is it depression?
+gloss:{e==depression}
+-
+no
+gloss:{no}
+
+is it an emotion that lasts a long time?
+gloss:{e.duration==long}
+-
+it can, but not usually
+gloss:{no,possiblyButNotUsually}
+
+can it also be directed at another person?
+gloss:{directed(e,otherPerson)}
+-
+yes, but mostly kept to yourself
+gloss:{yes,possiblyButNotUsually}
+
+frustration?
+gloss:{e==frustration}
+-
+no
+gloss:{no}
+
+sadness?
+gloss:{e==sadness}
+-
+no
+gloss:{no}
+
+would you say it's a strong emotion?
+gloss:{e.activation==high}
+-
+yes
+gloss:{yes}
+
+is it stronger than being stressed out?
+gloss:{e.activation>stressedOut.activation}
+-
+no
+gloss:{no}
+
+is it close to being stressed out?
+gloss:{similar(e,stressedOut)}
+-
+yes
+gloss:{yes}
+
+is it "stressed out"
+?
+gloss:{e==stressedOut}
+-
+almost
+gloss:{no,close}
+
+anxious?
+gloss:{e==anxiety}
+-
+yea!
+gloss:{yes,done}
+
+end:"2011-06-06 19:04:13", emotion:anxiety, questions:17, outcome:success
+
+
+match:3, answerer:user14.emo20q.r1, questioner:user16, start:"2011-06-06 19:05:02"
+
+ok, is it a good feeling?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+can it be caused by other people disappointing you?
+gloss:{cause(e,disappointmentByOtherPeople)}
+-
+yes, it could
+gloss:{yes,possibly}
+
+can it also be caused by disappointment in yourself?
+gloss:{cause(e,disappointmentInSelf)}
+-
+yes, among other things...
+gloss:{yes,explanation}
+
+when you feel this emotion, is it associated with blame on others or yourself?
+gloss:{associated(e,blame)}
+-
+no, not necessarily
+gloss:{no,notNecessarily}
+
+is it anger?
+gloss:{e==anger}
+-
+no
+gloss:{no}
+
+is it sadness?
+gloss:{e==sadness}
+-
+yes... good job!
+gloss:{yes,done}
+
+end:"2011-06-06 19:13:38", emotion:sadness, questions:6, outcome:success
+
+
+
+match:4, answerer:user16, questioner:user14.emo20q.r1, start:"2011-06-06 19:13:54"
+
+on a scale of red to blue, would the emotion be red?
+(if that makes sense to you...)
+gloss:{similarity(e,red)>similarity(e,blue)}
+-
+i think i get it, I would say neutral, but maybe a little red
+gloss:{yes,slightly}
+
+is it an emotion that you feel regularly?
+gloss:{e.frequency==regularly}
+-
+no
+gloss:{no}
+
+is it a negative emotion?
+gloss:{e.valence==negative}
+-
+no
+it' neutral
+*it's
+gloss:{no,hint}
+
+hmm, is it confused?
+gloss:{e==confusion}
+-
+no
+gloss:{no}
+
+is it an emotion that can just pop up spontaneously (as opposed to being caused by something)?
+gloss:{cause(emptySet,e)}
+-
+yes
+gloss:{yes}
+
+is it shy?
+gloss:{e==shyness}
+-
+no
+gloss:{no}
+
+bored?
+gloss:{e==boredom}
+-
+no
+gloss:{no}
+
+restless?
+gloss:{e==restless}
+-
+no
+gloss:{no}
+
+is it an emotion that you can feel for long durations?
+gloss:{e.duration==long}
+-
+no, it's very breif
+*brief
+gloss:{no,hint}
+
+surprise?
+gloss:{e==surprise}
+-
+yup!
+gloss:{yes,done}
+
+end:"2011-06-06 19:40:10", emotion:surprise, questions:10, outcome:success
+
+
+match:5, answerer:user14.emo20q.r1, questioner:user16, start:"2011-06-06 19:40:54"
+
+ok, is it a neutral emotion?
+gloss:{e.valence==neutral}
+-
+no
+gloss:{no}
+
+is an intense emotion?
+gloss:{e.activation==high}
+-
+no, not usually super intense, but maybe in some cases
+gloss:{no,withExceptions}
+
+is it a positive emotion?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+can it be spontaneous?
+gloss:{cause(emptySet,e)}
+-
+no, not usually
+gloss:{no,notUsually}
+
+can it be caused by a great accomplishment?
+gloss:{cause(greatAccomplishment,e)}
+-
+no
+gloss:{no}
+
+can be caused only by another person
+gloss:{only(cause(otherPerson,e))}
+-
+no, it can be, but other things as well
+gloss:{no,hint}
+
+is it pride?
+gloss:{e==pride}
+-
+no
+gloss:{no}
+
+when you feel this emotion, can other emotions be felt too?
+gloss:{assocated(e,otherEmotions)}
+-
+yes
+gloss:{yes}
+
+can it be associated with happiness?
+gloss:{associated(e,happiness)}
+-
+yes, there's usually some happiness during and possibly after this emotion
+gloss:{yes,hint}
+
+is it enthusiastic?
+gloss:{e==enthusiasm}
+-
+no
+gloss:{no}
+
+is it relief?
+gloss:{e==relief}
+-
+no, but close.  It might come before relief.
+gloss:{no,close,hint}
+
+is it excitement?
+gloss:{e==excitement}
+-
+no, but close.
+gloss:{no,close}
+
+is it anticipation?
+gloss:{e==anticipation}
+-
+no, but very close.
+gloss:{no,close}
+
+is it eager?
+gloss:{e==eagerness}
+-
+no, but still pretty close
+gloss:{no,close}
+
+hmmm, is it more intense than eager?
+gloss:{e.activation>eager.activation}
+-
+no, I'd say it's less intense but maybe longer lasting
+gloss:{no,hint}
+
+is it hopeful?
+gloss:{e==hope}
+-
+yes!  Good job!
+gloss:{yes,done,cheer}
+
+end:"2011-06-06 20:20:24", emotion:hope, questions:16, outcome:success
+
+
+###########################################################
+file:"2011-06-07 user11@ark.usc.edu - user16@ark.usc.edu.log"
+###########################################################
+
+match:1, answerer:user11, questioner:user16, start:"2011-06-07 18:20:39"
+
+ok, is it a positive emotion?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it a neutral emotion?
+gloss:{e.valence==neutral}
+-
+no
+gloss:{no}
+
+can the emotion be associated with happiness?
+gloss:{associated(e,happiness)}
+-
+no
+gloss:{no}
+
+does the emotion happen after something good happens?
+gloss:{situation(e,afterSomethingGoodHappens)}
+-
+no, often after or during something negative
+gloss:{no,hint}
+
+is it like being stressed out?
+gloss:{similar(e,stressedOut)}
+-
+yes
+gloss:{yes}
+
+is it nervous?
+gloss:{e==nervousness}
+-
+no but it is in the neighborhood 
+gloss:{no,close}
+
+Is it apprehensive?
+gloss:{e==apprehension}
+-
+no
+gloss:{no}
+
+Is the emotion more intense than nervous?
+gloss:{e.activation>nervousness.activation}
+-
+yeah
+gloss:{yes}
+
+is it scared?
+gloss:{e==scared}
+-
+uhm no its more towards stressed out rather than scared but more intense than nervous
+gloss:{no,hint}
+
+I see, is it overwhelmed?
+gloss:{e==overwhelmed}
+-
+almost
+it might be almost the same
+more negative
+gloss:{no,close,hint}
+
+is it frustrated?
+gloss:{e==frustration}
+-
+almost its a bit more geared to when you are frustrated with another person
+I can tell u know because I think its almost the same as frustrated if u want
+gloss:{no,close,hint}
+
+hmmm
+how about resentful
+gloss:{e==resentment}
+-
+no too far from frustrated
+gloss:{no,far}
+
+is it worried?
+gloss:{e==worry}
+-
+no
+gloss:{no}
+
+ok, 13 so far
+is it more intense than annoyed?
+gloss:{e.activation>annoyance.activation}
+-
+yes
+but
+that is the right track
+just more intense
+gloss:{yes,hint}
+
+is it like being fed up?
+or is it exasperated?
+gloss:{e==exasperation}
+-
+exaperated
+exasperated that is it!!!!
+gloss:{yes,done,cheer}
+
+end:"2011-06-07 18:46:19", emotion:exasperation, questions:15, outcome:success
+
+
+match:2, answerer:user16, questioner:user11, start:"2011-06-07 18:46:37"
+
+Ok is it a good emotion
+gloss:{e.valence==positive}
+-
+yea
+gloss:{yes}
+
+is
+it
+something relating another person
+like an emotion that you would feel towards another person
+gloss:{associated(e,otherPerson)}
+-
+it can be, but not only for people
+gloss:{yes,possible,notNecessarily}
+
+only for people? like only humans?
+gloss:{only(associated(e,people))}
+-
+no, I meant you can feel it towards another person, but also for yourself and other things
+gloss:{no,clarification}
+
+is it love?
+gloss:{e==love}
+-
+no
+gloss:{no}
+
+ok
+is it clearly positive or could it be neutral?
+gloss:{possible(e.valence==neutral)}
+-
+it's clearly positive
+gloss:{no,clarification}
+
+do you feel like this when you are done with a project and feel like you did a good job on it
+?
+gloss:{situation(e,doneGoodJobOnProject)}
+-
+not when you're done, but maybe before it's done, while you're working on it
+gloss:{no,hint}
+
+Ok is this an emotion that comes up when you apply for a job and you really want to get it
+you wish to get it?
+gloss:{situation(e,applyForDesirableJob)}
+-
+yea
+gloss:{yes}
+
+is it hopeful
+gloss:{e==hope}
+-
+yup!
+gloss:{yes,done}
+
+end:"2011-06-07 19:05:32", emotion:hope, questions:8, outcome:success
+
+
+match:3, answerer:user11, questioner:user16, start:"2011-06-07 19:05:32"
+
+ok, is it a positive emotion?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it an intense emotion?
+gloss:{e.activation==high}
+-
+yes
+gloss:{yes}
+
+can it vary between intense and mild?
+gloss:{intense>e.activation>mild}
+-
+yes
+so not always intense* so it can be mild to but not so mild for it to be neutral
+gloss:{yes,hint}
+
+ok, can it be associated with relief?
+gloss:{associated(e,relief)}
+-
+No
+gloss:{no}
+
+can it be associated with happiness?
+gloss:{associated(e,happiness)}
+-
+yes definitely
+gloss:{yes}
+
+do you feel it after you've had a great accomplishment?
+gloss:{situation(e,afterGreatAccomplishment)}
+-
+You could but its not common
+gloss:{yes,notCommon}
+
+do you feel it while working on a great accomplishment?
+gloss:{situation(e,whileWorkingOnGreatAccomplishment)}
+-
+no
+gloss:{no}
+
+do you feel it after a fun surprise?
+gloss:{situation(e,afterFunSurprise)}
+-
+yes
+gloss:{yes}
+
+do you feel it when you're content?
+gloss:{associated(e,contentment)}
+-
+Uhm not necessarily it is felt in similar situations but its not the same.
+gloss:{no,notNecessarily,hint}
+
+
+is it like exhilarated?
+gloss:{e==exhilaration}
+-
+less intense
+gloss:{no,hint}
+
+is it pleased?
+gloss:{e==pleased}
+-
+no
+gloss:{no}
+
+is it more intense than pleased?
+gloss:{e.activation>pleased.activation}
+-
+its different
+it is a reaction to something funny rather than something pleasing
+so no almost the same intensity
+gloss:{no,hint,clarification}
+
+is it cheerful?
+gloss:{e==cheerfulness}
+-
+no
+gloss:{no}
+
+would you feel it after an awesome concert?
+gloss:{situation(e,afterAwesomeConcert)}
+-
+no
+gloss:{no}
+
+would you feel it during a funny movie?
+gloss:{situation(e,duringFunnyMovie)}
+-
+yes
+gloss:{yes}
+
+would you feel it during a thriller action movie?
+gloss:{situation(e,duringThrillerMovie)}
+-
+no
+gloss:{no}
+
+is it like being entertained?
+gloss:{similar(e,entertained)}
+-
+yes
+gloss:{yes}
+
+does it always include laughing?
+gloss:{necessarily(behavior(e,laughing))}
+-
+yes
+or smiling
+or at least smiling inside...if you know what I mena
+mean
+gloss:{yes,clarification,hint}
+
+is it amused?
+gloss:{e==amusement}
+-
+yes!
+gloss:{yes,done}
+
+end:"2011-06-07 19:43:31", emotion:amusement, questions:19, outcome:success
+
+
+
+match:4, answerer:user16, questioner:user11, start:"2011-06-07 19:43:51"
+
+Uhmm is it a positive emotion?
+gloss:{e.valence==positive}
+-
+nope
+gloss:{no}
+
+is it very intense?
+gloss:{e.activation==high}
+-
+no
+gloss:{no}
+
+is it something you feel when you are doing something that is not very exciting?
+gloss:{situation(e,doingSomethingNotVeryExciting)}
+-
+yes
+gloss:{yes}
+
+is it bored?
+gloss:{e==boredom}
+-
+yes
+haha :-D
+gloss:{yes,cheer,done}
+
+end:"2011-06-07 19:59:41", emotion:boredom, questions:4, outcome:success
+
+
+match:5, answerer:user11, questioner:user16, start:"2011-06-07 19:59:45"
+
+is it a positive emotion?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is neutral?
+gloss:{e.valence==neutral}
+-
+no
+gloss:{no}
+
+do you feel it when you're in a competition?
+gloss:{situation(e,inCompetition)}
+-
+you could but not always
+gloss:{possibly,notAlways}
+
+do you feel it after something bad has happened?
+gloss:{situation(e,afterSomethingBadHappens)}
+-
+yes you can not always tho
+gloss:{yes,notAlways}
+
+do you feel it before something big is happening?
+gloss:{situation(e,beforeSomethingBigHappens)}
+-
+no
+gloss:{no}
+
+can you feel it towards yourself?
+gloss:{possibly(directed(e,self))}
+-
+yes
+gloss:{yes}
+
+is it like being apprehensive?
+gloss:{similar(e,apprehension)}
+-
+could be stronger
+sorry I meant to say no, stronger
+gloss:{no,hint,clarification}
+
+is it more intense than anxious?
+gloss:{e.activation>anxiety.activation}
+-
+yes
+gloss:{yes}
+
+is it more intense than overwhelmed?
+gloss:{e.activation>overwhelmed.activation}
+-
+yes
+gloss:{yes}
+
+is it like defeated?
+gloss:{similar(e,defeated)}
+-
+no
+more negative 
+gloss:{no,hint}
+
+is it more like sad or more like mad?
+gloss:{non-yes-no}
+-
+mad
+gloss:{non-yes-no}
+
+is like shame?
+gloss:{similar(e,shame)}
+-
+no
+gloss:{no}
+
+is it like furious?
+gloss:{similar(e,fury)}
+-
+yes
+gloss:{yes}
+
+is it like revenge?
+gloss:{similar(e,revenge)}
+-
+no
+gloss:{no}
+
+is it violent?
+gloss:{e==violent}
+-
+could be yeah but not necesarilly
+necessarily
+gloss:{possibly,notNecessarily}
+
+is it like vicious?
+gloss:{similar(e,vicious)}
+-
+no
+you can just feel it
+but it isnt necessarily vicious
+gloss:{no,clarification,hint}
+
+is it a bigger version of furious?
+gloss:{e.activation>fury.activation}
+-
+no
+a similar one
+gloss:{no,hint}
+
+is it different by including another emotion?
+gloss:{e-fury==anotherEmotion}
+-
+I dont think so
+its very much like being furious
+gloss:{uncertain,no,hint}
+
+is it ferocious?
+gloss:{e==ferocious}
+-
+no
+close tho
+you want to keep guessing you are so close I dont think you can ask anything that will get you closer
+cause they are almost synonyms
+gloss:{no,close}
+
+hmmm
+yea, I give up
+gloss:{non-yes-no,giveUp}
+-
+angry
+gloss:{non-yes-no,done}
+
+
+end:"2011-06-07 20:33:43", emotion:anger, questions:20, outcome:failure/giveup
+
+###########################################################
+file:"2011-06-13 user11@ark.usc.edu - user16@ark.usc.edu.log"
+###########################################################
+
+match:1, answerer:user11, questioner:user16, start:"2011-06-13 20:03:40"
+
+all right, is it a positive emotion?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it neutral?
+gloss:{e.valence==neutral}
+-
+no
+gloss:{no}
+
+is it associated with sadness
+gloss:{associated(e,sadness)}
+-
+yes it can be
+gloss:{possibly}
+
+can it be associated with anger?
+gloss:{associated(e,anger)}
+-
+yes but less often than with sadness although in a similar way
+you get feel this emotion and then feel sad or angry about it
+gloss:{notOften,clarification}
+
+ok, does it happen when you've failed at something?
+gloss:{situation(e,failAtSomething)}
+-
+yeah
+gloss:{yes}
+
+does it happen when you blame yourself
+gloss:{situation(e,blameYourself)}
+-
+uhm it can but not necessarily 
+gloss:{possibly}
+
+ok, can it associated with embarrasment?
+gloss:{associated(e,embarrassment)}
+-
+it is embarrassment 
+gloss:{yes,done}
+
+end:"2011-06-13 20:12:35", emotion:embarrassment, questions:7, outcome:success
+
+
+match:2, answerer:user16, questioner:user11, start:"2011-06-13 20:13:52"
+
+ok is it a positive emotion?
+gloss:{e.valence==positive}
+-
+yea
+gloss:{yes}
+
+do you feel like this when you have done something right?
+gloss:{situation(e,youHaveDoneSomethingRight)}
+-
+yea, but not limited to after having done something right but also before and during
+gloss:{yes,clarification}
+
+is it a pretty intense emotion?
+gloss:{e.activation==high}
+-
+it can be, but id say usually, on a range from 1-10, 10 being the most intense, it'd be 6 or 7
+actually maybe 5
+gloss:{yes,clarification}
+
+is it closely assimilated with being calm?
+gloss:{associated(e,calm)}
+-
+it's not calm at all
+gloss:{no}
+
+is this an emotion you feel whe you are doing something you like to do?
+gloss:{situation(e,doingSomethingYouLike)}
+-
+yea
+gloss:{yes}
+
+is it pleasure?
+gloss:{e==pleasure}
+-
+no but it's associated with it
+gloss:{no,close}
+
+do you feel the two simultaneously?
+gloss:{cooccur(e,pleasure)}
+-
+yea
+gloss:{yes}
+
+is it the opposite of sadness?
+gloss:{opposite(e,sadness)}
+-
+yea
+gloss:{yes}
+
+happiness
+is it ?
+gloss:{e==happiness}
+-
+not exactly
+gloss:{no,close}
+
+is it similar to being satisfied?
+gloss:{similar(e,satisfaction)}
+-
+mot really; satisfied is more of after an accomplishment
+has been made
+the emotion of thinking is mostly before and during
+gloss:{no,hint}
+
+is it similar to being entertained?
+gloss:{similar(e,entertainment)}
+-
+kinda, more like being engaged in something
+gloss:{hedge,hint}
+
+would this be an emotion you would feel when readying a book?
+reading
+gloss:{situation(e,readingABook)}
+-
+you could, but it's not a very likely emotion you'd be feeling
+more like when you have a task to do
+gloss:{possibly,hint}
+
+determined?
+gloss:{e==determination}
+-
+on the right track
+gloss:{no,close}
+
+if someone is scared of doing something but they are determined to do it would they feel this way?
+gloss:{situation(e,scaredButDeterminedToDoSomething)}
+-
+no, you'd have to have a positive attitude
+gloss:{no,hint}
+
+when you are doing something and feel like you are doing a good job would you feel like this?
+gloss:{situation(e,feelingThatYouAreDoingAGoodJobAtSomething)}
+-
+definitely
+gloss:{yes}
+
+is it pride?
+gloss:{e==pride}
+-
+not exactly, it's more like determined than pride, because pride more like an emotion you'd feel afterwards and determined is what you feel while you're working on it
+gloss:{no,close,hint}
+
+is this an emotion you feel when you have a positive outlook for something you are doing?>
+gloss:{situation(e,positiveOutlookForSomethingYouAreDoing)}
+-
+yea! getting closer!
+gloss:{yes,close,cheer}
+
+is it similar to hope?
+gloss:{similar(e,hope)}
+-
+it's similar, but more intense
+gloss:{yes,clarification}
+
+is it closer to being delighted?
+gloss:{similar(e,delight)}
+-
+it's like a fusion of determined and delighted
+gloss:{yes,hint}
+
+optimistic?
+gloss:{e==optimism}
+-
+yea, but more energetic than optimistic
+gloss:{yes,clarification}
+
+cheerful?
+gloss:{e==cheerfulness}
+-
+it's cheerful and determined, but it's really similar to optimistic
+Not sure if there are more questions to ask that will give you the word; want me to tell you?
+gloss:{yes,clarification,hint}
+
+Hahah I think I give up
+yea
+gloss:{giveUp,non-yes-no}
+-
+it's enthusiastic :-P
+it's kinda difficult to guess
+gloss:{done}
+
+end:"2011-06-13 20:12:35", emotion:enthusiasm, questions:22, outcome:failure/giveup
+
+
+match:3, answerer:user11, questioner:user16, start:"2011-06-13 21:02:42"
+
+is it a positive emotion?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it neutral?
+gloss:{e.valence==neutral}
+-
+no
+gloss:{no}
+
+is it associated with anger?
+gloss:{associated(e,anger)}
+-
+n
+no
+you can feel angry with it but they are not associated 
+gloss:{no,clarification}
+
+is it associated with sadness?
+gloss:{associated(e,sadness)}
+-
+same thing as with anger
+gloss:{no,clarification}
+
+can you feel it when you fail at something?
+gloss:{situation(e,failAtSomething)}
+-
+yeah you can
+gloss:{yes}
+
+can you feel it when you get a terrible surprise?
+gloss:{situation(e,terribleSurprise)}
+-
+no
+gloss:{no}
+
+if you feel it after you've failed, do you feel it when you know you're failing and dreading to see the end result that proves you've failed?
+gloss:{situation(e,dreadingImmanentFailure)}
+-
+yeah its a possibility
+gloss:{possibly}
+
+is it dissappointment?
+gloss:{e==disappointment}
+-
+no
+it can go along with disappointment but its not the same
+gloss:{no,clarification}
+
+ok, so more often, it's after some thing bad?
+gloss:{situation(e,afterSomethingBad)}
+-
+yes
+gloss:{yes}
+
+can blame be associated with it?
+gloss:{associated(e,blame)}
+-
+yes
+gloss:{yes}
+
+is it like guilty?
+gloss:{similar(e,guilt)}
+-
+yes!
+gloss:{yes,done}
+
+end:"2011-06-13 21:16:29", emotion:guilt, questions:11, outcome:success
+
+
+
+match:4, answerer:user16, questioner:user11, start:"2011-06-13 21:17:22"
+
+ok is it a positive emotion?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it an extreme emotion?
+gloss:{e.activation==high}
+-
+it can be, but usually it's mild
+gloss:{possibly,notUsually,clarification}
+
+If someone has a much nicer car than you but you know he did not work to get it but his parents gave it to him do you feel like this?
+gloss:{situation(e,enviousOfCarAndRichParents)}
+-
+no, not at all
+gloss:{no}
+
+can you feel this emotion when someone is doing something that bothers you
+gloss:{situation(e,someoneDoesSomethingToBotherYou)}
+-
+no, it's not connected to anger or envy
+gloss:{no,clarification}
+
+do you feel like this when someone does something you did not expect them too
+to
+?
+gloss:{situation(e,someoneDoesSomethingUnexpected)}
+-
+it can be, but it's not so much surprise but a sad realization
+gloss:{possibly,hint}
+
+disappointment 
+?
+gloss:{e==disappointment}
+-
+more complex than dissapointment, specifically with people
+gloss:{no,hint}
+
+is it similar to pain?
+gloss:{similar(e,pain)}
+-
+it's like a pain in your heart
+gloss:{yes,clarification}
+
+is it sometimes described as "being lost"
+gloss:{describedAs(e,beingLost)}
+-
+I've never heard it described that way, but you could say that
+gloss:{yes,clarification}
+
+is it closely assimilated with dismay? 
+gloss:{associated(e,dismay)}
+-
+yea
+gloss:{yes}
+
+is it appalled 
+?
+gloss:{e==appalled}
+-
+no, not so much shock but more sadness
+gloss:{no,hint}
+
+does it happen when someone is lonely ?
+gloss:{situation(e,someoneIsLonely)}
+-
+It's lonely!
+gloss:{yes,done}
+
+end:"2011-06-13 21:39:34", emotion:loneliness, questions:11, outcome:success
+
+
+match:5, answerer:user11, questioner:user16, start:"2011-06-13 21:40:56"
+
+cool, is it a negative emotion?
+gloss:{e.valence==negative}
+-
+no
+gloss:{no}
+
+is it neutral?
+gloss:{e.valence==neutral}
+-
+no but its mellow 
+gloss:{no,clarification}
+
+so it's more on the positive side thna the negative side?
+gloss:{e.valence==positive}
+-
+yes definitely
+gloss:{yes}
+
+is it like being content?
+gloss:{similar(e,contentment)}
+-
+similar but not the same content is a more constant emotion this is more common after you realize something
+gloss:{yes,hint}
+
+can it happen when something goes your way and you're pleased?
+gloss:{situation(e,pleasedWhenSomethingGoesYourWay)}
+-
+yes
+gloss:{yes}
+
+is it relieved or relaxed?
+gloss:{e==relief||e==relaxed}
+-
+relief!
+gloss:{yes,done}
+
+end:"2011-06-13 21:53:05", emotion:relief, questions:6, outcome:success
+
+
+#####################################################################
+file:"2011-06-14 user11@ark.usc.edu - user16@ark.usc.edu.log"
+#####################################################################
+
+
+match:1, answerer:user11, questioner:user16, start:"2011-06-14 18:01:33"
+
+ok is it negative?
+gloss:{e.valence==negative}
+-
+yes
+gloss:{yes}
+
+is it intense
+gloss:{e.activation==high}
+-
+it can be but not necessarily
+gloss:{possibly}
+
+then usually not intense?
+gloss:{usually(e.valence!=high))}
+-
+it really ranges depending on the situation
+gloss:{depends}
+
+is it kinda like anger?
+gloss:{similar(e,anger)}
+-
+can be yeah
+it can be mixed with anger
+not the same tho
+gloss:{yes,clarification}
+
+can it be mixed with sadness?
+gloss:{mixable(e,sadness)}
+-
+yeah
+gloss:{yes}
+
+would you say anger is more associated with it than sadness?
+gloss:{similarity(e,anger)>similarity(e,sadness)}
+-
+yeah I would say so
+gloss:{yes,hedge}
+
+does it happen when youve failed?
+gloss:{situation(e,youveFailed)}
+-
+no
+gloss:{no}
+
+is it kinda like fear?
+gloss:{similar(e,fear)}
+-
+no
+gloss:{no}
+
+is it associated with embarrassment?
+gloss:{associated(e,embarrassment)}
+-
+no
+gloss:{no}
+
+does it happen after nasty surprise?
+gloss:{situation(e,afterNastySurprise)}
+-
+it can but a nasty surprise isnt necessary to feel this emotion
+gloss:{possibly,notNecessarily,clarification}
+
+if it there were a nasty surprise, would the emotion be mild?
+gloss:{if(nastySurprise)then(e.activation==low)}
+-
+probably not
+gloss:{no,hedge}
+
+would it intense in that situation?
+gloss:{if(nastySurprise)then(e.activation==high)}
+-
+depends on the situation really
+gloss:{depends}
+
+then how about the nasty surprise is a friend betrays you, would it be mild then?
+gloss:{if(friendBetraysYou)then(e.activation==low)}
+-
+it would be not a common emotion when a friend betrays you
+gloss:{no,clarification}
+
+then how about something trivial, like...finding out vegetables you were going to use had gone bad?
+gloss:{situation(e,findingThatVegatablesHadGoneBad)}
+-
+no
+gloss:{no}
+
+is it kinda like regret?
+gloss:{similar(e,regret)}
+-
+no
+you would feel like this because an another person
+they might not cause this emotion intentionally 
+gloss:{no,hint}
+
+felt during betrayal?
+gloss:{situation(e,betrayal)}
+-
+can be but not necesarily
+gloss:{possibly}
+
+it like a kind of pain?
+gloss:{subset(e,pain)}
+-
+Yeah it can be suffered from sorta like a pain
+gloss:{yes,clarification}
+
+would you say the emotion has a lot of energy?
+gloss:{e.activation==high}
+-
+can have yeah
+gloss:{possibly}
+
+is there a wide range of intensities that this emotion can be felt?
+gloss:{e.activation==variable}
+-
+yeah
+gloss:{yes}
+
+so, if you were stranded in the middle of the desert, and pretty much doomed bc your friend ditched you there, would you feel this emotion
+gloss:{situation(e,ditchedByFriendInDesert)}
+-
+no
+It happens when your neighbor gets something really nice
+gloss:{no,hint}
+
+haha, jealousy?
+gloss:{e==jealousy}
+-
+yes envy
+gloss:{yes,synonym,done}
+
+end:"2011-06-14 18:41:47", emotion:envy/jealousy, questions:21, outcome:success/over20/synonym
+
+
+match:2, answerer:user16, questioner:user11, start:"2011-06-14 18:42:21"
+
+ok is it a positive emotion'?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it mildly negative?
+gloss:{e.valence==mildlyNegative}
+-
+it can range, but a standard representation of it is relatively intense
+gloss:{no,hint}
+
+is it associated with being embarassed?
+embarrassed
+gloss:{associated(e.embarrassment)}
+-
+no, but associated with it
+oh ok it is
+sorry
+it can be linked with embarrassment, but i wouldn't use embarrassment as a bridge leading to the emotion i have in mind
+gloss:{yes,clarification}
+
+do you feel like this when you are going to perform in front of a very big audience?
+gloss:{situation(e,goingToPerformInFrontOfAudience)}
+-
+yes you can feel it when you perform
+gloss:{yes}
+
+can it be associated with worrying?
+gloss:{associated(e,worrying)}
+-
+yes it can
+gloss:{yes}
+
+can it be associated with anxiety?
+gloss:{associated(e,anxiety)}
+-
+yea
+gloss:{yes}
+
+is it the opposite of being calm
+gloss:{opposite(e,calm)}
+-
+yes
+gloss:{yes}
+
+is it worrying?
+gloss:{e==worry}
+-
+more than that, worrying can be like a big user13 coming up, but the emotion i'm thinking of is more intense
+gloss:{no,close,hint}
+
+but its not anxiety?
+gloss:{e==anxiety}
+-
+it's super close, but anxiety is like a cousin
+think more like instincts
+gloss:{no,close,hint}
+
+distress?
+gloss:{e==distress}
+-
+yea...i think that's a good synonym, it's fear!
+gloss:{yes,done,synonym}
+
+end:"2011-06-14 18:59:36", emotion:fear/distress, questions:10, outcome:success/synonym
+
+
+
+match:3, answerer:user11, questioner:user16, start:"2011-06-14 19:00:37"
+
+ok is it positive?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it neutral?
+gloss:{e.valence==neutral}
+-
+no
+gloss:{no}
+
+does it vary in intensity?
+gloss:{e.activation==variable}
+-
+yeah
+gloss:{yes}
+
+is it kinda like anger?
+gloss:{similar(e,anger)}
+-
+this emotion will most likely lead to (be accompanied) by anger 
+gloss:{yes,clarification}
+
+is it more likely to have anger than sadness?
+gloss:{similarity(e,anger)>similarity(e,sadness)}
+-
+much more likely 
+actually sadness is not related to this emotion at all
+gloss:{yes,hint}
+
+but it's not exactly anger right?
+gloss:{e==anger}
+-
+no
+gloss:{no}
+
+do you feel under high pressure?
+gloss:{situation(e,feelUnderHighPressure)}
+-
+you could but its not necessarily associated with being under high pressure
+gloss:{possibly,notNecessarily}
+
+how about when betrayed?
+gloss:{situation(e,betrayal)}
+-
+yeah
+gloss:{yes}
+
+maybe vengeful?
+gloss:{e==vengeful}
+-
+its not vengeful but yeah you might get vengeful
+gloss:{no,close}
+
+is "determination" associated? or not at all?
+gloss:{associated(e,determination)}
+-
+not at all
+gloss:{no}
+
+are there other situations when you'd feel this emotions besides betrayal?
+gloss:{exist(s)(situation(e,s)&&s!=betrayal)}
+-
+oh yeah plenty
+gloss:{yes}
+
+then maybe when you're fighting for your life?
+gloss:{situation(e,fightingForYourLife)}
+-
+you can but it isnt the first emotion you would feel
+gloss:{possibly,notLikely)}
+
+how about kinda like panic?
+gloss:{similar(e,panic)}
+-
+no
+gloss:{no}
+
+how about pain?
+gloss:{similar(e,pain)}
+-
+yeah pain can be associated with this emotion?
+sorry no question mark
+gloss:{yes}
+
+can you feel it if you have physical pain?
+gloss:{situation(e,physicalPain)}
+-
+yeah
+gloss:{yes}
+
+what if it's accidental pain?
+gloss:{situation(e,accidentalPain)}
+-
+less likely
+gloss:{notLikely}
+
+would you feel it more it you did something stupid and caused the pain on yourself?
+gloss:{situation(e,doSomethingStupidAndCausePainOnYourself)}
+-
+yeah
+gloss:{yes}
+
+is it kinda like shame?
+gloss:{similar(e,shame)}
+-
+no
+gloss:{no}
+
+or like blame?
+gloss:{similar(e,blame)}
+-
+no
+gloss:{no}
+
+is it linked to annoyance?
+gloss:{associated(e,annoyance)}
+-
+its annoyance 
+being annoyed
+gloss:{yes,done}
+
+end:"2011-06-14 19:39:17", emotion:annoyance, questions:20, outcome:success
+
+
+match:4, answerer:user16, questioner:user11, start:"2011-06-14 19:40:03"
+
+ok is it a positive emotion?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it associated with fear?
+gloss:{associated(e,fear)}
+-
+sort of, right direction
+but not so intense
+gloss:{sortOf,hint}
+
+you are lost in the woods do you feel this emotion?
+gloss:{situation(e,lostInTheWoods)}
+-
+no
+think more social situation
+gloss:{no,hint}
+
+you are talking to someone you like do you feel this emotion?
+gloss:{situation(e,talkingToSomeoneYouLike)}
+-
+no
+gloss:{no}
+
+you are talking to someone very boring do you feel this emotion?
+gloss:{situation(e,talkingToSomeoneVeryBoring)}
+-
+no, it's more of a bad consequence
+gloss:{no,hint}
+
+do you feel like this when you arent very confident?
+gloss:{situation(e,youArentConfident)}
+-
+yea,  you could
+gloss:{possibly}
+
+is it closely associated with being insecure?
+gloss:{associated(e,insecurity)}
+-
+not very closely but insecurity can be a result
+gloss:{no,clarification}
+
+so you get this emotion and then insecurity
+gloss:{precedes(e,insecurity)}
+-
+yea
+gloss:{yes}
+
+someone leaves you out of their plans do you feel like this?
+gloss:{situation(e,someoneLeavesYouOutOfTheirPlans)}
+-
+no, it's not that someone did something bad to you, but you did something bad to them
+gloss:{no,hint}
+
+regret?
+gloss:{e==regret}
+-
+so close
+actually that's it: guilt
+gloss:{close,synonym,done}
+
+end:"2011-06-14 19:56:27", emotion:guilt/regret, questions:10, outcome:success/synonym
+
+
+################################################################
+file:"2011-06-15 user11@ark.usc.edu - user16@ark.usc.edu.log"
+################################################################
+
+
+match:1, answerer:user11, questioner:user16, start:"2011-06-15 18:41:51"
+
+all right, is it positive?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it pretty intense?
+gloss:{e.activation==high}
+-
+yeah it usually is
+gloss:{yes,usually}
+
+does it happen after soemthing awesome happens?
+gloss:{situation(e,afterSomethingAwesomeHappens)}
+-
+yeah it can
+gloss:{yes}
+
+does it happen while youre working toards a big accomplishment?
+*towards
+gloss:{situation(e,workingTowardABigAccomplishment)}
+-
+it can but is more common after
+gloss:{possibly,hint}
+
+is it associated with pride?
+gloss:{associated(e,pride)}
+-
+its pride!
+gloss:{yes,done}
+
+end:"2011-06-15 18:51:34", emotion:pride, questions:5, outcome:success
+
+
+match:2, answerer:user16, questioner:user11, start:"2011-06-15 18:52:22"
+
+ok is it a positive emotion?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is in an intense emotion';?
+gloss:{e.activation==high}
+-
+yea
+actually when you asked if it's intense
+it can have a huge effect on you, but you dont have an intense display of this emotion
+gloss:{yes,clarrification}
+
+when someone tells you a big lie and then you find out do you feel like this?
+gloss:{situation(e,someoneTellsYouALieAndYouFindOut)}
+-
+you can but not really
+gloss:{possibly,notReally}
+
+Ok is it associated with anger at all?
+gloss:{associated(e,anger)}
+-
+no
+well it could, but i don't think anger will lead you in the right direction
+gloss:{possibly,hint}
+
+is this emotion always related to another persons influence?
+gloss:{associated(e,otherPerson)}
+-
+no
+gloss:{no}
+
+do you feel this emotion if you let someone you love down?
+gloss:{situation(e,youLetSomeoneYouLoveDown)}
+-
+not necessarily
+but maybe if you let them down after putting in a lot of effort.
+gloss:{notNecessarily,hint}
+
+is it associated to shame?
+gloss:{associated(e,shame)}
+-
+not really shame, it's more physical than psychological
+gloss:{no,hint}
+
+is it associated with being tired ?
+gloss:{associated(e,beingTired)}
+-
+it's tired!
+gloss:{yes,done}
+
+end:"2011-06-15 19:14:44", emotion:tiredness, questions:8, outcome:success
+
+
+match:3, answerer:user11, questioner:user16, start:"2011-06-15 19:14:46"
+
+is it positive?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+do you show a lot of physical signs when you have the emotion?
+gloss:{hasExternalExpression(e)}
+-
+not necessarily but you can yeah it varies a lot
+gloss:{notNecessarily,possibly,variable}
+
+do you laugh?
+gloss:{behavior(e,laughing)}
+-
+no laughing usually it is not very common
+gloss:{no}
+
+do you smile?
+gloss:{behavior(e,smiling)}
+-
+you can but it isnt normally associated to this emotion
+gloss:{possibly,notUsually}
+
+is it intense?
+gloss:{e.activation==high}
+-
+it can vary
+from very mild to very intense\
+gloss:{variable}
+
+ok, would it be the most intense after completing a phd program?
+gloss:{if(situation(completeAPhdProgram))then(e.activation==high)}
+-
+no
+gloss:{no}
+
+is it like hopeful?
+gloss:{similar(e,hope)}
+-
+no
+gloss:{no}
+
+is it like being content?
+gloss:{similar(e,contentment)}
+-
+no
+gloss:{no}
+
+is it like confidence?
+gloss:{similar(e,confidence)}
+-
+no
+it regards another person most of the time
+gloss:{no,hint}
+
+is like being in love?
+gloss:{similar(e,love)}
+-
+yes! very close 
+feeling affection
+gloss:{yes,done,synonym}
+
+end:"2011-06-15 19:38:18", emotion:affection/love, questions:10, outcome:success/synonym
+
+
+match:4, answerer:user16, questioner:user11, start:"2011-06-15 19:39:49"
+
+ok is it a positive emotion'?
+gloss:{e.valence==positive}
+-
+yea
+gloss:{yes}
+
+do you feel it toward another person
+gloss:{directed(e,otherPerson)}
+-
+not really, more on situations
+gloss:{notReally,hint}
+
+so if you are at disney would you feel this emotion?
+gloss:{situation(e,disney)}
+-
+yea
+gloss:{yes}
+
+is it associated with excitement ??
+gloss:{associated(e,excitement)}
+-
+excitement is too energetic
+gloss:{no,hint}
+
+there is a big project coming up for  you and you feel positively about it would you feel this emotion?
+gloss:{situation(e,bigProjectComingUpAndYouFeelPositivelyAboutIt)}
+-
+well the project would cause stress, so you wouldn't feel this emotion 
+gloss:{no}
+
+is it calm?
+gloss:{e==calm}
+-
+yea!
+well, more like content but basically the same, right?
+gloss:{yes,done,synonym}
+
+end:"2011-06-15 19:48:22", emotion:contentment/calm, questions:6, outcome:success/synonym
+
+match:5, answerer:user11, questioner:user16, start:"2011-06-15 19:48:33"
+
+is it positive?
+gloss:{e==positive}
+-
+no
+gloss:{no}
+
+is it intense?
+gloss:{e.activation==high}
+-
+yes
+gloss:{yes}
+
+is it like exhilaration?
+gloss:{similar(e,exhilaration)}
+-
+no
+gloss:{no}
+
+is it different from exhilaration becuase of intensity? like too much happiness?
+gloss:{e.activation!=exhilaration.activation}
+-
+well its negative but it is also intense
+could be as intense as exhilaration just negative
+gloss:{yes,clarification}
+
+oh i thought you said positive
+is it like fury then?
+gloss:{similar(e,fury)}
+-
+no different
+gloss:{no}
+
+can some sadness be mixed in?
+gloss:{mixable(e,sadness)}
+-
+yeah def.
+gloss:{yes}
+
+is it more sadness than anger?
+gloss:{e.sadness>e.anger}
+-
+yeah
+gloss:{yes}
+
+is it like depression?
+gloss:{similar(e,depression)}
+-
+very similar
+gloss:{yes}
+
+is it similar to despair?
+gloss:{similar(e,despair)}
+-
+yes stronger than despair tho
+gloss:{yes,clarification}
+
+stronger thanoverwhelmed?
+gloss:{e.activation>overwhelmed.activation}
+-
+different more towards being in despair
+gloss:{no,clarification}
+
+like doomed?
+or giving up?
+gloss:{e==doomed}
+-
+you would give up beucase you feel like this
+kinda like feeling pain
+gloss:{no,hint}
+
+incompetent or worthless?
+gloss:{e==incompetence||e==worthlessness}
+-
+no
+gloss:{no}
+
+would be blaming yourself?
+*would you be
+gloss:{situation(e,blameYourself)}
+-
+yeah you could
+gloss:{possibly}
+
+would you be more likely blaming somebody else?
+or doesnt really matter?
+gloss:{situation(e,blamingSomeoneElse)}
+-
+no if you were feeling this emotion you would be blaming yourself
+gloss:{no,hint}
+
+kinda like feeling stupid?
+gloss:{similar(e,feelingStupid)}
+-
+much stronger you feel this emotion and you probably feel stupid
+gloss:{no,hint}
+
+which word that ive said is closest to it?
+gloss:{non-yes-no,askHint}
+-
+despair
+gloss:{non-yes-no,hint}
+
+in a sequence of events, would feel despair first, then the emotion, then give up?
+gloss:{sequenceOfEvents([despair,e,giveUp])}
+-
+you would probably feel it simultaneously 
+gloss:{no,hint}
+
+and it would have the same intensity as despair?
+gloss:{e.activation==despair.activation}
+-
+probably more
+gloss:{no,hint}
+
+maybe hopelessness?
+gloss:{e==hopelessness}
+-
+soooo close
+you would ______ from hopelessness
+gloss:{no,hint}
+
+or desperate?
+gloss:{e==desperate}
+-
+close too
+gloss:{no,close}
+
+resign?
+gloss:{e==resignation}
+-
+suffer
+gloss:{done}
+
+end:"2011-06-15 20:25:17", emotion:suffering, questions:22, outcome:failure/giveup/over20
+
+
+#################################################################
+file:"2011-06-21 user11@ark.usc.edu - user16@ark.usc.edu.log"
+#################################################################
+
+
+
+match:1, answerer:user16, questioner:user11, start:"2011-06-21 18:13:55"
+
+OK is it a positive emotion'?
+gloss:{e.valence==positive}
+-
+nope
+gloss:{no}
+
+is it associated with anger
+?
+gloss:{associated(e,anger)}
+-
+not really
+gloss:{no}
+
+so its more of a sad emotion?
+gloss:{sad(e)}
+-
+yea but i wouldnt call it sad for real
+gloss:{yes,clarification}
+
+is it an emotion toward someone else?
+gloss:{directed(e,otherPerson)}
+-
+nope
+gloss:{no}
+
+if you are
+planning on going to the beach but there is apossibility it might rain would you feel like this
+?
+gloss:{situation(e,goingToBeachButThereIsAPossibilityOfRain)}
+-
+nope
+gloss:{no}
+
+if you are upset at someone would you feel this emotion?
+gloss:{situation(e,upsetAtSomeone)}
+-
+mayybe if theyyve caused you to be upset many times before
+gloss:{maybe,hint}
+
+so its a pretty intense emotion?
+gloss:{e.activation==high}
+-
+no not usually. your scenario is an uncommon example
+gloss:{no,clarification}
+
+you expected someone to open the door for you but they didnt do you feel this emotion?
+gloss:{situation(e,youExpectedSomeoneToOpenTheDoorButTheyDidnt)}
+-
+no
+its more of an emotion that occurs after your own actions
+gloss:{no,hint}
+
+so you accidentally run over a cute bunny with your car would you feel like this?
+gloss:{situation(e,accidentallyRunOverACuteBunny)}
+-
+heh, no you wouldnt
+gloss:{no}
+
+is it associated with being embarassed?
+embarrassed
+?
+gloss:{associated(e,embarrassment)}
+-
+could be but wrong direction
+common emotion of college students
+gloss:{possibly,hint}
+
+is it associated with being shy?
+gloss:{associated(e,shyness)}
+-
+nope
+gloss:{no}
+
+is it associated with being impatient?
+gloss:{associated(e,impatience)}
+-
+no, more about work and stress
+gloss:{no,hint}
+
+is it assimilated to being tierd?
+tired
+gloss:{e==tiredness}
+-
+thats it :-)
+gloss:{yes,done}
+
+end:"2011-06-21 18:37:04", emotion:tiredness, questions:13, outcome:success
+
+
+match:2, answerer:user11, questioner:user16, start:"2011-06-21 18:37:12"
+
+ok is it positive?
+gloss:{e.valence==positive}
+-
+yeah
+gloss:{yes}
+
+is it usually intense?
+gloss:{e.activation==high}
+-
+it can be but it can also be pretty mild
+gloss:{possibly}
+
+when its intense do you laugh?
+gloss:{behavior(e,laughing)}
+-
+you can but not because something is funny
+gloss:{possibly}
+
+is it kinda like being optmistic?
+gloss:{similar(e,optimism)}
+-
+no
+gloss:{no}
+
+maybe kinda like being proud?
+gloss:{similar(e,pride)}
+-
+No different 
+gloss:{no}
+
+how about being plain happy?
+gloss:{similar(e,happiness)}
+-
+yeah
+you could be plain happy and feel this emotion
+gloss:{yes,clarification}
+
+does it happen when you're chilling watching your favorite tv show?
+gloss:{situation(e,watchingFavoriteTvShow)}
+-
+no
+gloss:{no}
+
+maybe when youre at a great concert?
+gloss:{situation(e,atAGreatConcert)}
+-
+yeah if you have been waiting for the concert for a while
+but
+its not that common
+gloss:{possibly,notCommon}
+
+hmm how about when youre looking foward to something
+gloss:{situation(e,lookingForwardToSomething)}
+-
+noo you would look forward to feeling like this
+gloss:{no,hint}
+
+maybe exhilaration
+?
+gloss:{e==exhilaration}
+-
+no more after rather than during
+gloss:{no,hint}
+
+maybe relief?
+gloss:{e==relief}
+-
+yes!!
+gloss:{yes,done}
+
+end:"2011-06-21 18:56:24", emotion:relief, questions:11, outcome:success
+
+
+match:3, answerer:user16, questioner:user11, start:"2011-06-21 18:57:06"
+
+ok is it a negative emotion?
+gloss:{e.valence==negative}
+-
+yea
+gloss:{yes}
+
+is it very intense?
+gloss:{e.activation==high}
+-
+on a scale of 1-5 id say 3.5 with 1 being least intense
+gloss:{scaleGivent}
+
+is it kinda like being sad?
+gloss:{similar(e,sadness)}
+-
+sorta, but its kinda like an energetic sadness, if that makrss sense
+gloss:{sortOf,hint}
+
+is it like misery?
+gloss:{e==misery}
+-
+well its not so much sad, more like bring uncomfortable
+*being
+gloss:{no,clarification}
+
+so a bit like suffering?
+gloss:{e==suffering}
+-
+thats the right direction
+gloss:{no,close}
+
+is a stronger or milder than suffering
+?
+gloss:{non-yes-no}
+-
+milder mixed with shame
+gloss:{non-yes-no}
+
+is it anguish?
+gloss:{e==anguish}
+-
+not exactly
+gloss:{no}
+
+is it associated with gilt?
+gloss:{associated(e,guilt)}
+-
+not really  the emoyion im thinking of isnt so serious like anguish or guilt
+gloss:{no,hint}
+
+if you think someone is lying do you feel this emotion?
+gloss:{situation(e,someoneIsLying)}
+-
+no
+gloss:{no}
+
+so you cheated on a user13 would you feel this emotion?
+gloss:{situation(e,youCheatedOnATest)}
+-
+you would be if you got caught in front of your whole class
+gloss:{possibly,hint}
+
+embarrassed?
+gloss:{e==embarrassed} 
+-
+yep!
+gloss:{yes,done}
+
+end:"2011-06-21 19:22:02", emotion:embarrassment, questions:12, outcome:success
+
+
+match:4, answerer:user11, questioner:user16, start:"2011-06-21 19:22:06"
+
+ok is it positive?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+neutral?
+gloss:{e.valence==neutral}
+-
+no
+gloss:{no}
+
+ls it intense?
+gloss:{e.activation==high}
+-
+It can vary but its not the most intense negative emotion 
+gloss:{variable}
+
+is it more linked to anger than sadness?
+gloss:{similarity(e,anger)>similarity(e,sadness)}
+-
+no the other way more linked to sadness than anger
+gloss:{no,clarification}
+
+is it kinda like sadness but mixed with another emotion?
+gloss:{e==mix(sadness,anotherEmotion)}
+-
+no its close to sadness
+but not the same
+gloss:{no,clarification}
+
+is it different because there's shame?
+gloss:{e-sadness==shame}
+-
+no
+its different because with this emotion you feel more than just sadness in regards to a situation
+gloss:{no,hint}
+
+is the situation possibly losing in an important match?
+gloss:{situation(e,losingAnImportantMatch)}
+-
+yeah it could be
+gloss:{yes,possibly}
+
+is it more likely when you've disappointed somebody?
+gloss:{situation(e,youveDisappointedSomebody)}
+-
+similar too its when maybe you have disappointed somebody and you feel like you cant do anything to fix it
+gloss:{no,close,hint}
+
+is it helpless?
+gloss:{e==helplessness}
+-
+yesss
+gloss:{yes}
+
+end:"2011-06-21 19:41:46", emotion:helpless, questions:9, outcome:success
+
+
+
+match:5, answerer:user16, questioner:user11, start:"2011-06-21 19:41:54"
+
+is it a positive emotion
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it similar to love?
+gloss:{similar(e,love)}
+-
+not really, but you can feel this emotion towards love
+gloss:{no,clarification}
+
+if you want love?
+gloss:{situation(e,youWantLove)}
+-
+more like if you think love's coming your way
+gloss:{no,hint}
+
+so its kinda like being excited?
+gloss:{similar(e,excitement)}
+-
+kinda
+gloss:{yes,hedge}
+
+is it like desiring something
+?
+gloss:{similar(e,disire)}
+-
+kinda mux desire and excited
+gloss:{kindOf,mix,hint}
+
+longing?
+gloss:{e==longing}
+-
+but with excited
+gloss:{no,close}
+
+Eagerness?
+gloss:{e==eagerness}
+-
+yea! it was enthusiastic
+gloss:{yes,done,synonym}
+
+end:"2011-06-21 19:58:44", emotion:enthusiasm/eagerness, questions:7, outcome:success/synonym
+
+
+match:6, answerer:user11, questioner:user16, start:"2011-06-21 19:22:06"
+
+is it positive?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it like sadness?
+gloss:{similar(e,sadness)}
+-
+much stronger
+and different*
+gloss:{no,clarification}
+
+like desperation?
+gloss:{similar(e,desperation)}
+-
+you would be desperate in a situation with this emotion but this emotion would prevail
+gloss:{clarification}
+
+fear?
+gloss:{e==fear}
+-
+stronger
+but yes
+right path 
+gloss:{no,close}
+
+anxiety? 
+gloss:{e==anxiety}
+-
+stronger think of terrible fear
+if you are walking down the street and someone walks out to chase you with a chainsaw
+gloss:{no,hint}
+
+ummm terror!
+gloss:{e==terror}
+-
+yes!
+gloss:{yes,done}
+
+end:"2011-06-21 20:12:39", emotion:terror, questions:6, outcome:success
+
+
+
+#################################################################
+file:"2011-06-22 user11@ark.usc.edu - user16@ark.usc.edu.log"
+#################################################################
+
+match:1, answerer:user11, questioner:user16, start:"2011-06-22 18:03:22"
+
+ok, is it positive?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it intense?
+gloss:{e.activation==high}
+-
+it can be yes
+usually its intense
+gloss:{yes,usually}
+
+does it happen after a great accomplishment?
+gloss:{situation(e,afterGreatAccomplishment)}
+-
+yes
+gloss:{yes}
+
+is like pridr/
+*pride
+gloss:{similar(e,pride)}
+-
+it can go along with pride
+gloss:{yes,clarification}
+
+does it happen when youre surprised?
+gloss:{coocur(e,surprise)}
+-
+pleasantly surprise
+d
+gloss:{yes,clarification}
+
+pleased?
+gloss:{e==pleased}
+-
+no but its very very close
+gloss:{no,close}
+
+content?
+gloss:{e==contentment}
+-
+stronger
+a very pleasant expirince
+think of*
+gloss:{no,clarification,hint}
+
+glad or grateful?
+gloss:{e==gladness||e==gratefulness}
+-
+another word for glad
+so close
+its actually different
+its experienced together with being glad 
+think of a very happy moment in ur life you had this emotion
+gloss:{no,close,clarification,hint}
+
+relief? spirited?
+ecstatic?
+gloss:{e==relief||e==spirited||e==ecstacy}
+-
+no
+closer to ecstatic
+gloss:{no,hint}
+
+thrilled?
+gloss:{e==thrill}
+-
+no you want to give up?
+gloss:{no}
+
+would you really only feel it when you're really really happy?
+gloss:{coocur(e,extremeHappiness)}
+-
+yeah it a very good moment
+its too general I'll tell you
+its Joy.
+gloss:{yes,done,giveaway}
+
+end:"2011-06-22 18:25:29", emotion:joy, questions:11, outcome:failure/spilledBeans
+
+
+match:2, answerer:user16, questioner:user11, start:"2011-06-22 18:25:30"
+
+Ok is it a positive emotion?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it associated with being surprised
+gloss:{associated(e,beingSurprised)}
+-
+nope
+gloss:{no}
+
+if you were doing yoga would you feel like this?
+gloss:{situation(e,doingYoga)}
+-
+no
+gloss:{no}
+
+so its an excited happy emotion?
+gloss:{excited(e)&&happy(e)}
+-
+yea it can be
+gloss:{yes,possibly}
+
+if you are getting a massage would you feel this emotion?'
+gloss:{situation(e,gettingAMassage)}
+-
+nope
+well, maybe depending on who it is
+gloss:{no,depends}
+
+if you just finished a very long paper and you think it turned out well would you feel this emotion
+?
+gloss:{situation(e,youFinishedALongPaperAndYouThinkItTurnedOutWell)}
+-
+nope
+gloss:{no}
+
+You are with the person you love would you feel this emotion?
+gloss:{situation(e,withSomeoneYouLove)}
+-
+yea!
+gloss:{yes}
+
+is it attraction?
+gloss:{e==attraction}
+-
+it's more general, you kinda said it already
+gloss:{no,close,hint}
+
+love?
+gloss:{e==love}
+-
+yea!
+gloss:{yes,done}
+
+end:"2011-06-22 18:47:12", emotion:love, questions:9, outcome:success
+
+
+match:3, answerer:user11, questioner:user16, start:"2011-06-22 18:47:26"
+
+ok is it (+)?
+gloss:{e.valence==positive}
+-
+ni
+no
+gloss:{no}
+
+is it neurtral?
+8neutral
+gloss:{e.valence==neutral}
+-
+n
+o
+gloss:{no}
+
+is more like sadness?
+gloss:{similar(e,sadness)}
+-
+no stronger
+gloss:{no,hint}
+
+very extreme emotion
+like despair?
+or anguish?
+gloss:{e.activation==high&&similar(e,despair)&&similar(e,anguish)}
+-
+yes
+close to both
+but its more something you would feel when you dont want to do something
+gloss:{yes,hint,clarification}
+
+maybe defiance or suffering?
+gloss:{e==defiance||e==suffering}
+-
+no closer to anguish
+think of the emotion you feel when there is a final and you dont want to do it
+gloss:{no,hint}
+
+maybe doomed or tortured?
+gloss:{e==doomed||e==tortured}
+-
+close to doom 
+think of the emotion you get when you have to do something you really dont want to do
+gloss:{no,close,hint}
+
+hopeless or powerless?
+gloss:{e==hopelessness}
+-
+hopeless close
+enough
+dread
+gloss:{yes,done,synonym}
+
+end:"2011-06-22 18:57:31", emotion:dread/hopelessness, questions:7, outcome:success/synonym
+
+
+match:4, answerer:user16, questioner:user11, start:"2011-06-22 18:57:41"
+
+Is it a positive moment?
+emotion haha sorry
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it associated with being irritated?
+gloss:{associated(e,irritation)}
+-
+not really
+gloss:{no,hedge}
+
+would you feel like this after your girlfriend breaks up with you
+gloss:{situation(e,breakup)}
+-
+no
+gloss:{no}
+
+is it like anger?
+gloss:{similar(e,anger)}
+-
+no, itd be more like sadness with stress
+gloss:{no,hint}
+
+is it associated with depression?
+gloss:{associated(e,depression)}
+-
+no
+gloss:{no}
+
+how about with aggravation?
+gloss:{associated(e,aggravation)}
+-
+no, aggravation seems kinda dominant whereas the emotion is kinda submissive
+gloss:{no,hint}
+
+is it associated with suffering?
+gloss:{associated(e,suffering)}
+-
+i would say so
+gloss:{yes,hedge}
+
+so if you are doing homework but you are very tired would you feel this emotion?
+gloss:{situation(e,doingHomeworkAndFeelingTired)}
+-
+no
+more like in social situations
+gloss:{no,hint}
+
+is it like being shy?
+gloss:{e==shyness}
+-
+thats it!
+gloss:{yes,done}
+
+end:"2011-06-22 19:07:25", emotion:shyness, questions:9, outcome:success
+
+
+match:5, answerer:user11, questioner:user16, start:"2011-06-22 19:07:27"
+
+is it positive?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it intense?
+gloss:{e.activation==high}
+-
+as far as intensity its a medium 
+gloss:{no,clarification}
+
+do you feel it when you earned 100 on a user13?
+gloss:{situation(e,doWellOnTest)}
+-
+yes definitely specially if were are worried about the user13
+gloss:{yes,clarification}
+
+maybe relief?
+gloss:{e==relief}
+-
+yes!
+gloss:{yes,done}
+
+end:"2011-06-22 19:12:03", emotion:relief, questions:4, outcome:success
+
+
+match:6, answerer:user16, questioner:user11, start:"2011-06-22 19:12:34"
+
+ok is it a negative emotion?
+gloss:{e.valence==negative}
+-
+yea
+gloss:{yes}
+
+are you in control when you feel this emotion
+?
+gloss:{associated(e,control)}
+-
+no
+gloss:{no}
+
+is it like anger?
+gloss:{similar(e,anger)}
+-
+no, like sadness
+gloss:{no,hint}
+
+you buy a very expensive car but it breaks would you feel this emotion toward the brand?
+gloss:{situation(e,youBuyExpensiveCarButItBreaks)}
+-
+no
+but you would feel this in general
+gloss:{no,clarification}
+
+is it associated with loneliness?
+gloss:{associated(e,loneliness)}
+-
+yea it can be
+gloss:{possibly}
+
+you screw up a group presentation for a class would you feel like this?'
+gloss:{situation(e,youScrewUpGroupPresentation)}
+-
+yea
+gloss:{yes}
+
+is it shame?
+gloss:{e==shame}
+-
+no
+but you can feel both at the same
+my wmotioni s very heneral
+*emlltion is
+*general
+sorry
+gloss:{no,hint}
+
+is it like misery?
+gloss:{similar(e,misery)}
+-
+basically yea! depression!
+gloss:{yes,done,synonym}
+
+end:"2011-06-22 19:28:13", emotion:depression/misery, questions:8, outcome:success/synonym
+
+
+
+match:7, answerer:user11, questioner:user16, start:"2011-06-22 19:28:58"
+
+is it positive?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+a bit likt sadness?
+gloss:{similar(e,sadness)}
+-
+no different
+gloss:{no}
+
+morelike anger?
+gloss:{similar(e,anger)}
+-
+similar but not quite there
+gloss:{yes,clarification}
+
+maybe more low key like annoyed?
+gloss:{similar(e,annoyance)}
+-
+yeah associated with annoyed
+gloss:{yes}
+
+maybe frustration?
+gloss:{e==frustration}
+-
+very similar
+gloss:{no,close}
+
+exasperated?
+gloss:{e==exasperated}
+-
+lose
+cloaw
+close
+gloss:{no,close}
+
+like when there is an awkward situation
+like unvomfortable?
+gloss:{situation(e,awkwardSituation)}
+-
+close
+gloss:{yes,close}
+
+umm nervous?
+gloss:{e==nervousness}
+-
+almost?
+gloss:{no,close}
+
+maybe apprehensive?
+gloss:{e==apprehension}
+-
+no
+gloss:{no}
+
+off all the words ive said which is closesr?
+*closest
+gloss:{non-yes-no}
+-
+uncomfortable
+gloss:{non-yes-no}
+
+self conscious?
+gloss:{e==selfConscious}
+-
+no
+tense
+gloss:{no,giveAway,done}
+
+end:"2011-06-22 19:53:54", emotion:tense/uncomfortable, questions:11, outcome:failure/spilledBeans/synonym
+
+
+
+match:8, answerer:user16, questioner:user11, start:"2011-06-22 19:54:11"
+
+ok is it positive
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it
+close to happiness?
+gloss:{similar(e,happiness)}
+-
+yea, a c;am happiness
+*calm
+gloss:{yes,hint}
+
+is it like love
+gloss:{similar(e,love)}
+-
+no
+gloss:{no}
+
+is it like pleasure?
+gloss:{similar(e,pleasure)}
+-
+yea! its conrenr
+(content
+gloss:{yes,done,giveAway}
+
+end:"2011-06-22 20:17:33", emotion:contentment, questions:4, outcome:spilledBeans
+
+
+######################################################################
+file:"2011-06-26 user14.emo20q.r1@ark.usc.edu - user2@ark.usc.edu.log"
+######################################################################
+
+
+match:1, answerer:user14.emo20q.r1, questioner:user2, start:"2011-06-26 10:15:08"
+
+ok, is it a positive emotion?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+does it relate to how you feel about other people?
+gloss:{associated(e,otherPerson)}
+-
+yes, in general
+gloss:{yes}
+
+does it relate to love?
+gloss:{associated(e,love)}
+-
+no
+gloss:{no}
+
+is it anger?
+gloss:{e==anger}
+-
+close, but no
+gloss:{no,close}
+
+does the emotion tend to quickly dissapate?
+gloss:{e.duration==short}
+-
+not usually
+good question!
+gloss:{no,cheer}
+
+thanks, do you feel the emotion towards strangers?
+gloss:{directed(e,stranger)}
+-
+you could, but I think you'd have to have some kind of interaction/history with the stranger first
+gloss:{possibly,clarification}
+
+oh, yeah, haha, is it more powerful than anger?
+gloss:{e.activation>anger.activation}
+-
+yes!
+gloss:{yes}
+
+wow, is it hatred?
+gloss:{e==hatred}
+-
+no
+but getting close
+gloss:{no,close}
+
+hmm
+hah
+can it lead to physical harm?
+gloss:{cause(e,physicalHarm)}
+-
+yes, you could say that... someone might get smacked, and the experiencer might get high blood pressure
+gloss:{yes,clarification}
+
+i see, is it frustration?
+gloss:{e==frustration}
+-
+no, it's stronger
+gloss:{no,hint}
+
+oh, is it furious?
+gloss:{e==fury}
+-
+yep, you got it !  :-D 
+gloss:{yes,done}
+
+end:"2011-06-26 10:57:12", emotion:fury, questions:11, outcome:success
+
+
+match:2, answerer:user2, questioner:user14.emo20q.r1, start:"2011-06-26 11:00:06"
+
+okay, is it an emotion that you anticipate feeling today?
+gloss:{situation(e,today)}
+-
+yes
+gloss:{yes}
+
+does it relate to how you feel about other people?
+gloss:{associated(e,otherPeople)}
+-
+yes, it can
+but not exclusively
+gloss:{possibly}
+
+are you more likely to experience this emotion in the company of friends?
+gloss:{experienceWith(e,friends)}
+-
+no
+gloss:{no}
+
+Does the emotion make you want to take some action?
+gloss:{cause(e,action)}
+-
+yes, it can
+gloss:{yes,possibly}
+
+is it a strong emotion?
+gloss:{e.activation==high}
+-
+yes, I think so
+gloss:{yes,hedge}
+
+is it an emotion that you can tell by looking at a person whether they are feeling the emotion or not?
+gloss:{hasExternalExpression(e)}
+-
+no
+gloss:{no}
+
+is it an emotion that makes you feel good?
+gloss:{cause(e,feelGood)}
+-
+no
+gloss:{no}
+
+is it similar to frustrated?
+gloss:{similar(e,frustrated)}
+-
+no
+gloss:{no}
+
+confused?
+gloss:{e==confused}
+-
+no
+gloss:{no}
+
+is it similar to sad?
+gloss:{similar(e,sadness)}
+-
+hmm, Yes, I think it relates a little bit
+gloss:{yes,clarification}
+
+depressed?
+gloss:{e==depression}
+-
+not that strong, also it doesn't necessarily lead to sadness
+gloss:{no,hint}
+
+nostalgia?
+gloss:{e==nostalgia}
+-
+no, perhaps a little stronger
+gloss:{no,hint}
+
+missing someone?
+gloss:{e==missingSomeone}
+-
+no, but I think you're in the neighborhood
+gloss:{no,close}
+
+is it caused by something in particular (as opposed to just popping up)?
+gloss:{cause(something,e)}
+-
+yes
+yes, it has an origin, but it can pop up throughout the rest of your life
+gloss:{yes,hint}
+
+regret?
+gloss:{e==regret}
+-
+yes
+!
+gloss:{yes,done}
+
+end:"2011-06-26 11:25:58", emotion:regret, questions:15, outcome:success
+
+
+#################################################################
+file:"2011-06-27 user11@ark.usc.edu - user16@ark.usc.edu.log"
+#################################################################
+
+
+match:1, answerer:user11, questioner:user16, start:"2011-06-27 18:09:15"
+
+is it positive?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it neutral?
+gloss:{e.valence==neutral}
+-
+no
+gloss:{no}
+
+does it vary in intensity
+gloss:{e.activation==variable}
+-
+yes
+gloss:{yes}
+
+is it kinda like sadness?
+gloss:{similar(e,sadness)}
+-
+no more like anger
+gloss:{no,hint}
+
+does it happen after you failed a user13?
+gloss:{situation(e,afterYouFailATest)}
+-
+No
+it would happen more often after you have witnessed something
+gloss:{no,hint}
+
+would you feel it after you see someone bully your little sister?
+gloss:{situation(e,afterYouSeeSomeoneBullyYourLittleSister)}
+-
+yes
+gloss:{yes}
+
+would it be like rage?
+gloss:{similar(e,rage)}
+-
+it could be accompagnied by rage but it is not rage
+accompanied 
+gloss:{no,clarification}
+
+would you feel it after dealing with somebody annoying?
+gloss:{situation(e,afterDealingWithSomebodyAnnoying)}
+-
+not every time but it is possible
+gloss:{possibly}
+
+is it a combination of anger and another emotion, or pretty different from plain anger?
+gloss:{e==anger+otherEmotion}
+-
+different
+gloss:{no}
+
+is it more like being wary?
+gloss:{similar(e,beingWary)}
+-
+closer yes
+gloss:{yes,close}
+
+is it more extreme, like being paranoid?
+gloss:{similar(e,paranoia)}
+-
+no its different
+after you have seen something very distasteful for example
+gloss:{no,hint}
+
+would you feel it if you saw a documentary about the meat industry and then you feel skeptical about ordering a hamburger?
+gloss:{situation(e,afterSeeingADocumentaryAboutTheMeatIndustry)}
+-
+yes possibly 
+gloss:{yes, possibly}
+
+how about more when you see the news about a serial killer in your enighborhood and you're walking home late at night?
+gloss:{situation(e,seeNewsAboutSerialKillerAndWalkHomeLateAtNight)}
+-
+no
+gloss:{no}
+
+is it like being skeptical?
+gloss:{similar(e,skepticism)}
+-
+Well it relates closely to the feeling that you got initially when watching the documentary about the meat
+you might have felt this emotion towards some of the scenes
+you saw
+gloss:{no,clarification}
+
+maybe shock or disgust?
+gloss:{e==shock||e==disgust}
+-
+disgust!
+thats it!
+gloss:{yes,done}
+
+end:"2011-06-27 18:49:49", emotion:disgust, questions:15, outcome:success
+
+
+match:2, answerer:user16, questioner:user11, start:"2011-06-27 18:50:30"
+
+is it positive?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it intense
+gloss:{e.activation==high}
+-
+yea it usually is
+gloss:{yes,hedge}
+
+is it like being sad?
+gloss:{similar(e,sadness)}
+-
+sorta, it's more sad than anger
+gloss:{sortOf,clarification}
+
+is it like envy?
+gloss:{similar(e,envy)}
+-
+no
+gloss:{no}
+
+so would this be an emotion that might be assimilated to depression
+gloss:{associated(e,depression)}
+-
+do you mean it could progress into depression? it's not associated with depression
+depression seems not to be very energetic, but the emotion i'm thinking of kinda does
+gloss:{no,clarification}
+
+so if you just lost a pet would you feel like this
+?
+gloss:{situation(e,youJustLostAPet)}
+-
+if you're looking for him you would
+gloss:{yes,clarification}
+
+is it like exasperation?
+gloss:{similar(e,exasperation)}
+-
+no
+gloss:{no}
+
+would you feel like this if you were lost in the woods?
+gloss:{situation(e,lostInTheWoods)}
+-
+definitely
+gloss:{yes}
+
+is it like scared?
+gloss:{similar(e,scared)}
+-
+maybe a little less intense
+gloss:{maybe}
+
+misery?
+gloss:{e==misery}
+-
+think more along the lines of the energy of being scared
+gloss:{no,hint}
+
+despair?
+gloss:{e==despair}
+-
+but less intense than being scared
+gloss:{no,hint}
+
+glumness?
+gloss:{e==glumness}
+-
+what would you feel when you have a scary user13?
+gloss:{no,hint}
+
+fear
+anxiety
+gloss:{e==fear||e==anxiety}
+-
+yea! anxiety!
+gloss:{yes,done}
+
+end:"2011-06-27 19:15:24", emotion:anxiety, questions:13, outcome:success
+
+
+match:3, answerer:user11, questioner:user16, start:"2011-06-27 19:17:11"
+
+yep! is it positive?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it like anger?
+gloss:{similar(e,anger)}
+-
+no
+gloss:{no}
+
+is it more like sadness?
+gloss:{similar(e,sadness)}
+-
+yes
+gloss:{yes}
+
+do you feel it when someone dear has passed away?
+gloss:{situation(e,someoneCloseDied)}
+-
+no
+more a reaction to something you do
+gloss:{no,hint}
+
+is it like guilt?
+gloss:{e==guilt}
+-
+yes guilt!!!
+gloss:{yes,done}
+
+end:"2011-06-27 19:33:32", emotion:guilt, questions:5, outcome:success
+
+
+match:4, answerer:user16, questioner:user11, start:"2011-06-27 19:34:16"
+
+is it a negative emotion?
+gloss:{e.valence==negative}
+-
+it's kinda neutral
+gloss:{no,hint}
+
+is it intense?
+gloss:{e.activation==high}
+-
+yes
+gloss:{yes}
+
+can you get it in a situation where you are scareD?
+gloss:{situation(e,scared)}
+-
+yep
+gloss:{yes}
+
+how about when you win the lottery?
+gloss:{situation(e,winLottery)}
+-
+yep
+gloss:{yes}
+
+is it surprise?
+gloss:{e==surprise}
+-
+yea you got it!
+gloss:{yes,done}
+
+end:"2011-06-27 19:47:15", emotion:surprise, questions:5, outcome:success
+
+
+match:5, answerer:user11, questioner:user16, start:"2011-06-27 19:47:23"
+
+is it positive?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it intense?
+gloss:{e.activation==high}
+-
+yes it can be
+gloss:{yes}
+
+do you feel it after you get 100 on a midterm?
+gloss:{situation(e,afterYouGet100OnAMidterm)}
+-
+yes
+gloss:{yes}
+
+is it pride?
+gloss:{e==pride}
+-
+no but close
+you feel it when you are driving and think you are going to crash but you dont
+gloss:{no,close,hint}
+
+is it relief?
+gloss:{e==relief}
+-
+yes!
+gloss:{yes,done}
+
+end:"2011-06-27 20:02:00", emotion:relief, questions:5, outcome:success
+
+
+match:6, answerer:user16, questioner:user11, start:"2011-06-27 20:03:40"
+
+ok is it positive?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+ok is it intense?
+gloss:{e.activation==high}
+-
+not really
+gloss:{no,hedge}
+
+is it sad
+like sad
+gloss:{similar(e,sadness)}
+-
+more like mad
+gloss:{no,hint}
+
+so closer to rage?
+gloss:{similar(e,rage)}
+-
+rage is super intense, the emotion i'm thinking of is pretty mild
+gloss:{no,hint}
+
+do you feel like this when you lose your favorite sweater?
+gloss:{situation(e,loseYourFavoriteSweater)}
+-
+yea
+but more when you lose a regular sweater and it's cold out
+gloss:{yes,clarification}
+
+is it associated with irritation?
+gloss:{associated(e,irritation)}
+-
+yea! it irritated/annoyed
+*it's
+gloss:{yes,done}
+
+end:"2011-06-27 20:15:35", emotion:annoyance/irritated, questions:6, outcome:success/synonym
+
+
+
+####################################################################
+file:"2011-06-28 user11@ark.usc.edu - user16@ark.usc.edu.log"
+####################################################################
+
+
+match:1, answerer:user11, questioner:user16, start:"2011-06-28 18:15:37"
+
+ok is it positive?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it intense?
+gloss:{e.activation==high}
+-
+yes
+gloss:{yes}
+
+is it like anger?
+gloss:{similar(e,anger)}
+-
+yeah similar
+gloss:{yes}
+
+is it more like rage? or exasperation?
+gloss:{non-yes-no}
+-
+exaperation
+gloss:{non-yes-no}
+
+does it happen when somebody takes the thing you want?
+gloss:{situation(e,someoneTakesTheThingYouWant)}
+-
+not necessarily but it can
+gloss:{possibly}
+
+how about when your tennis doubles' partner keeps messing up and you have a match tomorrow?
+gloss:{situation(e,tennisDoublesPartnerKeepsMessingUp)}
+-
+yeah
+you would get this way
+after the match maybe not during it
+gloss:{yes,clarification}
+
+pessimistic? or bitter?
+gloss:{e==bitter}
+-
+closer to bitter
+gloss:{no,close}
+
+maybe resentful?
+gloss:{e==resentment}
+-
+Yeah but its like when someone is just not in a good mood
+it can be combined with bitterness
+resentfulness
+gloss:{no,hint}
+
+kinda like sullen? or grumpy?
+gloss:{e==grumpy}
+-
+grumpy!
+gloss:{yes,done}
+
+end:"2011-06-28 18:31:00", emotion:grumpiness, questions:9, outcome:success
+
+
+match:2, answerer:user16, questioner:user11, start:"2011-06-28 18:31:24"
+
+is it a positive emotion?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it like being happy?
+gloss:{similar(e,happiness)}
+-
+well, you can be really serious, but happy at the same time
+gloss:{yes,clarification}
+
+do you get this emotion at disneyland?
+gloss:{situation(e,disney)}
+-
+no
+gloss:{no}
+
+would you feel this when u are pleasantly surprised?
+gloss:{situation(e,pleasantlySurprised)}
+-
+no
+gloss:{no}
+
+is it associated with optimism? 
+gloss:{associated(e,optimism)}
+-
+yea
+gloss:{yes}
+
+is it hope?
+gloss:{e==hope}
+-
+yea, but there's more of a focused energy
+gloss:{no,close}
+
+eagerness
+gloss:{e==eagerness}
+-
+umm, well , i think they're all synonyms, and its hard to differentiate; i was thinking determination
+gloss:{yes,done,synonym}
+
+end:"2011-06-28 18:48:18", emotion:eagerness/determination, questions:7, outcome:success/synonym
+
+
+
+match:3, answerer:user11, questioner:user16, start:"2011-06-28 18:49:37"
+
+is it posiitive?
+gloss:{e.valence==positive}
+-
+No
+gloss:{no}
+
+is it like sadness?
+gloss:{similar(e,sadness)}
+-
+YES
+yes
+sorry no caps hahaha
+gloss:{yes}
+
+is it intense like depression?
+gloss:{similar(e,depression)}
+-
+it can b e
+but not always
+gloss:{possibly,notAlways}
+
+is it different from plain sadness?
+gloss:{different(e,sadness)}
+-
+yes \
+when you feel this negative emotion you can also feel sadness
+gloss:{yes,clarification}
+
+does it happen when someone betrays you?
+gloss:{situation(e,betrayal)}
+-
+yes
+gloss:{yes}
+
+is it like a painful emotion, like feeling betrayed?
+gloss:{painful(e)}
+-
+yes
+very close
+gloss:{yes,close}
+
+is betrayal the most common situation when this emotion happens? or are there other situations?
+gloss:{exist(s)(situation(e,s)&&s!=betrayal)}
+-
+yeah
+when someone does something you didnt expect
+gloss:{yes,hint}
+
+like shock?
+gloss:{similar(e,shock)}
+-
+close yeah 
+think about how you feel when your friend that was going to do a favor for you doesnt do it
+gloss:{yes,close,hint}
+
+well i'm thinking being let down, so maybe disappointed?
+gloss:{e==disappointment}
+-
+yes! disappointing 
+gloss:{yes,done}
+
+end:"2011-06-28 19:14:20", emotion:disappointment, questions:9, outcome:success
+
+
+match:4, answerer:user16, questioner:user11, start:"2011-06-28 19:15:12"
+
+ok is it a positive emotion
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it extreme?
+gloss:{e.activation==high}
+-
+it can be, but it varies
+gloss:{possibly,variable}
+
+is it like sadness?
+gloss:{similar(e,sadness)}
+-
+no, i'd say more it's more like anger than sadness, but it's not really anger
+gloss:{no,hint}
+
+do you feel this emotion when your friend gets a prettier girlfriend than you?
+gloss:{situation(e,friendGetsPrettierGirlfriendThanYou)}
+-
+haha no
+gloss:{no}
+
+would you feel like this before you get a cold vaccine?
+gloss:{situation(e,beforeYouGetAColdVaccine)}
+-
+if you're scared of shots, yes
+gloss:{yes,depends}
+
+is it associated with worry
+?
+gloss:{associated(e,worry)}
+-
+yea, but think more like nervous
+gloss:{yes,hint}
+
+anxious?
+gloss:{e==anxiety}
+-
+well, they're all really similar, i was thinking something like 
+well, think more like paranoid mixed with anxious
+gloss:{no,hint}
+
+helplessness
+gloss:{e==helplessness}
+-
+yea, but not so submissive as helplessness, more like you're stranded in a creepy forest and you're closely watching your surroundings
+gloss:{no,close,hint}
+
+stress?
+despair?
+haha I give up
+gloss:{giveUp}
+-
+haha, i was thinking wary
+gloss:{done}
+
+end:"2011-06-28 19:38:14", emotion:wariness, questions:9, outcome:failure/giveup
+
+
+match:5, answerer:user11, questioner:user16, start:"2011-06-28 19:38:16"
+
+haha ok, is it positive?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it intense?
+gloss:{e.activation==high}
+-
+yeah it can
+be
+gloss:{yes,possibly}
+
+if you complete a 4-year ph.d program, would you feel this emotion pretty intensely?
+gloss:{situation(e,youCompletePhdProgram)}
+-
+yes
+gloss:{yes}
+
+would it be pride? or relief?"
+gloss:{e==pride||e==relief}
+-
+close to relief think of a satisfaction?
+of
+a 
+synonym
+haha typo
+gloss:{no,close}
+
+maybe feeling care free now that you're done?
+gloss:{e==carefree}
+-
+yeah you call that a word
+its when you are____
+gloss:{no,close,hint}
+
+relaxed?
+gloss:{e==relaxed}
+-
+no you want to give up?
+its kinda hard 
+gloss:{no,done}
+
+end:"2011-06-28 19:49:54", emotion:satisfaction, questions:6, outcome:failure/giveup/spilledBeans
+
+
+match:6, answerer:user16, questioner:user11, start:"2011-06-28 19:50:00"
+
+ok is it a positive emotion?
+gloss:{e.valence==positive}
+-
+yea
+gloss:{yes}
+
+is it very intense
+gloss:{e.activation==high}
+-
+yea
+gloss:{yes}
+
+is it associated with attraction?
+gloss:{associated(e,attraction)}
+-
+not necessarily
+gloss:{notNecessarily}
+
+is it associated with satisfaction
+?
+gloss:{associated(e,satisfaction)}
+-
+not always, think simple
+gloss:{notAlways,hint}
+
+so more like plain happy?
+gloss:{similar(e,happy)}
+-
+yea!
+oh, i mean, think more like plain happy, not happiness mixed in with something
+gloss:{yes,clarification}
+
+is it like being optimistic?
+gloss:{similar(e,optimism)}
+-
+nope
+gloss:{no}
+
+is it like being thrilled?
+gloss:{similar(e,thrill)}
+-
+there you go! i was thinking exhilaration
+gloss:{yes,done,synonym}
+
+end:"2011-06-28 20:08:14", emotion:exhilaration/thrill, questions:7, outcome:success/synonym
+
+
+#########################################################################
+file:"2011-06-29 user14.emo20q.r1@ark.usc.edu - user1@ark.usc.edu.log"
+#########################################################################
+
+match:1, answerer:user1, questioner:user14.emo20q.r1, start:"2011-06-29 18:51:24"
+
+okay, is it an emotion that you might feel at disney land?
+gloss:{situation(e,disney)}
+-
+no
+gloss:{no}
+
+is it an emotion that lasts a long time?
+gloss:{e.duration==long}
+-
+sometimes
+gloss:{sometimes}
+
+is it caused by something in particular?
+gloss:{exists(c)(cause(c,e))}
+-
+there are many causes
+gloss:{yes,clarification}
+
+can it occur with out any particular cause?
+gloss:{cause(emptySet,e)}
+-
+no
+gloss:{no}
+
+is it an emotion that makes you feel good?
+gloss:{cause(e,feelGood)}
+-
+no
+gloss:{no}
+
+is it similar to sadness?
+gloss:{similar(e,sadness)}
+-
+yes
+gloss:{yes}
+
+is it sadness?
+gloss:{e==sadness}
+-
+sorrow
+gloss:{yes,done,synonym}
+
+end:"2011-06-29 18:55:38", emotion:sorrow/sadness, questions:7, outcome:success/synonym
+
+
+#################################################################
+file:"2011-06-29 user11@ark.usc.edu - user16@ark.usc.edu.log"
+#################################################################
+
+match:1, answerer:user16, questioner:user11, start:"2011-06-29 18:16:51"
+
+is it positive?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it an emotion you would feel at a theme park?
+gloss:{situation(e,themePark)}
+-
+no
+gloss:{no}
+
+would you feel it after a user13?
+gloss:{situation(e,afterTest)}
+-
+maybe if it goes well
+rather when you get a good grade back
+gloss:{yes,depends}
+
+is it associated with satisfaction?
+gloss:{associated(e,satisfaction)}
+-
+it can be
+gloss:{possibly}
+
+if you thought you lost something but then find it in your pocket would you feel like this??
+gloss:{situation(e,thoughtYouLostSomethingButFindItInYourPocket)}
+-
+nope
+gloss:{no}
+
+when you finish a great piece of art would you feel liek this?
+gloss:{situation(e,finishAGreatPieceOfArt)}
+-
+yea
+gloss:{yes}
+
+is it pride
+?
+gloss:{e==pride}
+-
+yep!
+gloss:{yes,done}
+
+end:"2011-06-29 18:30:43", emotion:pride, questions:7, outcome:success
+
+
+match:2, answerer:user11, questioner:user16, start:"2011-06-29 18:32:05"
+
+ok is it positive?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it like anger?
+gloss:{similar(e,anger)}
+-
+No
+gloss:{no}
+
+is it like sadness?
+gloss:{similar(e,sadness)}
+-
+yeah its closer
+gloss:{yes,close}
+
+would you feel it if you hooked up with your best friend's spouse?
+gloss:{situation(e,youHookedUpWithYourBestFriendsSpouse)}
+-
+yeah but it is not guilt
+gloss:{yes,hint}
+
+not like shame?
+gloss:{similar(e,shame)}
+-
+no
+its more like
+after the fact you feel guilty and also something else
+gloss:{no,hint}
+
+is it like feeling humble and wanting to do something so your friend can forgive you?
+like repenting?
+gloss:{e==humble||e==repenting}
+-
+no it is neither
+gloss:{no}
+
+is more closely associated with fear
+maybe panic that you're going to get caught?
+gloss:{associated(e,fear)}
+-
+yes yes
+but what do you call when you are afraid you are going to get caught
+gloss:{yes,hint}
+
+scared or paranoid?
+gloss:{e==scared}
+-
+its kinda like scared, worried
+gloss:{no,close,hint}
+
+is it like nervous? or more like you said scared
+gloss:{non-yes-no}
+-
+its worried
+gloss:{giveAway,done}
+
+end:"2011-06-29 18:53:49", emotion:worry/scared, questions:9, outcome:success/synonym/spilledBeans?
+
+
+match:3, answerer:user16, questioner:user11, start:"2011-06-29 18:54:42"
+
+ok is it positive?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it asociated with sadness?
+associated 
+gloss:{associated(e,sadness)}
+-
+i'd say more like sadness than anger, but it's like either
+*but it's not really like either
+gloss:{no,hint}
+
+ok
+is it associated with being annoyed?
+gloss:{associated(e,annoyance)}
+-
+not really, but you can be annoyed and this emotion at the same time
+or becuase you're annoyed, you can feel this emotion
+gloss:{no,hedge,hint}
+
+would you feel like this if you think someone is lying?
+gloss:{situation(e,youThinkSomeoneIsLying)}
+-
+you could, but maybe more likely if they keep lying time after time
+gloss:{possibly,depends}
+
+if a friend betrays you would you feel like this
+?
+gloss:{situation(e,friendBetrayesYou)}
+-
+maybe, but this emotion isn't really linked with social situaqtions
+gloss:{maybe,hint}
+
+more like something a person did themselves?
+gloss:{cause(self,e)}
+-
+yea, like a hard day's night :-D
+gloss:{yes,hint}
+
+is it like guit?
+gloss:{e==guilt}
+-
+no
+gloss:{no}
+
+so if say you make a big mistake would you feel like this?
+gloss:{situation(e,makeABigMistake)}
+-
+maybe
+more like,you've had a long day, made many mistakes and you just wanna go home and rest
+gloss:{maybe,hint}
+
+so exhausted
+?
+gloss:{e==exhausted}
+-
+no worries, exhausted is right! :-)
+gloss:{yes,done}
+
+end:"2011-06-29 19:36:47", emotion:exhaustion, questions:9, outcome:success
+
+
+match:4, answerer:user11, questioner:user16, start:"2011-06-29 19:38:42"
+
+is it positive?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it like sadness?
+gloss:{similar(e,sadness)}
+-
+no
+gloss:{no}
+
+maybe more like anger?
+gloss:{similar(e,anger)}
+-
+uhm
+its really like neither
+it can happen when you are sad happy or angry
+but its bad
+gloss:{no,clarification,hint}
+
+does it happen suddenly, like shock?
+gloss:{sudden(e)}
+-
+no probably progressively 
+gloss:{no,hint}
+
+would it happen when you're having a great day and then slowly annoying things piles on top each other so you end up frustrated?
+gloss:{situation(e,havingAGreatDayThenAnnoyingThingsPileUpAndYouBecomeFrustrated)}
+-
+yes
+gloss:{yes}
+
+but it's different from being frustrated?
+gloss:{different(e,frustrated)}
+-
+yes
+gloss:{yes}
+
+is it like rage?
+gloss:{similar(e,rage)}
+-
+no more like when you have a lot of homework
+gloss:{no,hint}
+
+overwhelmed?
+gloss:{e==overwhelmed}
+-
+its associated with overwhelmed
+gloss:{no,close}
+
+is it more neutral than overwhelmed or more angry than overwhelmed?
+gloss:{non-yes-no}
+-
+its more overwhelmed than overwhelmed 
+gloss:{non-yes-no}
+
+like devastated? or distressed?
+gloss:{e==devastated||e==distressed}
+-
+closer to distress 
+think of hw
+gloss:{non-yes-no}
+
+stress?
+*stressed
+gloss:{e==stress}
+-
+yeesss!'
+gloss:{yes,done}
+
+end:"2011-06-29 19:54:14", emotion:stress, questions:11, outcome:success
+
+
+##########################################################################
+file:"2011-06-30 user14.emo20q.r1@ark.usc.edu - user11@ark.usc.edu.log"
+##########################################################################
+
+match:1, answerer:user14.emo20q.r1, questioner:user11, start:"2011-06-30 18:30:40"
+
+ok is it positive/
+?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+is it intense?
+gloss:{e.activation==high}
+-
+yes
+gloss:{yes}
+
+is associated with sadness?
+gloss:{associated(e,sadness)}
+-
+no
+well, it could be I guess, but not closely.
+gloss:{possibly}
+
+is it an emotion caused by your own actions or someone elses actions
+?
+gloss:{non-yes-no}
+-
+It could be, but but not necessarily...
+gloss:{non-yes-no}
+
+your little cousin breaks your TV would you feel this emotion?
+gloss:{situation(e,cousinBreaksYourTv)}
+-
+hahaha... yes, quite possibly
+gloss:{yes}
+
+is it anger?
+gloss:{e==anger}
+-
+no
+gloss:{no}
+
+would you feel like this if you got lost?
+gloss:{situation(e,getLost)}
+-
+no
+gloss:{no}
+
+would you feel like this if you crash your car?
+gloss:{situation(e,crashCar)}
+-
+yes
+gloss:{yes}
+
+is it associated with irritation?
+being irritated 
+gloss:{associated(e,irritation)}
+-
+no
+gloss:{no}
+
+if someone lets you down would you feel like this?
+gloss:{situation(e,someoneLetsYouDown)}
+-
+yes, in some extreme cases.
+gloss:{yes,possibly}
+
+is it associated with disappointment?
+gloss:{associated(e,disappointment)}
+-
+no, not so much (except as I said in extreme cases)
+gloss:{no,depends}
+
+if you break your leg and you are in a lot of pain would you feel like this?
+gloss:{situation(e,breakLegInALotOfPain)}
+-
+yes, but the emphasis is on breaking your leg
+gloss:{yes,clarification}
+
+not on the pain?
+gloss:{associated(e,pain)}
+-
+less about that, but it might be a factor
+gloss:{possibly}
+
+ok is it associated with suffering?
+gloss:{associated(e,suffering)}
+-
+yes
+it's often the beginning of suffering
+gloss:{yes,hint}
+
+is it grief?
+gloss:{e==grief}
+-
+no, it's not really associated with sadness except in very extreme cases
+gloss:{no,notUsually}
+
+if the power goes out
+and there is nothing to do 
+gloss:{situation(e,powerGoesOut)}
+-
+possibly, but I think the situation would have to be more extreme
+gloss:{possibly,depends}
+
+is it associated with being aggravated?
+gloss:{associated(e,aggravation)}
+-
+possibly... you might feel this emotion right before being extremely aggravated.
+gloss:{possibly}
+
+if something unexpected happens do you feel liek this'/>
+like this?
+gloss:{situation(e,somethingUnexpectedHappens)}
+-
+yes
+gloss:{yes}
+
+is it surprise?
+gloss:{e==surprise}
+-
+no, it's similar to surprise but without the possibility of it being pleasant.
+gloss:{no,hint}
+
+if you get a bad great in a class that you thought you were doing great in do you feel like this?
+gloss:{situation(e,badGradeInAClassYouThoughtYouWereDoingGreatIn)}
+-
+yes
+gloss:{yes}
+
+is it disappointment?
+gloss:{e==disappointment}
+-
+no, more extreme and immediate... it's what you would feel before you realized you were dissapointed
+gloss:{no,hint}
+
+stupefaction? 
+gloss:{e==stupefaction}
+-
+haha... pretty close.  it might be synonym, but this word is much more common
+gloss:{no,close,hint}
+
+shock?
+gloss:{e==shock}
+-
+yes, good job!
+gloss:{yes,done,cheer}
+
+end:"2011-06-30 19:11:07", emotion:shock, questions:23, outcome:success/over20
+
+
+match:2, answerer:user11, questioner:user14.emo20q.r1, start:"2011-06-30 19:12:13"
+
+let's see... is it an emotion where another person is involved?
+gloss:{associated(e,otherPerson)}
+-
+yes
+gloss:{yes}
+
+is it an emotion that normally makes you feel good?
+gloss:{cause(e,feelGood)}
+-
+no
+gloss:{no}
+
+does it make you feel bad?
+gloss:{cause(e,feelBad)}
+-
+Not exactly bad, its unpleasant
+gloss:{notExactly,clarification}
+
+is some other person the cause of the emotion?
+gloss:{cause(otherPerson,e)}
+-
+yes
+gloss:{yes}
+
+can you also feel the emotion about yourself?
+gloss:{directed(e,self)}
+-
+no
+gloss:{no}
+
+is it associated with disappointment?
+gloss:{associated(e,disappointment)}
+-
+it can be felt along with it but it isnt really associated with it
+gloss:{no,clarification}
+
+does the emotion dissipate quickly?
+gloss:{e.duration==short}
+-
+no usually
+gloss:{notUsually}
+
+is it related to jealosy/envy?
+gloss:{associated(e,[jealousy,envy])}
+-
+its jealousy! nice!
+gloss:{yes,done,cheer}
+
+end:"2011-06-30 19:25:08", emotion:jealousy/envy, questions:8, outcome:success/synonym
+
+
+match:3, answerer:user14.emo20q.r1, questioner:user11, start:"2011-06-30 19:28:44"
+
+ok is it a good emotion?
+gloss:{good(e)}
+-
+no
+gloss:{no}
+
+is it extreme?
+gloss:{e.activation==high}
+-
+can be but there is a range.
+gloss:{canBe,variable}
+
+ok would you feel like this if you fail a user13?
+gloss:{situation(e,failATest)}
+-
+possibly... if it was your fault
+gloss:{possibly,hint}
+
+is it associated with sadness?
+gloss:{associated(e,sadness)}
+-
+yes
+gloss:{yes}
+
+if a girl breaks up with you do you feel like this'?
+gloss:{situation(e,girlBreaksUpWithYou)}
+-
+in certain cases, for example if she broke up with you because you cheated on her
+gloss:{inCertainCases,hint}
+
+can you feel like this when you lie?
+gloss:{situation(e,lying)}
+-
+yes
+gloss:{yes}
+
+is it guilt?
+gloss:{e==guilt}
+-
+yep!  good job...
+gloss:{yes,done,cheer}
+
+end:"2011-06-30 19:38:53", emotion:guilt, questions:7, outcome:success
+
+
+match:4, answerer:user11, questioner:user14.emo20q.r1, start:"2011-06-30 19:38:56"
+
+is it positive?
+gloss:{e.valence==positive}
+-
+no
+gloss:{no}
+
+does it last a long time?
+gloss:{e.duration==long}
+-
+it can yeah
+gloss:{yes,possibly}
+
+do you think a dog can feel this emotion?
+gloss:{feel(e,dog)}
+-
+uhmmm yeah possibly
+gloss:{possibly}
+
+is it fear?
+gloss:{e==fear}
+-
+no but it is similar
+gloss:{no,close}
+
+is it excited?
+gloss:{e==excited}
+-
+think fear but more specific
+gloss:{no,hint}
+
+hmm...
+frightened?
+gloss:{e==fright}
+-
+closer very close but not exactly
+you can feel all of this due to this emotion
+gloss:{no,close}
+
+would you feel it at a haunted house?
+gloss:{situation(e,atHauntedHouse)}
+-
+no
+gloss:{no}
+
+how about if something made a noise in the night and you weren't sure what it is?
+gloss:{situation(e,somethingMadeANoiseInTheNightAndYouArentSureWhatItIs)}
+-
+no
+gloss:{no}
+
+is there anticipation involved?
+if there's an expectation of something happening...
+gloss:{associated(e,expectation)}
+-
+yeah
+gloss:{yes}
+
+is it dread?
+gloss:{e==dread}
+-
+no think of the reason why someone wouldnt do something in front of people
+gloss:{no,hint}
+
+embarrassment?
+gloss:{e==embarrassment}
+-
+no
+it can go along
+but you feel this because you are afraid of feeling embarrassment
+gloss:{no,close,hint}
+
+oh, shyness?
+gloss:{e==shyness}
+-
+close enough
+insecurity 
+insecure
+gloss:{yes,done,synonym}
+
+end:"2011-06-30 19:56:08", emotion:insecurity/shyness, questions:12, outcome:success/synonym
+
+
+match:5, answerer:user14.emo20q.r1, questioner:user11, start:"2011-06-30 19:56:28"
+
+is it positive?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it intense
+gloss:{e.activation==high}
+-
+no
+gloss:{no}
+
+is it associated with happiness 
+gloss:{associated(e,happiness)}
+-
+somewhat... I would say they tend to coocur
+gloss:{somewhat,clarification}
+
+would you feel like this if you are at disneyland
+gloss:{situation(e,disney)}
+-
+no not so much...
+gloss:{no,hedge}
+
+would you feel like this if you are with someone you love?
+gloss:{situation(e,withSomeoneYouLove)}
+-
+yes
+and not just romantic love, ie, family too
+gloss:{yes,clarification}
+
+can you feel this toward a pet?
+gloss:{can(directed(e,pet)}
+-
+no
+actually you don't normally feel it towards anything
+gloss:{no,clarification}
+
+is it associated with enjoyment
+?
+gloss:{associated(e,enjoyment)}
+-
+somewhat... but like I said it's not about anything in particular.
+gloss:{somewhat,clarification}
+
+is it associated with being comfortable?
+gloss:{associated(e,beingComfortable)}
+-
+yes
+gloss:{yes}
+
+is it more intense or less intense than being comfortable?
+gloss:{non-yes-no}
+-
+about the same or maybe a tad less
+gloss:{non-yes-no}
+
+is it associated with serenity?
+gloss:{associated(e,serenity)}
+-
+yes, in fact that might be a synonym, but I think you'll get it while I'm pondering...
+I think it's a little different, serene is usually a comfortable surrounding but you can be this emotion in any situation...
+gloss:{yes,clarification}
+
+composed?
+gloss:{e==composed}
+-
+no, not composed but it's also very close
+gloss:{no,close}
+
+is it tranquility?
+gloss:{e==tranquility}
+-
+the same state of mind but it can be in any situation....
+so not quite
+gloss:{no,close,hint}
+
+unpreoccupied
+?
+I dont even think you can translate that
+its from a word in spanish
+gloss:{e==unpreoccupied}
+-
+hahaha.... no its not that complicated... i think there is a cognate in spanish too
+gloss:{no,hint}
+
+uhm do you feel like this at the spa?
+gloss:{situation(e,spa)}
+-
+yes, you definitely feel it in cases when you'd be tranquil/serene, but also say on a battle field if you are very well trained.
+gloss:{yes,clarification}
+
+do you feel like this during a user13?
+gloss:{situation(e,duringTest)}
+-
+ideally yes, but in general no
+gloss:{ideally,notGenerally}
+
+how about if you are a professional dancer and you are in the middle of a performance 
+gloss:{situation(e,professionalDancerInMiddleOfPerformance)}
+-
+yes, I think so
+but I think it's very close to tranquil/serene maybe I should count it...
+gloss:{yes,clarification}
+
+give me a situation
+in which you would feel like this
+gloss:{non-yes-no}
+-
+you would feel it in all the situations of tranquil/serene, but it's more mental I think
+rather than the situation.
+gloss:{non-yes-no}
+
+is it like being focused?
+gloss:{similar(e,focus)}
+-
+its kind of a prerequisite
+if you're agitated you can't focus, so you need to ____ down.
+gloss:{kindOf,hint}
+
+calmm!
+haha ok
+it was close 
+gloss:{e==calm}
+-
+aha!!!
+yeah, it's probably synonym, just that I think about it too much :-P
+gloss:{yes,done,cheer}
+
+end:"2011-06-30 20:33:27", emotion:calm, questions:19, outcome:success
+
+
+################################################################
+file:"2011-06-30 user14.emo20q.r1@ark.usc.edu - user9@ark.usc.edu"
+################################################################
+
+
+match:1, answerer:user14.emo20q.r1, questioner:user9, start:"2011-06-30 09:23:19"
+
+1. Is it a positive emotion?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+2. Is it very obvious to other people if you are having this emotion?
+gloss:{hasExternalExpression(e)}
+-
+yes
+gloss:{yes}
+
+3. Is it usually an intense emotion?
+gloss:{e.activation==high}
+-
+no, not so much
+gloss:{no,hedge}
+
+Does it usually last for a short period of time?
+gloss:{e.duration==short}
+-
+no
+gloss:{no}
+
+|s it happy?
+gloss:{e==happiness}
+-
+it is a happy emotion, but happy isn't it.  For me at least, it's slightly different
+gloss:{no,clarification}
+
+Is it associated with something being satisfied (i.e. an aim or a goal?)
+gloss:{assocated(e,goal)}
+-
+no, but good question though
+gloss:{no}
+
+is it pleasure? (as in, taking pleasure in something?)
+gloss:{e==pleasure}
+-
+no, but it is kind of close.  this emotion is pleasurable and being satisfied is probably a prerequisite, but it's not any one particular aim/goal or cause.
+gloss:{no,close,hint}
+
+contented?
+gloss:{e==contentment}
+-
+no, this emotion is a little more positive
+gloss:{no,hint}
+
+enjoyment?
+gloss:{e==enjoyment}
+-
+also pretty close, but no.  Less about any particular object of enjoyment.  you might enjoy being around a person feeling this emotion though.
+gloss:{no,close,hint}
+
+enthusiasm?
+gloss:{e==enthusiasm}
+-
+very close, but not so strong
+gloss:{no,close,hint}
+
+hmmm  - I'm still here, just thinking
+gloss:{non-yes-no}
+-
+no prob... you're in the right vicinity.  I think that happy was your closest guess so far and some players might even consider it a synonym
+gloss:{non-yes-no,hint}
+
+ah ok  -I might have gone off on the wrong track
+joy?
+gloss:{e==joy}
+-
+all your past couple of guesses are pretty close
+no
+gloss:{no,close}
+
+cheerful?
+gloss:{e==cheerfulness}
+-
+yeah!
+gloss:{yes,done}
+
+end:"2011-06-30 09:55:38", emotion:cheerfulness, questions:13, outcome:success
+
+
+match:2, answerer:user9, questioner:user14.emo20q.r1, start:"2011-06-30 09:57:27"
+
+does this emotion involve a goal or aim?
+gloss:{associated(e,goal)}
+-
+no, it doesn't have to
+gloss:{no,notNecessarily}
+
+is there another person involved?
+gloss:{associated(e,otherPerson)}
+-
+yes
+gloss:{yes}
+
+does this emotion usually make you feel good?
+gloss:{cause(e,feelGood)}
+-
+no
+gloss:{no}
+
+would you say it's a negative emotion?
+gloss:{e.valence==negative}
+-
+yes
+gloss:{yes}
+
+is it a strong emotion?
+gloss:{e.activation==high}
+-
+it can be strong, but it doesn't have to be, so I would say no
+gloss:{no,clarification}
+
+so is it necessary that there is another person (or other sentient being) involved?
+gloss:{necessary(associated(e,otherPerson))}
+-
+yes
+gloss:{yes}
+
+is it annoyed?
+gloss:{e==annoyance}
+-
+no
+gloss:{no}
+
+is it the other person that the emotion is directed at? 
+gloss:{directed(e,otherPerson)}
+-
+yes
+gloss:{yes}
+
+jealosy?
+gloss:{e==jealousy}
+-
+very close, but not quite the same
+gloss:{no,close}
+
+envy?
+gloss:{e==envy}
+-
+yep
+gloss:{yes,done}
+
+end:"2011-06-30 10:13:52", emotion:envy, questions:10, outcome:success
+
+
+
+###################################################################
+file:"2011-06-30 user26@ark.usc.edu - user16@ark.usc.edu.log"
+###################################################################
+
+match:1, answerer:user26, questioner:user16, start:"2011-06-30 18:27:46"
+
+ok, is it a positive emotion?
+gloss:{e.valence==positive}
+-
+no
+i would say generally it's not considered positive
+gloss:{no,generally,clarification}
+
+is it kinda like anger?
+gloss:{similar(e,anger)}
+-
+no
+gloss:{no}
+
+is it like sadness?
+gloss:{similar(e,sadness)}
+-
+no
+gloss:{no}
+
+do you feel it when you've had a long exhausting day?
+gloss:{situation(e,longExhaustingDay)}
+-
+you may
+but not necessarily
+gloss:{possibly,notNecessarily}
+
+do you feel it when someone lets you down?
+gloss:{situation(e,someoneLetsYouDown)}
+-
+not typically
+gloss:{no,notTypically}
+
+how about when you're scared?
+gloss:{situation(e,scared)}
+-
+no
+definitely not when you're scared
+gloss:{no}
+
+do you feel it when somebody has something you want?
+gloss:{situation(e,someoneHasSomethingYouWant)}
+-
+no
+gloss:{no}
+
+do you feel it when you're stressed?
+gloss:{situation(e,stress)}
+-
+no
+not while you are stressed
+but enough stress may lead you to feel this way
+gloss:{no,clarification}
+
+kinda like being overwhelemed?
+*overwhelmed
+gloss:{similar(e,overwhelmed)}
+-
+no
+but being overwhelmed may cause you to feel this way
+gloss:{no,clarification}
+
+it's a generally bad feeling, righT?
+gloss:{e.valence==negative}
+-
+it's not generally considered a good thing
+gloss:{yes,generally}
+
+so is it bad?
+gloss:{bad(e)}
+-
+sort of
+gloss:{sortOf}
+
+is it an intense feeling?
+gloss:{e.activation==high}
+-
+no
+it's not intense
+gloss:{no}
+
+do you feel it when somebody is bothering you?
+gloss:{situation(e,someoneIsBotheringYou)}
+-
+no
+gloss:{no}
+
+do you get it when you're surprised?
+gloss:{situation(e,surprise)}
+-
+no
+i wouldn't really say that it is caused by external stimuli
+gloss:{no,hint}
+
+do you feel it when you you blame yourself?
+gloss:{situation(e,blameYourself)}
+-
+no
+gloss:{no}
+
+i feel really lost, can i get a hint?
+gloss:{non-yes-no,askHint}
+-
+hmmm
+it is internal
+and not cause by others
+gloss:{non-yes-no,hint}
+
+kinda like being disappointed in yourself?
+gloss:{similar(e,disappointmentInOneself)}
+-
+but i wouldn't say it is very negative
+you couldn't feel this and be disappointed in yourself
+simultaneously
+
+gloss:{no,hint}
+
+but it's like feeling bad about yourself, right?
+gloss:{similar(e,feelingBadAboutOneself)}
+-
+no not at all
+it doesn't reflect how you feel about yourself
+gloss:{no,hint}
+
+is it like being tired?
+gloss:{similar(e,tiredness)}
+-
+sort of
+you're on the right track
+gloss:{sortOf,close}
+
+is it like being calm?
+gloss:{similar(e,calm)}
+-
+you would probably be in a calm state if you feel this
+gloss:{probably}
+
+like feeling content?
+gloss:{similar(e,contentment)}
+-
+no
+it's not really a positive feeling
+gloss:{no,clarification}
+
+is it being bored?
+gloss:{e==boredom}
+-
+no
+but you are EXTREMELY close
+gloss:{no,close}
+
+is it being uninterested? or distracted?
+gloss:{e==beingUninterested}
+-
+yes to the first
+not really to the second
+it is very similar to be uninterested
+that's a synonym
+so you got it :)
+it was apathy
+gloss:{yes,done,synonym}
+
+end:"2011-06-30 19:06:36", emotion:apathy/uninterested, questions:23, outcome:success/over20/synonym
+
+
+match:2, answerer:user16, questioner:user26, start:"2011-06-30 19:07:39"
+
+is it a positive thing to feel?
+gloss:{e.valence==positive}
+-
+nope
+gloss:{no}
+
+is it an intense thing to feel?
+gloss:{e.activation==high}
+-
+it can vary
+gloss:{variable}
+
+would you feel it for a long time?
+gloss:{e.duration==long}
+-
+you could
+gloss:{possibly}
+
+would you feel it if a friend died?
+gloss:{situation(e,friendDied)}
+-
+not at all
+gloss:{no}
+
+would you feel it if you were suprised?
+or shocked
+?
+gloss:{situation(e,surprise)}
+-
+nope, unless you were shocked at something your friend accomplished or received
+gloss:{no,hint}
+
+oh is it jealousy?
+gloss:{e==jealousy}
+-
+yea! i kinda gave too much info
+yeah you gave it away a little with that hint :)
+gloss:{yes,done}
+
+end:"2011-06-30 19:17:49", emotion:jealousy, questions:6, outcome:success/bigHint
+
+
+match:3, answerer:user26, questioner:user16, start:"2011-06-30 19:24:36"
+
+ok, is it a positive emotion?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it intense?
+gloss:{e.activation==high}
+-
+it can be
+but it can cover a pretty broad range of intensity
+gloss:{possibly,variable}
+
+do you get it when you get a good grade on a midterm?
+gloss:{situation(e,getAGoodGradeOnAMidTerm)}
+-
+no
+i wouldn't typically associate it with that situation
+gloss:{no,clarification}
+
+would it be while you're working really hard on a project?
+gloss:{situation(e,workingHardOnProject)}
+-
+no
+gloss:{no}
+
+would you feel it when you're cheering your team on at a football game?
+gloss:{situation(e,cheeringYourTeam)}
+-
+you may
+sort of
+gloss:{possibly,sortOf}
+
+is it more likely when you're listening to a peaceful song
+gloss:{situation(e,listeningToPeacefulSong)}
+-
+ummm
+i wouldn't say it is more likely
+it depends who you are listening to the song with i guess
+gloss:{depends,hint}
+
+is it like a positive feeling you feel towards somebody dear to you?
+gloss:{similar(e,positiveFeelingTowardSomeoneDear)}
+-
+yes
+gloss:{yes}
+
+is it love?
+gloss:{e==love}
+-
+very close
+gloss:{no,close}
+
+maybe affectionate?
+gloss:{e==affection}
+-
+that's it :)
+gloss:{yes,done}
+
+end:"2011-06-30 19:39:34", emotion:affection, questions:9, outcome:success
+
+
+match:4, answerer:user16, questioner:user26, start:"2011-06-30 19:41:10"
+
+ok
+it is a positive emotion?
+gloss:{e.valence==positive}
+-
+yes
+gloss:{yes}
+
+is it directed at someone else?
+gloss:{directed(e,otherPerson)}
+-
+not really
+gloss:{no,hedge}
+
+would you feel it after accomplishing something?
+gloss:{situation(e,afterAccomplishingSomething)}
+-
+not necessarily after
+gloss:{notNecessarily,clarification}
+
+is it similar to feeling motivated?
+gloss:{similar(e,motivation)}
+-
+yea
+gloss:{yes}
+
+is it motivation?
+gloss:{e==motivation}
+-
+it's a little less goal-oriented than motivated
+gloss:{no,hint}
+
+would you feel it if you are about to do something you enjoy?
+gloss:{situation(e,aboutToDoSomethingYouEnjoy)}
+-
+yea, maybe something like playing poker
+gloss:{yes,clarification}
+
+is it similar to excited?
+gloss:{similar(e,excitement)}
+-
+yea, but keep the feeling of motivation in mind
+gloss:{yes,hint}
+
+hmmm
+is it similar to feeling daring?
+gloss:{similar(e,feelingDaring)}
+-
+maybe, but it's more like motivation
+like positive energy
+gloss:{maybe,hint}
+
+is it similar to feeling lucky?
+gloss:{similar(e,feelingLucky)}
+-
+yes
+well, maybe it's synonymous
+I was thinking hopeful
+gloss:{yes,done,synonym}
+
+end:"2011-06-30 20:00:53", emotion:hope/feelingLucky, questions:9, outcome:success/synonym
+
+
