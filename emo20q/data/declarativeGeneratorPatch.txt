@@ -1,0 +1,79 @@
+gloss	atmplt
+cooccur(e,pleasure)	{e:it} cooccurs with pleasure
+e-fury==anotherEmotion	{e:it} is like fury combined with another emotion
+similar(e,misery)	{e:it} is similar to misery
+assocated(e,goal)	{e:it} is associated with a goal
+similar(e,hostility)	{e:it} is similar to hostility
+situation(e,afterAccomplishingSomething)	you feel {e:this emotion} after accomplishing something
+similar(e,motivation)	{e:it} is similar to motivation
+situation(e,aboutToDoSomethingYouEnjoy)	{e:it} is when you are about to do something you enjoy
+similar(e,feelingDaring)	{e:it} is similar to feeling daring
+similar(e,feelingLucky)	{e:it} is similar to feeling lucky
+if(situation(completeAPhdProgram))then(e.activation==high)	{e:this emotion} would be most intense after completing a phd program
+situation(e,longExhaustingDay)	{e:it} is like when you have a long exhausting day
+situation(e,someoneHasSomethingYouWant)	{e:it} is like when someone has something you want
+situation(e,stress)	{e:it} is like when you are stressed
+similar(e,overwhelmed)	{e:it} is like when you are overwhelmed
+bad(e)	{e:it} is a bad emotion
+situation(e,someoneIsBotheringYou)	{e:it} can occur when someone is bothering you
+situation(e,surprise)	{e:it} is when you are surprised
+similar(e,disappointmentInOneself)	{e:it} is similar to disappointment in one's self
+similar(e,feelingBadAboutOneself)	{e:it} is similar to feeling bad about one's self
+similar(e,tired)	{e:it} is similar to being tired
+similar(e,calm)	{e:it} is similar to being calm
+associated(e,goal)	{e:it} is associated with a goal
+necessary(associated(e,otherPerson))	{e:this emotion} is necessarily associated with another person
+feel(e,dog)	a dog can feel {e:this emotion}
+situation(e,somethingMadeANoiseInTheNightAndYouArentSureWhatItIs)	you would feel {e:this emotion} if something made a noise in the night and you aren't sure what it is
+associated(e,pain)	{e:it} is associated with pain
+sudden(e)	{e:it} is a sudden emotion
+similar(e,happy)	{e:it} is similar to happiness
+situation(e,winLottery)	{e:it} would happen if you win the lottery
+cause(e,self.feelGood)	{e:it} makes you feel good
+cause(event,e)	{e:this emotion} can be caused by an event
+not(expected(e))	{e:it} is unexpected
+e.valence>happiness.valence	{e:it} is stronger than happiness
+cause(e,benefit(otherPerson))	{e:it} can cause another person to benefit
+subset(e,devotion)	{e:it} is a type of devotion
+e.valence<passedScreening.valence	{e:it} is not as positive as the feeling when you pass screening
+similar(e,joy)	{e:it} is similar to joy
+situation(e,followingOtherPersonsBehavior)	{e:it} is related to following someone else's behavior or example
+similar(e,surprise)	{e:it} is similar to surprise
+e.activation<situation(e,sick(otherPerson))	{e:it} is not as strong as when you are sick of another person
+hasInternalExpression(e)	{e:it} is expressed inwardly
+situation(e,self.doneSomethingBadTo(otherPerson))	{e:it} is a situation when you have done something bad to another person
+e.activation==moderate	{e:it} is a moderately strong emotion
+e.activation>disappointment.activation	{e:it} is less strong than disappointment
+similar(e,excited)	{e:it} is similar to excited
+situation(e,goalAttainment)	{e:it} occurs when you attain a goal
+possible(e.valence==neutral)	it is possible that {e:this emotion} is neutral
+coocur(e,surprise)	{e:this emotion} can cooccur with surprise
+situation(e,feelUnderHighPressure)	{e:it} is when you feel under high pressure
+situation(e,somethingGoesWrongWithOtherPerson)	{e:it} is when somehting goes wrong with another person
+associated(e,determination)	{e:it} is associated with determination
+exist(s)(situation(e,s)&&s!=betrayal)	there are situations besides betrayal that are associated with {e:this emotion}
+situation(e,fightingForYourLife)	{e:it} occurs when you are in situations where you are fighting for your life
+similar(e,pain)	{e:it} is similar to pain
+similar(e,blame)	{e:it} is similar to blame
+associated(e,serenity)	{e:it} is associated with serenity
+e.activation==high&&similar(e,despair)&&similar(e,anguish)	{e:it} is an extreme emotion like despair or anguish
+e.activation>nervousness.activation	{e:it} is stronger than nervousness
+cause(self,e)	{e:this emotion}  is something that people can bring on upon themselves
+similar(e,thrill)	{e:this emotion} is like thrill
+e-sadness==shame	{e:this emotion} is like sadness with shame
+associated(e,otherPeople)	{e:it} is associated with other people
+endsWith(e.spelling,ful)	{e:this emotion's} name ends with -ful
+e.activation!=exhilaration.activation	{e:this emotion} differs from exhilaration in terms of its intensity
+similar(e,annoyance)	{e:it} is like being annoyed
+situation(e,spa)	you would feel {e:it} at a spa
+situation(e,duringTest)	you would feel {e:it} during a test
+situation(e,professionalDancerInMiddleOfPerformance)	you would feel {e:it} if you were a professional dancer in the middle of a performance
+similar(e,focus)	{e:it} is like being focused
+situation(e,makeABigMistake)	{e:it} is when you make a big mistake
+situation(e,losingAnImportantMatch)	{e:it} is when you lose an important match
+endsWith(e.spelling,ive)	the spelling of {e:this emotion} ends with -ive
+endsWith(e.spelling,ness)	the spelling of {e:this emotion} ends with -ness
+similar(e,despair)	{e:it} is similar to despair
+situation(e,blamingSomeoneElse)	you feel {e:this} when you blame someone else
+sequenceOfEvents([despair,e,giveup])	{e:this emotion} comes between despair and giving up
+e.activation==despair.activation	{e:this emotion} is about as strong as despair
