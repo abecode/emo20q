@@ -6,6 +6,7 @@ import json
 #from sqlalchemy.ext.declarative import declarative_base
 #Base = declarative_base()
 #from sqlalchemy import Column, Integer, String, MetaData, create_engine, ForeignKey
+from .nlphelper import classifyYN
 
 DIRNAME = os.path.dirname(os.path.realpath(__file__))
 DATADIR = os.path.join(DIRNAME, "data")
@@ -83,7 +84,7 @@ class Match(object):
             if "non-yes-no" in turn.qgloss: continue
             yield turn
 
-class Turn(object):
+class Turn():
     """One of the question/answer pairs from and emo20q match"""
 
     def questionId(self):
@@ -99,17 +100,17 @@ class Turn(object):
 
         return ans
 
-class Question(object):
+class Question():
     """Keeps track of question strings"""
 
-    def __init__(self,q,gloss):
+    def __init__(self, q, gloss):
         self.q = q
         self.gloss = gloss
 
-class Answer(object):
+class Answer():
     """Keeps track of answer strings"""
 
-    def __init__(self,a,gloss):
+    def __init__(self, a, gloss):
         self.a = a
         self.gloss = gloss
 
@@ -243,8 +244,19 @@ class HumanComputerCouchJsonTournament(Tournament):
                     turn.q = t['container'][0]['param']['text']
                     turn.qgloss = t['container'][0]['param']['gloss']
                     turn.a = t['container'][1]['param']['text']
-                    turn.agloss = t['container'][1]['param']['gloss']
-                    #print turn.qgloss, turn.a
+                    answer = classifyYN(turn.a)
+                    # for some reason, this is not included in the
+                    # game data json
+                    if answer == 1:
+                        turn.agloss = "yes" 
+                    elif answer == -1:
+                        turn.agloss = "no"
+                    else:
+                        turn.agloss = "non-yes-no"
+                    # print("q: ", turn.q)
+                    # print("qgloss: ",  turn.qgloss)
+                    # print("a: ", turn.a)
+                    # print("agloss: ", turn.agloss)
                     mtch._turns.append(turn)
             self._matches.append(mtch)
 
