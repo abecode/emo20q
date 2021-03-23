@@ -1,0 +1,4 @@
+#!/bin/bash
+echo running pre-commit hook
+echo $(pwd)
+nbstripout --keep-output *.ipynb
