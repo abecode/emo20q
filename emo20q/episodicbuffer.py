@@ -3,6 +3,7 @@
 from datetime import datetime as dt
 import json
 import os
+import re
 import sys
 import time
 from emo20q import nlphelper
@@ -49,7 +50,7 @@ class EpisodicBuffer(list):
     def newMatch(self):
         del self[:]
     def numTurns(self):
-        turns = filter(lambda x: isinstance(x, Turn) or isinstance(x, Question),self)
+        turns = list(filter(lambda x: isinstance(x, Turn) or isinstance(x, Question), self))
         return len(turns)
     def getFeature(self,q,a):
         if(not q.gloss): 
@@ -60,7 +61,7 @@ class EpisodicBuffer(list):
         else : answer = "other"
         return (q.gloss,answer)
     def getFeatures(self):
-        turns = filter(lambda x: isinstance(x, Turn),self)
+        turns = list(filter(lambda x: isinstance(x, Turn), self))
         features = {}
         for x in turns:
             f = self.getFeature(x.q, x.a)
