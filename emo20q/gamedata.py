@@ -19,19 +19,13 @@ class Tournament():
         return self._matches
     def __add__(self,other):
         t = Tournament()
-        t._matches = []
-        t._matches.extend(self.matches())
-        t._matches.extend(other.matches())
+        t.matches = []
+        t.matches.extend(self.matches)
+        t.matches.extend(other.matches)
         return t
 
 class Match(object):
     """An emo20q game instance"""
-
-    def turns(self):
-        return self._turns
-
-    def emotion(self):
-        return self._emotion
 
     def readTurns(self,fh):
         while True:
@@ -121,10 +115,10 @@ class HumanHumanTournament(Tournament):
     def __init__(self, annotationFile=None):
         if not annotationFile:
             annotationFile = os.path.join(DATADIR, HUMANHUMAN)
-        f = open(annotationFile, 'rU')
+        f = open(annotationFile, 'r')
         self.fname = annotationFile
         try:
-            self._matches = [m for m in self.readMatches(f)]
+            self.matches = [m for m in self.readMatches(f)]
             #for m in self.getMatches(f):
             #    print m.turns[0]
         finally:
@@ -138,8 +132,8 @@ class HumanHumanTournament(Tournament):
                 break
             mtch = Match()
             turns = []
-            if re.match("match:\d+", line):
-                m = re.match("match:\d+, answerer:(?P<answerer>.+?), questioner:(?P<questioner>.+?), start:\"(?P<start>.+?)\"", line)
+            if re.match(r"match:\d+", line):
+                m = re.match(r"match:\d+, answerer:(?P<answerer>.+?), questioner:(?P<questioner>.+?), start:\"(?P<start>.+?)\"", line)
                 mtch.answerer = m.group('answerer')
                 mtch.questioner = m.group('questioner')
                 mtch.start = m.group('start')
@@ -148,12 +142,12 @@ class HumanHumanTournament(Tournament):
                 turns = [turn for turn in mtch.readTurns(fh)]
                 line = fh.readline()
                 #print "should say end: " + line
-                m = re.match("end:\"(?P<end>.+?)\", emotion:(?P<emotion>.+?), questions:(?P<questions>.+?), outcome:(?P<outcome>.+)(, .*)?",line)
-                mtch._end = m.group('end');
-                mtch._emotion = m.group('emotion');
-                mtch._questions = m.group('questions');
-                mtch._outcome = m.group('outcome');
-                mtch._turns = turns
+                m = re.match(r"end:\"(?P<end>.+?)\", emotion:(?P<emotion>.+?), questions:(?P<questions>.+?), outcome:(?P<outcome>.+)(, .*)?",line)
+                mtch.end = m.group('end');
+                mtch.emotion = m.group('emotion');
+                mtch.numquestions = m.group('questions');
+                mtch.outcome = m.group('outcome');
+                mtch.turns = turns
                 #print mtch._emotion
                 yield(mtch)
 
@@ -185,11 +179,11 @@ class HumanComputerTournament(Tournament):
     def __init__(self, annotationFile=None):
         if not annotationFile:
             annotationFile = os.path.join(DATADIR, PILOTDATA)
-        f = open(annotationFile, 'rU')
+        f = open(annotationFile, 'r')
         self.fname = annotationFile
         line = f.readline() #remove header
         try:
-            self._matches = [m for m in self.readMatches(f)]
+            self.matches = [m for m in self.readMatches(f)]
             #for m in self.getMatches(f):
             #    print m.turns[0]
         finally:
@@ -200,14 +194,14 @@ class HumanComputerTournament(Tournament):
         currentEmotion = ""
         for line in fh:
             turn = Turn()
-            m = re.match("^(?P<emotion>.+?)\t(?P<stimuli>.+?)\t(?P<response>.+?)$", line)
+            m = re.match(r"^(?P<emotion>.+?)\t(?P<stimuli>.+?)\t(?P<response>.+?)$", line)
             emotion = m.group('emotion').lower()
             turn.qgloss = m.group('stimuli')
             turn.a = m.group('response')
             if(emotion!=currentEmotion):
                 mtch = Match()
-                mtch._turns=turns
-                mtch._emotion=currentEmotion
+                mtch.turns=turns
+                mtch.emotion=currentEmotion
                 if currentEmotion != '':       #there was a blank/empty emotion
                     matches.append(mtch)
                 turns = []
@@ -228,16 +222,16 @@ class HumanComputerCouchJsonTournament(Tournament):
             fname = os.path.join(DATADIR, COUCHJSON)
         db = json.load(open(fname))
         self.fname = fname
-        self._matches = []
+        self.matches = []
         for row in db.get("rows"):
             mtch = Match()
             doc = row.get('doc')
             if 'param' not in doc: continue #this is a design document, not data
             if 'emotion' not in doc['param']: continue # this this emo20q dialog hasn't been annotated
             if 'container' not in doc: raise KeyError('"container" not found in doc') #this shouldn't happen ever
-            mtch._emotion = doc['param']['emotion']
+            mtch.emotion = doc['param']['emotion']
             #print mtch._emotion
-            mtch._turns = []
+            mtch.turns = []
             for t in doc['container']:
                 if 'type' in t and t['type'] == "Turn":
                     turn = Turn()
@@ -257,8 +251,8 @@ class HumanComputerCouchJsonTournament(Tournament):
                     # print("qgloss: ",  turn.qgloss)
                     # print("a: ", turn.a)
                     # print("agloss: ", turn.agloss)
-                    mtch._turns.append(turn)
-            self._matches.append(mtch)
+                    mtch.turns.append(turn)
+            self.matches.append(mtch)
 
 
 
@@ -320,9 +314,9 @@ if __name__ == "__main__":
         # read in tournament, do some testing, get some stats
         t = HumanHumanTournament("../annotate/emo20q.txt")
         assert isinstance(t,Tournament)
-        assert type( t.matches() ) == list
-        print(len(t.matches()))
-        print([m.emotion() for m in t.matches()])
+        assert type( t.matches ) == list
+        print(len(t.matches))
+        print([m.emotion() for m in t.matches])
         #t.printStats()
         #engine = create_engine('sqlite:///emo20q.db', echo=True)
         #Base.metadata.create_all(engine)
@@ -333,7 +327,7 @@ if __name__ == "__main__":
         G = nx.DiGraph()
 
         for m_idx,m in enumerate(t.matches()):
-            assert isinstance(m,Match)
+            assert isinstance(m, Match)
             assert type(m.turns()) == list
             G.add_nodes_from(m.turns())
 

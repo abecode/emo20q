@@ -12,12 +12,12 @@ class LexicalAccess():
 
       self._dictionary = defaultdict(list)
 
-      for m in tournament.matches():
-         for t in m.turns():
+      for m in tournament.matches:
+         for t in m.turns:
             self._dictionary[t.questionId()].append(t.q)
    def __call__(self,gloss):
       return self.lookUp(qgloss)
-   def lookUp(self,qgloss):
+   def lookUp(self, qgloss):
        candidates = self._dictionary[qgloss]
        if len(candidates) == 0:
           match = re.search(r'^e==(.+)$', qgloss)

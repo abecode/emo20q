@@ -165,7 +165,7 @@ class GenerateDeclarative():
     def generateRandom(self, gloss):
         """generates a random realization"""
         if gloss in self._dictionary:
-            return self.replace(random.choice(self[gloss]))
+            return self.replace(random.choice(self._dictionary[gloss]))
         else:
             #print gloss
             raise KeyError(gloss)

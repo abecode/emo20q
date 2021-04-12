@@ -12,7 +12,7 @@ import nltk
 
 
 from emo20q import nlphelper
-from emo20q.GPDA import GPDA,State,GPDAError
+from emo20q.gpda import GPDA, State, GPDAError
 from emo20q.semanticknowledge import SemanticKnowledge
 from emo20q.lexicalaccess import LexicalAccess
 from emo20q.episodicbuffer import (EpisodicBuffer, Turn, AgentUtt, UserUtt,

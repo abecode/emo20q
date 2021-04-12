@@ -26,8 +26,8 @@ class SemanticKnowledge(NaiveBayesClassifier):
 
       #count turns in a dict, for pruning
       qcounts = defaultdict(int)
-      for m in tournament.matches():
-         for t in m.turns():
+      for m in tournament.matches:
+         for t in m.turns:
             qcounts[t.questionId()]+=1
 
       feature_count_threshold  = 2
@@ -40,13 +40,13 @@ class SemanticKnowledge(NaiveBayesClassifier):
       #get FreqDist of questions(properties/features) given emotions
       self._feature_freqdist = defaultdict(FreqDist)
       self._feature_values = defaultdict(set)
-      for m in tournament.matches():
-         #print(m.emotion())
-         emotions = m.emotion().split("/") #deal with synonyms (sep'd w/ '/' )
+      for m in tournament.matches:
+         #print(m.emotion)
+         emotions = m.emotion.split("/") #deal with synonyms (sep'd w/ '/' )
          for e in emotions:
             self._labels.add(e)
             self._label_freqdist[e] += 1
-            for t in m.turns():
+            for t in m.turns:
                qid = t.questionId()
                if(qcounts[qid] >= feature_count_threshold):
                   #deal with b.s. questions
