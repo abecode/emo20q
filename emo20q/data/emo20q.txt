@@ -1664,11 +1664,11 @@ yes
 (to me, but not sure if yes to others. so it's more like subjective)
 gloss:{yes,subjective,hint}
 
-would you feel it if you had a user13 the next day?
+would you feel it if you had a test the next day?
 gloss:{situation(e,futureTest)}
 -
 no
-(but can do after the user13.)
+(but can do after the test.)
 gloss:{no,hint}
 
 dissapointed?
@@ -5248,7 +5248,7 @@ gloss:{yes}
 is it worrying?
 gloss:{e==worry}
 -
-more than that, worrying can be like a big user13 coming up, but the emotion i'm thinking of is more intense
+more than that, worrying can be like a big test coming up, but the emotion i'm thinking of is more intense
 gloss:{no,close,hint}
 
 but its not anxiety?
@@ -6039,7 +6039,7 @@ gloss:{situation(e,someoneIsLying)}
 no
 gloss:{no}
 
-so you cheated on a user13 would you feel this emotion?
+so you cheated on a test would you feel this emotion?
 gloss:{situation(e,youCheatedOnATest)}
 -
 you would be if you got caught in front of your whole class
@@ -6492,10 +6492,10 @@ gloss:{e.activation==high}
 as far as intensity its a medium 
 gloss:{no,clarification}
 
-do you feel it when you earned 100 on a user13?
+do you feel it when you earned 100 on a test?
 gloss:{situation(e,doWellOnTest)}
 -
-yes definitely specially if were are worried about the user13
+yes definitely specially if were are worried about the test
 gloss:{yes,clarification}
 
 maybe relief?
@@ -6886,7 +6886,7 @@ gloss:{similar(e,sadness)}
 no more like anger
 gloss:{no,hint}
 
-does it happen after you failed a user13?
+does it happen after you failed a test?
 gloss:{situation(e,afterYouFailATest)}
 -
 No
@@ -7034,7 +7034,7 @@ gloss:{no,hint}
 glumness?
 gloss:{e==glumness}
 -
-what would you feel when you have a scary user13?
+what would you feel when you have a scary test?
 gloss:{no,hint}
 
 fear
@@ -7610,7 +7610,7 @@ gloss:{situation(e,themePark)}
 no
 gloss:{no}
 
-would you feel it after a user13?
+would you feel it after a test?
 gloss:{situation(e,afterTest)}
 -
 maybe if it goes well
@@ -8072,7 +8072,7 @@ gloss:{e.activation==high}
 can be but there is a range.
 gloss:{canBe,variable}
 
-ok would you feel like this if you fail a user13?
+ok would you feel like this if you fail a test?
 gloss:{situation(e,failATest)}
 -
 possibly... if it was your fault
@@ -8283,7 +8283,7 @@ gloss:{situation(e,spa)}
 yes, you definitely feel it in cases when you'd be tranquil/serene, but also say on a battle field if you are very well trained.
 gloss:{yes,clarification}
 
-do you feel like this during a user13?
+do you feel like this during a test?
 gloss:{situation(e,duringTest)}
 -
 ideally yes, but in general no
