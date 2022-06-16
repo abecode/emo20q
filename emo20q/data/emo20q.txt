@@ -195,13 +195,13 @@ no
 gloss:{no}
 
 Excited?
-gloss:{e==excitement}
+gloss:{e==excited}
 -
 but i had a different word in mind
 gloss:{no,clarification:t-1}
 
 so it's similar to excited?
-gloss:{similar(e,excitement)}
+gloss:{similar(e,excited)}
 -
 no
 gloss:{no}
@@ -6137,7 +6137,7 @@ more like if you think love's coming your way
 gloss:{no,hint}
 
 so its kinda like being excited?
-gloss:{similar(e,excitement)}
+gloss:{similar(e,excited)}
 -
 kinda
 gloss:{yes,hedge}
@@ -8797,7 +8797,7 @@ yea, maybe something like playing poker
 gloss:{yes,clarification}
 
 is it similar to excited?
-gloss:{similar(e,excitement)}
+gloss:{similar(e,excited)}
 -
 yea, but keep the feeling of motivation in mind
 gloss:{yes,hint}
