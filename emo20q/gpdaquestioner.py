@@ -195,7 +195,7 @@ class QuestionerAgent(GPDA):
     def welcomeMessage(self,input):
         output = "[Agent enters the universe of discourse]\n"
         output += "Welcome to EMO20Q\n"
-        output += "I'm goint to try to guess the emotion that you are thinking of\n"
+        output += "I'm going to try to guess the emotion that you are thinking of\n"
         output += "it needn't be the emotion you are currently feeling\n"
         output += "Let me know when you are ready..."
         self.episodicBuffer.add(AgentUtt(output))
