@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 
-from .gamedata import HumanHumanTournament
 from collections import defaultdict
 import re
 import random
+
+from .gamedata import HumanHumanTournament
+from .nlphelper import remove_question_numbers
 
 class LexicalAccess():
    def __init__(self):
@@ -14,7 +16,7 @@ class LexicalAccess():
 
       for m in tournament.matches:
          for t in m.turns:
-            self._dictionary[t.questionId()].append(t.q)
+            self._dictionary[t.questionId()].append(remove_question_numbers(t.q))
    def __call__(self,gloss):
       return self.lookUp(qgloss)
    def lookUp(self, qgloss):

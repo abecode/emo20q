@@ -203,6 +203,13 @@ class GenerateDeclarative():
     def hedge(self, sentence):
         return "maybe " + sentence
 
+def remove_question_numbers(question):
+    # removes numbers before questions from the human-human data
+    # e.g. 1) #2 3.
+    question = re.sub(r"^\#?\d\d?(\)|\.|:|,)? *", "", question)
+    question = re.sub(r"\n\d\d?\n?", "", question, re.M)
+    question = re.sub(r"\d\d?\s*$", "", question)
+    return question
 
 if __name__ == "__main__":
     import doctest
