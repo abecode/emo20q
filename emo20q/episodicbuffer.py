@@ -87,8 +87,8 @@ class EpisodicBuffer(list):
             with open(os.path.join(DIRNAME, LOGDIR, f"dialog-{timestamp}.json"), "w") as f:
                 print(jsondata, file=f)
         else:
-            print(jsondata)
-        
+            #print(jsondata)
+            pass
 
     
     def saveCouchDB(self,db="couchdb"):

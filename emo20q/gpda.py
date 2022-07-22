@@ -111,15 +111,15 @@ class GPDA(nx.DiGraph):
                                
     """
     stack = []
-    def __call__(self,input):
+    def __call__(self,input_):
         #catch special commands here
-        self.processGlobalCommands(input)
+        self.processGlobalCommands(input_)
         for n in self[self.state]:   #check neighbor states
-            if self[self.state][n]['test'](input):
-                output = self[self.state][n]['function'](input)
+            if self[self.state][n]['test'](input_):
+                output = self[self.state][n]['function'](input_)
                 self.set_state(n)
                 return output
-        raise GPDAError("no valid transition using this input, given current state %s"%self.state.name)
+        raise GPDAError(f"no valid transition using this input, given current state '{self.state.name}' and input '{input_}'")
     
     def processGlobalCommands(self,input):
         pass

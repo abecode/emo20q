@@ -65,8 +65,9 @@ def isQuestion(string):
         return True
     if re.search(r'(?:how|who|what|why) (?:do|is|are|does|did|was|can|would|should|old|you)', string):
         return True
+    if re.search(r'(?:is|does|will) (?:it|this|the)', string):
+        return True
     return False
-
 
 def splitCommaList(string):
     out = []
