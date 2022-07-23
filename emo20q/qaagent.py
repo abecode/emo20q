@@ -247,7 +247,7 @@ class QAAgent(GPDA):
                             function=lambda q: self.answerQuestion(q))
         # if we get a non-question
         self.add_transition(self.answeringState, self.answeringFeedbackState,
-                            test=lambda x: not self.keepAnswering(x) and not self.episodicBuffer.user_guessed_correctly,
+                            test=lambda x: not self.keepAnswering(x) and not self.episodicBuffer.user_guessed_correctly and not self.episodicBuffer.question_number==20,
                             function=lambda q: self.giveQAFeedback(q))
         # if we get another non-question
         self.add_transition(self.answeringFeedbackState, self.answeringFeedbackState,
@@ -259,12 +259,15 @@ class QAAgent(GPDA):
                             function=lambda q: self.answerQuestion(q))
         #last question
         self.add_transition(self.answeringState, self.lastQuestionToAnswer,
-                            test=lambda x: self.episodicBuffer.question_number==19,
+                            test=lambda x: self.episodicBuffer.question_number>=19,
                             function=lambda q: self.twentiethQuestion(q))
         # end
         self.add_transition(self.answeringState,self.endState,
                             test=lambda x: self.episodicBuffer.user_guessed_correctly,
                             function=self.goodbyeMessage)
+        self.add_transition(self.answeringFeedbackState, self.endState,
+                            test=lambda x: self.episodicBuffer.question_number>=20,
+                            function=lambda q: self.answerQuestion(q))
 
 
         self.state = self.startState
@@ -499,7 +502,7 @@ class QAAgent(GPDA):
         if nlphelper.isQuestion(input_) and self.episodicBuffer.question_number <= 19:
             return True
         return False
-    def twentiethQuestion(self, input_):
+    def twentiethQuestion(self, question):
         """ last question"""
         print(self.episodicBuffer.chosen_emotion, self.episodicBuffer.question_number)
         # a correct guess
