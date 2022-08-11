@@ -165,7 +165,46 @@ class QAAgent(GPDA):
     Thank you for playing
     ...
 
+    # test end state:
+    >>> agent = QAAgent()
 
+    >>> QAAgent("")  #doctest: +ELLIPSIS
+    <qaagent.QAAgent object ...
+
+    >>> print(agent("ready")) #doctest: +ELLIPSIS
+    [Agent enters the universe of discourse]
+    ...
+
+    >>> print(agent("yes")) #doctest: +ELLIPSIS
+    Ok, let me see here...
+    ...
+
+    >>> print(agent("yes")) #doctest: +ELLIPSIS
+    1
+    ...
+    >>> agent("yes") #doctest: +ELLIPSIS
+    2
+    ...
+    >>> agent("yes") #doctest: +ELLIPSIS
+    3
+    ...
+
+    >>> agent("yes") #doctest: +ELLIPSIS
+    4
+    ...
+
+    >>> agent("yes") #doctest: +ELLIPSIS
+    5
+    ...
+
+    >>> agent("yes") #doctest: +ELLIPSIS
+    Awesome!\nNow let's switch roles.  I'll pick the emotion and you ask the questions.
+
+
+    >>> agent("is it a positive emotion?") #doctest: +ELLIPSIS
+    no
+    ..
+    
     """
 
     startState = State("startState")
@@ -300,10 +339,10 @@ class QAAgent(GPDA):
         output = "Ok, let me see here... \n"
         nextQ = self.pickNextQuestion()
         output += self.lexicalAccess.lookUp(nextQ)
-        self.episodicBuffer.add(Question(output,gloss=nextQ))
+        self.episodicBuffer.add(AgentQuestion(output,gloss=nextQ))
         return output
     def evaluateQuestionAnswer(self,input):
-        self.episodicBuffer.add(Answer(input))
+        self.episodicBuffer.add(UserAnswer(input))
         if self.episodicBuffer.numTurns() >= 20:
             raise GPDAError("shouldn't be asking with 20 or more questions")
         #output = "ok, I see.  Number %s. Is it a bla bla bla?"%str(self.episodicBuffer.numTurns()+1)
@@ -315,7 +354,7 @@ class QAAgent(GPDA):
         post = self.semanticKnowledge.prob_classify(features)
 
         # if last question was an identity question (guess), then zero out that emotion
-        if isinstance(self.episodicBuffer[-1],Turn) and \
+        if isinstance(self.episodicBuffer[-1],AgentAskingTurn) and \
                 hasattr(self.episodicBuffer[-1].q, "isIdentityQuestion") and \
                 self.episodicBuffer[-1].q.isIdentityQuestion():
             match = re.search(r'^e==(.+)$', self.episodicBuffer[-1].q.gloss)
@@ -325,7 +364,7 @@ class QAAgent(GPDA):
             post = nltk.probability.DictionaryProbDist(tmpDict,normalize=True)
         # if last question was an identity question (guess), then zero out that emotion
         # slightly messy having reduplication here: to deal with a disconfirmed confirmation
-        if isinstance(self.episodicBuffer[-3],Turn) and \
+        if isinstance(self.episodicBuffer[-3],AgentAskingTurn) and \
                 hasattr(self.episodicBuffer[-3].q, "isIdentityQuestion") and \
                 self.episodicBuffer[-3].q.isIdentityQuestion():
             match = re.search(r'^e==(.+)$', self.episodicBuffer[-3].q.gloss)
@@ -335,7 +374,7 @@ class QAAgent(GPDA):
             post = nltk.probability.DictionaryProbDist(tmpDict,normalize=True)
 
         #deal with similarity questions
-        if isinstance(self.episodicBuffer[-1],Turn) and \
+        if isinstance(self.episodicBuffer[-1],AgentAskingTurn) and \
                 hasattr(self.episodicBuffer[-1].q, "isSimilarityQuestion") and \
                 self.episodicBuffer[-1].q.isSimilarityQuestion() and \
                 nlphelper.classifyYN(self.episodicBuffer[-1].a.text)==-1:
@@ -366,28 +405,32 @@ class QAAgent(GPDA):
         #self.episodicBuffer.add(Belief(self.belief))
         nextQ = self.pickNextQuestion()
         output = self.lexicalAccess.lookUp(nextQ)
-        self.episodicBuffer.add(Question(output,gloss=nextQ))
+        self.episodicBuffer.add(AgentQuestion(output,gloss=nextQ))
         #for x in self.stack:
         #    print x
         return output
     def shouldIAsk(self,input):
         print(self.episodicBuffer.numTurns())
-        if hasattr(self.episodicBuffer[-1],'isIdentityQuestion') and self.episodicBuffer[-1].isIdentityQuestion() and nlphelper.isAffirmative(input):
+        if hasattr(self.episodicBuffer[-1],'isIdentityQuestion') and \
+           self.episodicBuffer[-1].isIdentityQuestion() and \
+           nlphelper.isAffirmative(input):
             return False
         if self.episodicBuffer.numTurns() < 20:
             return True
         return False
     def shouldIReview(self,input):
-        if self.episodicBuffer.numTurns() >= 20 and not (self.episodicBuffer[-1].isIdentityQuestion() and  nlphelper.isAffirmative(input)):
+        if self.episodicBuffer.numTurns() >= 20 and \
+           not (self.episodicBuffer[-1].isIdentityQuestion() and \
+                nlphelper.isAffirmative(input)):
             return True
         return False
     def confirmAnswer(self,input):
-        self.episodicBuffer.add(Answer(input))
+        self.episodicBuffer.add(UserAnswer(input))
         output = "so did I get it right?"
         self.episodicBuffer.add(AgentUtt(output))
         return output
     def reviewAnswer(self,input):
-        self.episodicBuffer.add(Answer(input))
+        self.episodicBuffer.add(UserAnswer(input))
         output = "Dammit, that is disappointing... \n"
         output += "Well, what was the emotion that you picked?"
         self.episodicBuffer.add(AgentUtt(output))
@@ -399,6 +442,7 @@ class QAAgent(GPDA):
         self.episodicBuffer.add(AgentUtt(output))
         return output
     def doYouWantToPlayAgain(self,input,outcome=None):
+        """ this is currently not used in the acii 2022 demo system"""
         #########################################################
         # This is where serialization to couchdb should happen
         #########################################################
@@ -466,7 +510,11 @@ class QAAgent(GPDA):
             result = sorted([x for x in probYes if x not in features],key=probYes.__getitem__, reverse=True)
         return result[0:n]
     def emotions(self):
-        """ returns a list of emotions that the agent knows about """
+        """returns a list of emotions that the agent knows about 
+
+        this is the start of the new functions added for the acii 2022
+        demo agent
+        """
         return list(self.semanticKnowledge._labels)
     def pickEmotion(self):
         """ picks a random emotion from the set of emotions
@@ -565,8 +613,23 @@ if __name__ == "__main__":
         doctest.testmod()
     #elif args.run:
     else:
-        input_ = ""
         agent = QAAgent()
+        input_ = ""
+        print(agent(input_))
+        print(agent("yes"))
+        print(agent("yes"))
+        print(agent("yes"))
+        print(agent("yes"))
+        print(agent("yes"))
+        print(agent("yes"))
+        print(agent("yes"))
+        print(agent("yes"))
+        print(agent("yes"))
+        for x in range(0,19):
+            print(agent("is it happy?"))
+            
         while True:
+            print(agent.state.name)
             print(agent(input_))
+            print(agent.state.name)
             input_ = input("> ")
