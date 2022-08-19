@@ -15,8 +15,9 @@ from emo20q import nlphelper
 from emo20q.gpda import GPDA, State, GPDAError
 from emo20q.semanticknowledge import SemanticKnowledge
 from emo20q.lexicalaccess import LexicalAccess
-from emo20q.episodicbuffer import (EpisodicBuffer, Turn, AgentUtt, UserUtt,
-                            Question, Answer)
+from emo20q.episodicbufferqa import (EpisodicBuffer, AgentAskingTurn,
+                                     AgentUtt, UserUtt, AgentQuestion,
+                                     UserAnswer, IllocutionaryAct)
 from emo20q.qa import answer_emotion_question
 
 # tensorflow stuff for question answerer
@@ -449,7 +450,7 @@ class QAAgent(GPDA):
         self.episodicBuffer.save()
         self.episodicBuffer.add(UserUtt(input))
         self.belief = nltk.probability.UniformProbDist(self.semanticKnowledge.entities())
-        self.episodicBuffer.newMatch()
+        
         output = str()
         if outcome == "success":
             output = "Awesome!\n"
@@ -521,6 +522,8 @@ class QAAgent(GPDA):
         used for the question answering role
         """
         self.episodicBuffer.chosen_emotion = random.choice(list(set(self.emotions())-tough_emotions)) # set the chosen emotion
+        self.episodicBuffer.add(IllocutionaryAct(type="ChooseEmotion",
+                                                 emotion=self.episodicBuffer.chosen_emotion))
         self.episodicBuffer.question_number = 1  # set the question number
         self.episodicBuffer.user_guessed_correctly = False
         return self.episodicBuffer.chosen_emotion
@@ -529,6 +532,7 @@ class QAAgent(GPDA):
         # for first turn
         if not getattr(self.episodicBuffer, "chosen_emotion", None):
             self.pickEmotion()
+        self.episodicBuffer.add(UserUtt(question))
         #print(self.episodicBuffer.chosen_emotion, self.episodicBuffer.question_number)
         # a correct guess
         if self.episodicBuffer.chosen_emotion.lower() in question.lower():
@@ -543,6 +547,7 @@ class QAAgent(GPDA):
         # a question
         reply = f"{answer} (that was question {self.episodicBuffer.question_number})"
         self.episodicBuffer.question_number += 1
+        self.episodicBuffer.add(AgentUtt(reply))
         return reply
     def keepAnswering(self, input_):
         if self.episodicBuffer.user_guessed_correctly:

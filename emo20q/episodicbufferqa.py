@@ -41,14 +41,14 @@ class EpisodicBuffer(list):
         super(list, self).__init__()
     def add(self, input_, semantics=None):
         input_.semantics = semantics
-        if isinstance(input_, Question):
+        if isinstance(input_, AgentQuestion):
             input_.talker = "agent"
             self.append(input_)
-        elif isinstance(input_, Answer):
+        elif isinstance(input_, UserAnswer):
             input_.talker = "user"
             q = self.pop()
-            if isinstance(q, Question):
-                t = Turn(q, input_)
+            if isinstance(q, AgentQuestion):
+                t = AgentAskingTurn(q, input_)
                 self.append(t)
             elif isinstance(q, AgentUtt):
                 self.append(q)
@@ -66,7 +66,7 @@ class EpisodicBuffer(list):
     def newMatch(self):
         del self[:]
     def numTurns(self):
-        turns = list(filter(lambda x: isinstance(x, Turn) or isinstance(x, Question), self))
+        turns = list(filter(lambda x: isinstance(x, AgentAskingTurn) or isinstance(x, AgentQuestion), self))
         return len(turns)
     def getFeature(self,q,a):
         if(not q.gloss): 
@@ -77,7 +77,7 @@ class EpisodicBuffer(list):
         else : answer = "other"
         return (q.gloss,answer)
     def getFeatures(self):
-        turns = list(filter(lambda x: isinstance(x, Turn), self))
+        turns = list(filter(lambda x: isinstance(x, AgentAskingTurn), self))
         features = {}
         for x in turns:
             f = self.getFeature(x.q, x.a)
@@ -145,10 +145,10 @@ class Utterance():
         self.is_agent = is_agent
 class AgentUtt(Utterance):
     def __init__(self, text, gloss=None):
-        super.__init__(text, gloss, is_agent=True)
+        super().__init__(text, gloss, is_agent=True)
 class UserUtt(Utterance):
     def __init__(self, text, gloss=None):
-        super.__init__(text, gloss, is_agent=False)
+        super().__init__(text, gloss, is_agent=False)
 class AgentQuestion(AgentUtt):
     def isIdentityQuestion(self):
         if re.search(r'^e==(.+)$', self.gloss):
@@ -160,20 +160,24 @@ class AgentQuestion(AgentUtt):
             return True
         else:
             return False
-
 class UserAnswer(UserUtt):
     pass
     
-class AgentAskingTurn(object):
+class AgentAskingTurn():
     def __init__(self, q, a):
         self.q = q
         self.a = a
 
+class IllocutionaryAct():
+    def __init__(self, type, **args):
+        self.type = type
+        self.args = args
+
         
 def match2JsonEncoder(x):
     out = {}
-    if isinstance(x, Turn):
-        out['type'] = 'Turn'
+    if isinstance(x, AgentAskingTurn):
+        out['type'] = 'AgentAskingTurn'
         out['container'] = [{'type':'Question',
                              'param':{'text':x.q.text,
                                       'gloss':x.q.gloss}},
@@ -189,5 +193,8 @@ def match2JsonEncoder(x):
         out['type'] = 'AgentUtt'
         out['param'] = {'text':x.text}
         return out
+    if isinstance(x, IllocutionaryAct):
+        out['type'] = x.type
+        out['param'] = x.args
 
 
