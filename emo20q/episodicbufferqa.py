@@ -61,6 +61,8 @@ class EpisodicBuffer(list):
         elif isinstance(input_, UserUtt):
             input_.talker = "user"
             self.append(input_)
+        elif isinstance(input_, IllocutionaryAct):
+            self.append(input_)
         else:
             raise EpisodicBufferError("Stack content error")
     def newMatch(self):
@@ -143,6 +145,11 @@ class Utterance():
         self.text = text
         self.gloss = gloss
         self.is_agent = is_agent
+    def __str__(self):
+        d = {"text": self.text,
+             "gloss": self.gloss,
+             "is_agent": self.is_agent}
+        return f"Utterance({d})"
 class AgentUtt(Utterance):
     def __init__(self, text, gloss=None):
         super().__init__(text, gloss, is_agent=True)
@@ -167,12 +174,15 @@ class AgentAskingTurn():
     def __init__(self, q, a):
         self.q = q
         self.a = a
+    def __str__(self):
+        return f"AgentAskingTurn({self.q}, {self.a})"
 
 class IllocutionaryAct():
     def __init__(self, type, **args):
         self.type = type
         self.args = args
-
+    def __str__(self):
+        return f"IllocutionaryAct({self.type}, {self.args})"
         
 def match2JsonEncoder(x):
     out = {}

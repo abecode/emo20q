@@ -21,11 +21,14 @@ import official.nlp.bert.tokenization
 
 # for desktop:
 os.environ['NO_GCE_CHECK'] = 'true'
+# note: this is from the training pipeline
+# it only uses the tokenizer and vocab
 gs_folder_bert = "gs://cloud-tpu-checkpoints/bert/v3/uncased_L-12_H-768_A-12"
 tokenizer = bert.tokenization.FullTokenizer(
    vocab_file=os.path.join(gs_folder_bert, "vocab.txt"),
     do_lower_case=True)
-export_dir = "/Users/kaze7539/Downloads/saved_model_bert_emo20qa"
+#export_dir = "/Users/kaze7539/Downloads/saved_model_bert_emo20qa"
+export_dir = "/home/ec2-user/saved_model_bert_emo20qa"
 model  = tf.saved_model.load(export_dir)
 
 # # for aws

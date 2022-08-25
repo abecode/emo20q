@@ -566,7 +566,7 @@ class QAAgent(GPDA):
         # a correct guess, but maybe a synonym
         answer = answer_emotion_question(self.episodicBuffer.chosen_emotion, question)
         if answer == "yes":
-            reply = "yes, that's not the exactly what I picked, but I'll say it's close enough."
+            reply = f"yes, that's not the exactly what I picked, {self.episodicBuffer.chosen_emotion}, but I'll say it's close enough."
             self.episodicBuffer.user_guessed_correctly = True
             return reply
         # a question
