@@ -175,7 +175,7 @@ class AgentAskingTurn():
         self.q = q
         self.a = a
     def __str__(self):
-        return f"AgentAskingTurn({self.q}, {self.a})"
+        return f"AgentAskingTurn(\n\t{self.q},\n\t{self.a})"
 
 class IllocutionaryAct():
     def __init__(self, type, **args):

@@ -19,24 +19,23 @@ import official.nlp.bert.tokenization
 
 # Set up tokenizer to generate Tensorflow dataset
 
-# for desktop:
-os.environ['NO_GCE_CHECK'] = 'true'
-# note: this is from the training pipeline
-# it only uses the tokenizer and vocab
-gs_folder_bert = "gs://cloud-tpu-checkpoints/bert/v3/uncased_L-12_H-768_A-12"
+# # for desktop:
+# os.environ['NO_GCE_CHECK'] = 'true'
+# # note: this is from the training pipeline
+# # it only uses the tokenizer and vocab
+# gs_folder_bert = "gs://cloud-tpu-checkpoints/bert/v3/uncased_L-12_H-768_A-12"
+# tokenizer = bert.tokenization.FullTokenizer(
+#    vocab_file=os.path.join(gs_folder_bert, "vocab.txt"),
+#     do_lower_case=True)
+# export_dir = "/Users/kaze7539/Downloads/saved_model_bert_emo20qa"
+# model  = tf.saved_model.load(export_dir)
+
+# for aws
 tokenizer = bert.tokenization.FullTokenizer(
-   vocab_file=os.path.join(gs_folder_bert, "vocab.txt"),
-    do_lower_case=True)
-#export_dir = "/Users/kaze7539/Downloads/saved_model_bert_emo20qa"
+   vocab_file="vocab.txt",
+     do_lower_case=True)
 export_dir = "/home/ec2-user/saved_model_bert_emo20qa"
 model  = tf.saved_model.load(export_dir)
-
-# # for aws
-# tokenizer = bert.tokenization.FullTokenizer(
-#    vocab_file="vocab.txt",
-#      do_lower_case=True)
-# export_dir = "/home/ec2-user/saved_model_bert_emo20qa"
-# model  = tf.saved_model.load(export_dir)
 
 lab2id = {"no":0, "maybe":1, "yes":2}
 id2lab = {v:k for k,v in lab2id.items()}

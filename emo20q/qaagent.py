@@ -22,11 +22,11 @@ from emo20q.qa import answer_emotion_question
 
 # tensorflow stuff for question answerer
 # for tensorflow/bert
-import numpy as np
-import tensorflow as tf
+#import numpy as np
+#import tensorflow as tf
 # !pip install -q tf-models-official==2.4.0
-from official.nlp import bert
-import official.nlp.bert.tokenization
+#from official.nlp import bert
+#import official.nlp.bert.tokenization
 
 # 
 tough_emotions = set(["silly", "feelingLucky", "stupor", "wariness", "exotic", "exasperation",
@@ -522,6 +522,7 @@ class QAAgent(GPDA):
         used for the question answering role
         """
         self.episodicBuffer.chosen_emotion = random.choice(list(set(self.emotions())-tough_emotions)) # set the chosen emotion
+        print(self.episodicBuffer.chosen_emotion)
         self.episodicBuffer.add(IllocutionaryAct(type="ChooseEmotion",
                                                  emotion=self.episodicBuffer.chosen_emotion))
         self.episodicBuffer.question_number = 1  # set the question number
@@ -557,25 +558,31 @@ class QAAgent(GPDA):
         return False
     def twentiethQuestion(self, question):
         """ last question"""
+        self.episodicBuffer.add(UserUtt(question))
         print(self.episodicBuffer.chosen_emotion, self.episodicBuffer.question_number)
         # a correct guess
         if self.episodicBuffer.chosen_emotion.lower() in question.lower():
             reply = f"yes, I picked {self.episodicBuffer.chosen_emotion}.  Good job!"
             self.episodicBuffer.user_guessed_correctly = True
+            self.episodicBuffer.add(AgentUtt(reply))
             return reply
         # a correct guess, but maybe a synonym
         answer = answer_emotion_question(self.episodicBuffer.chosen_emotion, question)
         if answer == "yes":
             reply = f"yes, that's not the exactly what I picked, {self.episodicBuffer.chosen_emotion}, but I'll say it's close enough."
             self.episodicBuffer.user_guessed_correctly = True
+            self.episodicBuffer.add(AgentUtt(reply))
             return reply
         # a question
         reply = f"Doh! That was the last question... the emotion I picked is {self.episodicBuffer.chosen_emotion}"
         self.episodicBuffer.question_number += 1
+        self.episodicBuffer.add(AgentUtt(reply))
         return reply
     def giveQAFeedback(self, input_):
+        self.episodicBuffer.add(UserUtt(input_))
         reply = "Sorry, I'm not a human so I need input formatted as a question or I'll get confused"
         reply += f"(you are on question number {self.episodicBuffer.question_number}"
+        self.episodicBuffer.add(AgentUtt(reply))
         return reply
     def isGuess(self, input_):
         m = re.search(r" *is it (.*)\??", input_)
