@@ -29,10 +29,14 @@ from emo20q.qa import answer_emotion_question
 #import official.nlp.bert.tokenization
 
 # 
-tough_emotions = set(["silly", "feelingLucky", "stupor", "wariness", "exotic", "exasperation",
-                     "devastation", "soberness", "uninterested", "ambiguity", "quixotic", "educated",
-                     "nothing", "perplexity", "introspection", "maniacal", "suicidal", "alienation",
-                      "pessimism", "failure", "coldness", "despise", "avarice", "caring", "infuriation"])
+tough_emotions = set(["silly", "feelingLucky", "stupor", "wariness",
+                      "exotic", "exasperation", "devastation",
+                      "soberness", "uninterested", "ambiguity",
+                      "quixotic", "educated", "nothing", "perplexity",
+                      "introspection", "maniacal", "suicidal",
+                      "alienation", "pessimism", "failure", "coldness",
+                      "despise", "avarice", "caring", "infuriation",
+                      "acting"])
 
 
 class QAAgent(GPDA):
@@ -280,7 +284,7 @@ class QAAgent(GPDA):
         #if we get a non question in the between answering state
         self.add_transition(self.betweenMatchesState,self.betweenMatchesState,
                             test=lambda x: not nlphelper.isQuestion(x),
-                            function=lambda x: "Okay, I'm ready for questions")
+                            function=lambda x: self.readyForQuestions(x))
         #question answering loop
         self.add_transition(self.answeringState, self.answeringState,
                             test=self.keepAnswering,
@@ -428,34 +432,34 @@ class QAAgent(GPDA):
     def confirmAnswer(self,input):
         self.episodicBuffer.add(UserAnswer(input))
         output = "so did I get it right?"
-        self.episodicBuffer.add(AgentUtt(output))
+        self.episodicBuffer.add(AgentUtt(output, gloss="request-confirm"))
         return output
     def reviewAnswer(self,input):
         self.episodicBuffer.add(UserAnswer(input))
         output = "Dammit, that is disappointing... \n"
         output += "Well, what was the emotion that you picked?"
-        self.episodicBuffer.add(AgentUtt(output))
+        self.episodicBuffer.add(AgentUtt(output, gloss="fail,ask-emotion"))
         return output
     def reviewAnswerAfterDisconfirm(self,input):
         self.episodicBuffer.add(UserUtt(input))
         output = "Dammit, that is disappointing... \n"
         output += "Well, what was the emotion that you picked?"
-        self.episodicBuffer.add(AgentUtt(output))
+        self.episodicBuffer.add(AgentUtt(output, gloss="fail,ask-emotion"))
         return output
     def doYouWantToPlayAgain(self,input,outcome=None):
-        """ this is currently not used in the acii 2022 demo system"""
+        """ this is where roles get switched """
         #########################################################
         # This is where serialization to couchdb should happen
         #########################################################
         self.episodicBuffer.save()
-        self.episodicBuffer.add(UserUtt(input))
+        self.episodicBuffer.add(UserUtt(input, gloss="give-emotion"))
         self.belief = nltk.probability.UniformProbDist(self.semanticKnowledge.entities())
         
         output = str()
         if outcome == "success":
             output = "Awesome!\n"
         output += "Now let's switch roles.  I'll pick the emotion and you ask the questions."
-        self.episodicBuffer.add(AgentUtt(output))
+        self.episodicBuffer.add(AgentUtt(output, gloss="switch-roles"))
         return output
     def pickNextQuestion(self,randomize=False):
         #sort the question/features by probability of being != None
@@ -525,30 +529,39 @@ class QAAgent(GPDA):
         print(self.episodicBuffer.chosen_emotion)
         self.episodicBuffer.add(IllocutionaryAct(type="ChooseEmotion",
                                                  emotion=self.episodicBuffer.chosen_emotion))
+        print("chosen_emotion: ", self.episodicBuffer.chosen_emotion)
         self.episodicBuffer.question_number = 1  # set the question number
         self.episodicBuffer.user_guessed_correctly = False
         return self.episodicBuffer.chosen_emotion
+    def readyForQuestions(self, input_):
+        """ wait for question when switching roles """
+        self.episodicBuffer.add(UserUtt(input_))
+        reply = "Ok, I'm ready for questions"
+        self.episodicBuffer.add(AgentUtt(reply, gloss="ready-to-answer"))
+        return reply
     def answerQuestion(self, question):
         """ answer questions and respond to guesses"""
         # for first turn
         if not getattr(self.episodicBuffer, "chosen_emotion", None):
             self.pickEmotion()
-        self.episodicBuffer.add(UserUtt(question))
+        self.episodicBuffer.add(UserUtt(question, gloss="unclassified-question"))
         #print(self.episodicBuffer.chosen_emotion, self.episodicBuffer.question_number)
         # a correct guess
         if self.episodicBuffer.chosen_emotion.lower() in question.lower():
             reply = f"yes, I picked {self.episodicBuffer.chosen_emotion}.  Good job!"
             self.episodicBuffer.user_guessed_correctly = True
+            self.episodicBuffer.add(AgentUtt(reply, gloss="user-guessed-correctly"))
             return reply
         # a correct guess, but maybe a synonym
         answer = answer_emotion_question(self.episodicBuffer.chosen_emotion, question)
         if answer == "yes" and self.isGuess(question):
             reply = "yes, but that's not the exactly what I picked"
+            self.episodicBuffer.add(AgentUtt(reply, gloss="user-guessed-close"))
             return reply
         # a question
         reply = f"{answer} (that was question {self.episodicBuffer.question_number})"
         self.episodicBuffer.question_number += 1
-        self.episodicBuffer.add(AgentUtt(reply))
+        self.episodicBuffer.add(AgentUtt(reply, gloss="reply-to-question"))
         return reply
     def keepAnswering(self, input_):
         if self.episodicBuffer.user_guessed_correctly:
@@ -564,31 +577,31 @@ class QAAgent(GPDA):
         if self.episodicBuffer.chosen_emotion.lower() in question.lower():
             reply = f"yes, I picked {self.episodicBuffer.chosen_emotion}.  Good job!"
             self.episodicBuffer.user_guessed_correctly = True
-            self.episodicBuffer.add(AgentUtt(reply))
+            self.episodicBuffer.add(AgentUtt(reply, gloss="user-guessed-correctly"))
             return reply
         # a correct guess, but maybe a synonym
         answer = answer_emotion_question(self.episodicBuffer.chosen_emotion, question)
         if answer == "yes":
             reply = f"yes, that's not the exactly what I picked, {self.episodicBuffer.chosen_emotion}, but I'll say it's close enough."
             self.episodicBuffer.user_guessed_correctly = True
-            self.episodicBuffer.add(AgentUtt(reply))
+            self.episodicBuffer.add(AgentUtt(reply, gloss="user-guessed-close"))
             return reply
         # a question
         reply = f"Doh! That was the last question... the emotion I picked is {self.episodicBuffer.chosen_emotion}"
         self.episodicBuffer.question_number += 1
-        self.episodicBuffer.add(AgentUtt(reply))
+        self.episodicBuffer.add(AgentUtt(reply, gloss="give-emotion-after-20q"))
         return reply
     def giveQAFeedback(self, input_):
         self.episodicBuffer.add(UserUtt(input_))
         reply = "Sorry, I'm not a human so I need input formatted as a question or I'll get confused"
         reply += f"(you are on question number {self.episodicBuffer.question_number}"
-        self.episodicBuffer.add(AgentUtt(reply))
+        self.episodicBuffer.add(AgentUtt(reply, gloss="give-qa-feedback"))
         return reply
     def isGuess(self, input_):
-        m = re.search(r" *is it (.*)\??", input_)
+        m = re.search(r" *is it (.*)\?", input_)
         if m and m.groups(0) in self.emotions():
             return True
-        m = re.search(r" *(.*)\??", input_)
+        m = re.search(r" *(.*)\?", input_)
         if m and m.groups(0) in self.emotions():
             return True
     
